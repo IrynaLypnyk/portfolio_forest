@@ -4,6 +4,7 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
+const eslint = require('gulp-eslint');
 
 const del = require('del');
 
@@ -58,6 +59,8 @@ function clean() {
 // webpack
 function scripts() {
     return gulp.src('src/scripts/app.js')
+        .pipe(eslint())
+        .pipe(eslint.format())
         .pipe(gulpWebpack(webpackConfig, webpack)) 
         .pipe(gulp.dest(paths.scripts.dest));
 }
