@@ -5,6 +5,7 @@ const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const eslint = require('gulp-eslint');
+const gulpStylelint = require('gulp-stylelint');
 
 const del = require('del');
 
@@ -45,6 +46,7 @@ function templates() {
 function styles() {
     return gulp.src('./src/styles/app.scss')
         .pipe(sourcemaps.init())
+        .pipe(gulpStylelint({reporters: [{formatter: 'string', console: true}]}))
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))
