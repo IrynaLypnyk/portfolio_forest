@@ -11,20 +11,64 @@
     <script src="/assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <h1>Главная</h1>
-    <form>
-      <label for="email">email</label>
-      <input name="email" id="email">
-      <label for="password">password</label>
-      <input name="password" id="password">
-      <button>Войти</button>
-    </form>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="/index.html">Главная</a></li>
-      <li><a href="/about.html">Обо мне</a></li>
-      <li><a href="my-works.html">Мои работы</a></li>
-      <li><a href="blog.html">Блог</a></li>
-    </ul>
+    <div class="wrapper">
+      <div class="welcome">
+        <div class="welcome__auth-btn">
+          <button class="auth-btn">Авторизоваться</button>
+        </div>
+        <div class="welcome__flipper">
+          <div class="welcome__user-block">
+            <div class="user-block form-container">
+              <div class="welcome__socials"></div>
+              <div class="welcome__nav-btns"></div>
+            </div>
+          </div>
+          <div class="welcome__auth-form">
+            <div class="auth-form form-container">
+              <div class="form__title auth-form__title">
+                <div class="block-subtitle block-subtitle_auth-form">Авторизуйтесь</div>
+              </div>
+              <form class="form" action="" method="get">
+                <label class="form__label auth-form__label">
+                  <input class="form__input auth-form__input auth-form__input_login" type="text" placeholder="Логин">
+                  <div class="form__input-fake auth-form__input-fake auth-form__input-fake_login"></div>
+                </label>
+                <label class="form__label auth-form__label">
+                  <input class="form__input auth-form__input auth-form__input_pswd" type="password" placeholder="Пароль">
+                  <div class="form__input-fake auth-form__input-fake auth-form__input-fake-pswd"></div>
+                </label>
+                <label class="form__checkbox-label auth-form__checkbox-label">
+                  <input class="form__checkbox-input auth-form__checkbox-input" type="checkbox" checked>
+                  <div class="form__checkbox-fake auth-form__checkbox-fake"></div>
+                  <div class="form__label-text auth-form__label-text">Я человек</div>
+                </label>
+                <div class="form__radio-block auth-form__radio-block">
+                  <div class="form__label-text auth-form__label-text auth-form__label-text_radio">Вы точно не робот?</div>
+                  <div class="form__radio-input-block auth-form__radio-input-block">
+                    <label class="form__radio-label auth-form__radio-label">
+                      <input class="form__radio-input auth-form__radio-input" type="radio" name="isrobot" checked>
+                      <div class="form__radio-fake auth-form__radio-fake"></div>
+                      <div class="form__label-text auth-form__label-text">Да</div>
+                    </label>
+                    <label class="form__radio-label auth-form__radio-label">
+                      <input class="form__radio-input auth-form__radio-input" type="radio" name="isrobot">
+                      <div class="form__radio-fake auth-form__radio-fake"></div>
+                      <div class="form__label-text auth-form__label-text">Я не уверен</div>
+                    </label>
+                  </div>
+                </div>
+              </form>
+              <div class="auth-form__nav-btns"></div>
+            </div>
+          </div>
+        </div>
+        <div class="welcome__copyright">
+          <div class="copyright">
+            <p class="copyright__item">&copy; Ирина Лыпник</p>
+            <p class="copyright__item">создано с &#10084; в LoftSchool | 2017</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
