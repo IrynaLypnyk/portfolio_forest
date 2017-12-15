@@ -1,7 +1,10 @@
 body{
     margin: 100px;
-    background: #ccc
+    background: #ccc;
 }
+/* normalize.css */
+@import "../../node_modules/normalize.css/normalize.css";
+
 @import 'common/menu';
 @import 'common/technologies';
 @import 'common/slider';
