@@ -1,8 +1,6 @@
-body{
-    margin: 100px;
-    background: plum;
-}
+
 /* normalize.css */
 @import "../../node_modules/normalize.css/normalize";
 
-
+/* components */
+@import '_components/_fonts';
