@@ -1,6 +1,9 @@
 node_modules
 .idea/
 .vscode/
+src/images/
+src/fonts/
+src/favicons/
 
 # Compiled source #
 ###################
