@@ -1,4 +1,6 @@
 block variables
+include components/mixins.pug
+
 
 doctype html
 html(lang="ru")
@@ -43,8 +45,8 @@ html(lang="ru")
         <script>alert("Вы используете устаревший браузер. Пожалуйста, обновите браузер https://browsehappy.com/")</script>
         <p class="browserupgrade">Вы используете устаревший браузер. <a href="https://browsehappy.com/">Обновите браузер</a> абсолютно бесплатно.</p>
         <![endif]-->
-
-        block content
+        .wrapper
+            block content
 
 
 

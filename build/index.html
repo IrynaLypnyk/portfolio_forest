@@ -37,6 +37,82 @@
 <script>alert("Вы используете устаревший браузер. Пожалуйста, обновите браузер https://browsehappy.com/")</script>
 <p class="browserupgrade">Вы используете устаревший браузер. <a href="https://browsehappy.com/">Обновите браузер</a> абсолютно бесплатно.</p>
 <![endif]-->
-    <h1>Добро пожаловать!!!!!!!!!!!!!!!!!!</h1>
+    <div class="wrapper">
+      <div class="welcome">
+        <div class="welcome__auth">
+          <button class="auth-btn">Авторизоваться</button>
+        </div>
+        <div class="welcome__flipper flipper">
+          <div class="flipper__side flipper__side--front">
+            <div class="welcome__hero-info">
+              <div class="hero__img-block">
+                <div class="hero__img"></div>
+              </div>
+              <div class="hero__name">Владимир Астахов</div>
+              <div class="hero__title">Личный сайт веб-разработчика</div>
+            </div>
+            <div class="welcome__socials socials">
+              <ul class="socials__list">
+                <li class="socials__item"><a class="socials__link" href="#">Facebook
+                    <svg class="socials__icon socials__icon_fb" width="26px" height="26px">
+                      <use xlink:href="assets/images/icons/sprite.svg#fb"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link" href="#">GitHub
+                    <svg class="socials__icon socials__icon_github" width="26px" height="26px">
+                      <use xlink:href="assets/images/icons/sprite.svg#github"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link" href="#">LinkedIn
+                    <svg class="socials__icon socials__icon_in" width="26px" height="26px">
+                      <use xlink:href="assets/images/icons/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <nav class="nav">
+              <ul class="nav-btns">
+                <li class="nav-btns__item"><a class="nav-btns__link" href="my-works.html">Мои работы</a></li>
+                <li class="nav-btns__item"><a class="nav-btns__link" href="about.html">Обо мне</a></li>
+                <li class="nav-btns__item"><a class="nav-btns__link" href="blog.html">Блог</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="flipper__side flipper__side--back">
+            <form class="auth-form">
+              <div class="auth-form__title">Авторизуйтесь</div>
+              <div class="auth-form__fields">
+                <input class="auth-form__input" type="text" placeholder="Логин">
+                <input class="auth-form__input" type="password" placeholder="Пароль">
+                <div class="auth-form__checkbox">
+                  <label class="auth-form__label auth-form__label--checkbox">Я человек
+                    <input class="auth-form__checkbox-input" type="checkbox" checked>
+                  </label>
+                </div>
+                <div class="auth-form__radio">
+                  <p class="auth-form__radio-text">Вы точно не робот?</p>
+                  <label class="auth-form__label auth-form__label--radio">Да
+                    <input class="auth-form__radio-input" type="radio" name="isRobot" checked>
+                  </label>
+                  <label class="auth-form__label auth-form__label--radio">Нет
+                    <input class="auth-form__radio-input" type="radio" name="isRobot" checked>
+                  </label>
+                </div>
+              </div>
+            </form>
+            <nav class="nav">
+              <ul class="nav-btns">
+                <li class="nav-btns__item"><a class="nav-btns__link" href="index.html">На главную</a></li>
+                <li class="nav-btns__item"><a class="nav-btns__link" href="#">Войти</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="welcomepage__copyright copyright">
+          <ul class="copyright__list">
+            <li class="copyright__item">&copy; Ирина Лыпник</li>
+            <li class="copyright__item">создано с любовью в LoftSchool</li>
+            <li class="copyright__item">2017</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
