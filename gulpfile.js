@@ -52,6 +52,10 @@ const paths = {
 		src: 'src/fonts/**/*.*',
 		dest: 'build/assets/fonts/',
 	},
+	favicons: {
+		src: 'src/favicons/**/*.*',
+		dest: 'build/favicons/',
+	},
 };
 
 // pug
@@ -117,6 +121,12 @@ function fonts() {
 		.pipe(gulp.dest(paths.fonts.dest));
 }
 
+// просто переносим favicons
+function favicons() {
+	return gulp.src(paths.favicons.src)
+		.pipe(gulp.dest(paths.favicons.dest));
+}
+
 //svg sprite
 function toSprite() {
 	return gulp
@@ -162,12 +172,13 @@ exports.clean = clean;
 exports.images = images;
 exports.fonts = fonts;
 exports.toSprite = toSprite;
+exports.favicons = favicons;
 
 
 // контрольная сборка на продакшн
 gulp.task('default', gulp.series(
 	clean,
-	gulp.parallel(styles, templates, images, fonts, scripts, toSprite),
+	gulp.parallel(styles, templates, images, fonts, scripts, toSprite, favicons),
 	gulp.parallel(watch, server)
 ));
 
