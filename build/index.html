@@ -39,76 +39,102 @@
 <![endif]-->
     <div class="wrapper">
       <div class="welcome">
-        <div class="welcome__auth">
+        <div class="welcome__auth-btn">
           <button class="auth-btn">Авторизоваться</button>
         </div>
-        <div class="welcome__flipper flipper">
-          <div class="flipper__side flipper__side--front">
-            <div class="welcome__hero-info">
-              <div class="hero__img-block">
-                <div class="hero__img"></div>
+        <div class="welcome__flipper">
+          <div class="welcome__user-block">
+            <div class="user-block form-container">
+              <div class="user__img-block">
+                <div class="user__img"></div>
               </div>
-              <div class="hero__name">Владимир Астахов</div>
-              <div class="hero__title">Личный сайт веб-разработчика</div>
+              <div class="user__name">Владимир Астахов</div>
+              <div class="user__title">Личный сайт веб-разработчика</div>
+              <div class="welcome__socials">
+                <ul class="socials">
+                  <li class="socials__item"><a class="socials__link" href="#">
+                      <svg class="socials__icon socials__icon_fb" width="26px" height="26px">
+                        <use xlink:href="assets/images/icons/sprite.svg#fb"> </use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="socials__link" href="#">
+                      <svg class="socials__icon socials__icon_github" width="26px" height="26px">
+                        <use xlink:href="assets/images/icons/sprite.svg#github"> </use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="socials__link" href="#">
+                      <svg class="socials__icon socials__icon_in" width="26px" height="26px">
+                        <use xlink:href="assets/images/icons/sprite.svg#in"> </use>
+                      </svg></a></li>
+                </ul>
+              </div>
+              <div class="welcome__nav-btns">
+                <ul class="nav-btns"> 
+                  <li class="nav-btns__item"><a class="nav-btns__link" href="my-works.html">Мои работы</a></li>
+                  <li class="nav-btns__item"><a class="nav-btns__link" href="about.html">Обо мне</a></li>
+                  <li class="nav-btns__item"><a class="nav-btns__link" href="blog.html">Блог</a></li>
+                </ul>
+              </div>
             </div>
-            <div class="welcome__socials socials">
-              <ul class="socials__list">
-                <li class="socials__item"><a class="socials__link" href="#">Facebook
-                    <svg class="socials__icon socials__icon_fb" width="26px" height="26px">
-                      <use xlink:href="assets/images/icons/sprite.svg#fb"></use>
-                    </svg></a></li>
-                <li class="socials__item"><a class="socials__link" href="#">GitHub
-                    <svg class="socials__icon socials__icon_github" width="26px" height="26px">
-                      <use xlink:href="assets/images/icons/sprite.svg#github"></use>
-                    </svg></a></li>
-                <li class="socials__item"><a class="socials__link" href="#">LinkedIn
-                    <svg class="socials__icon socials__icon_in" width="26px" height="26px">
-                      <use xlink:href="assets/images/icons/sprite.svg#in"></use>
-                    </svg></a></li>
-              </ul>
-            </div>
-            <nav class="nav">
-              <ul class="nav-btns">
-                <li class="nav-btns__item"><a class="nav-btns__link" href="my-works.html">Мои работы</a></li>
-                <li class="nav-btns__item"><a class="nav-btns__link" href="about.html">Обо мне</a></li>
-                <li class="nav-btns__item"><a class="nav-btns__link" href="blog.html">Блог</a></li>
-              </ul>
-            </nav>
           </div>
-          <div class="flipper__side flipper__side--back">
-            <form class="auth-form">
-              <div class="auth-form__title">Авторизуйтесь</div>
-              <div class="auth-form__fields">
-                <input class="auth-form__input" type="text" placeholder="Логин">
-                <input class="auth-form__input" type="password" placeholder="Пароль">
-                <div class="auth-form__checkbox">
-                  <label class="auth-form__label auth-form__label--checkbox">Я человек
-                    <input class="auth-form__checkbox-input" type="checkbox" checked>
-                  </label>
-                </div>
-                <div class="auth-form__radio">
-                  <p class="auth-form__radio-text">Вы точно не робот?</p>
-                  <label class="auth-form__label auth-form__label--radio">Да
-                    <input class="auth-form__radio-input" type="radio" name="isRobot" checked>
-                  </label>
-                  <label class="auth-form__label auth-form__label--radio">Нет
-                    <input class="auth-form__radio-input" type="radio" name="isRobot" checked>
-                  </label>
-                </div>
+          <div class="welcome__auth-form">
+            <div class="auth-form form-container">
+              <div class="form__title auth-form__title">
+                <div class="block-subtitle block-subtitle_auth-form">Авторизуйтесь</div>
               </div>
-            </form>
-            <nav class="nav">
-              <ul class="nav-btns">
-                <li class="nav-btns__item"><a class="nav-btns__link" href="index.html">На главную</a></li>
-                <li class="nav-btns__item"><a class="nav-btns__link" href="#">Войти</a></li>
-              </ul>
-            </nav>
+              <form class="form" action="" method="get">
+                <label class="form__label auth-form__label">
+                  <input class="form__input auth-form__input auth-form__input_login" type="text" placeholder="Логин">
+                  <div class="form__input-fake auth-form__input-fake auth-form__input-fake_login">
+                    <svg class="form__input-icon auth-form__input-icon auth-form__input-icon_login" width="15" height="15">
+                      <use xlink:href="assets/images/icons/sprite.svg#login"></use>
+                    </svg>
+                  </div>
+                </label>
+                <label class="form__label auth-form__label">
+                  <input class="form__input auth-form__input auth-form__input_pswd" type="password" placeholder="Пароль">
+                  <div class="form__input-fake auth-form__input-fake auth-form__input-fake-pswd">
+                    <svg class="form__input-icon auth-form__input-icon auth-form__input-icon_pswd" width="17" height="17">
+                      <use xlink:href="assets/images/icons/sprite.svg#password"></use>
+                    </svg>
+                  </div>
+                </label>
+                <label class="form__checkbox-label auth-form__checkbox-label">
+                  <input class="form__checkbox-input auth-form__checkbox-input" type="checkbox" checked>
+                  <div class="form__checkbox-fake auth-form__checkbox-fake">
+                    <svg class="form__checkbox-icon auth-form__checkbox-icon" width="11" height="11">
+                      <use xlink:href="assets/images/icons/sprite.svg#check"></use>
+                    </svg>
+                  </div>
+                  <div class="form__label-text auth-form__label-text">Я человек</div>
+                </label>
+                <div class="form__radio-block auth-form__radio-block">
+                  <div class="form__label-text auth-form__label-text auth-form__label-text_radio">Вы точно не робот?</div>
+                  <div class="form__radio-input-block auth-form__radio-input-block">
+                    <label class="form__radio-label auth-form__radio-label">
+                      <input class="form__radio-input auth-form__radio-input" type="radio" name="isrobot" checked>
+                      <div class="form__radio-fake auth-form__radio-fake"></div>
+                      <div class="form__label-text auth-form__label-text">Да</div>
+                    </label>
+                    <label class="form__radio-label auth-form__radio-label">
+                      <input class="form__radio-input auth-form__radio-input" type="radio" name="isrobot">
+                      <div class="form__radio-fake auth-form__radio-fake"></div>
+                      <div class="form__label-text auth-form__label-text">Я не уверен</div>
+                    </label>
+                  </div>
+                </div>
+              </form>
+              <div class="auth-form__nav-btns">
+                <ul class="nav-btns"> 
+                  <li class="nav-btns__item"><a class="nav-btns__link" href="index.html">На главную</a></li>
+                  <li class="nav-btns__item"><a class="nav-btns__link" href="#">Войти</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="welcomepage__copyright copyright">
-          <ul class="copyright__list">
+        <div class="welcome__copyright">
+          <ul class="copyright">
             <li class="copyright__item">&copy; Ирина Лыпник</li>
-            <li class="copyright__item">создано с любовью в LoftSchool</li>
+            <li class="copyright__item">создано с &#10084; в LoftSchool</li>
             <li class="copyright__item">2017</li>
           </ul>
         </div>

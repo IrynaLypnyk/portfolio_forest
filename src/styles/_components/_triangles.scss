@@ -1,0 +1,32 @@
+// triangles
+
+.triangles{
+  position: absolute;
+  display: block;
+  bottom: 100%;
+  left: 0;
+  right: 0; 
+  z-index: 10;
+  margin-bottom: -6px;
+
+  &_blog{
+    margin-bottom: -6px; 
+  }
+
+}
+  
+  .triangles__svg{
+    
+    &_about-left{
+      fill: #ebefe2;
+    }
+    
+    &_about-right{
+      fill: #f4f5f0;
+    }
+
+    &_blog,
+    &_my-works{
+      fill: #f8f9f5;
+    }
+  }

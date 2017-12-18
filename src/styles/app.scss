@@ -1,12 +1,13 @@
 /* colors */
-$green:#6c9c5a;
+$green1:#6c9c5a;
 $green2:#4e8839;
-$grey: #566358;
+$grey1: #566358;
 $grey2: #373e42;
 $grey3: #f0efe9;
 $red: #e44845;
 $blue: #6da3bd;
-$bg: #f6f6f6;
+$bg1: #f6f6f6;
+$bg2: #f6f6f6;
 $bgabout1: #ebefe2;
 $bgabout2:#f4f5f0;
 $bgblog: #faf8f0;
@@ -17,5 +18,26 @@ $bgworks2: #e1e4d7;
 /* normalize.css */
 @import "../../node_modules/normalize.css/normalize";
 
-/* components */
-@import '_components/_fonts';
+/* _setups */
+@import '_setups/_fonts';
+@import '_setups/_mixins';
+@import '_setups/_base';
+
+/* _components */
+@import '_components/_socials';
+@import '_components/_user';
+@import '_components/_header';
+@import '_components/_burger-menu';
+@import '_components/_forms';
+@import '_components/_triangles';
+@import '_components/_skills-circles';
+@import '_components/_map';
+@import '_components/_slider';
+@import '_components/_footer';
+@import '_components/_flipper';
+
+/* _pages */
+@import '_pages/_index';
+@import '_pages/_about';
+@import '_pages/_blog';
+@import '_pages/_my-works';

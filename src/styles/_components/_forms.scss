@@ -1,0 +1,261 @@
+
+//common styles for all three forms
+.form-container{
+  position: relative;
+  overflow: hidden;
+  @include flex-center;
+  flex-direction: column;
+  width: 380px;
+  padding: 0 20px;
+
+ 
+}
+
+.form{
+  width: 100%;
+}
+
+.form__title{
+  margin-bottom: 30px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.form__label{
+  // width: 340px;
+  width: 100%;
+  margin-bottom: 20px;
+  @include flex-center;
+  //flex-direction: row-reverse;
+}
+
+.form__input,
+.form__textarea{
+  border: 1px solid #fff;
+  padding: 15px 10px 15px 20px; 
+  @include roboto(regular);
+  color: rgba($grey1, .5);
+  font-size: 16px;
+  outline: none; 
+  width: 100%;
+
+  &:focus{
+    border: 1px solid $green1;
+    color: $grey2;
+  }
+}
+
+.form__input{
+  height: 45px;
+
+}
+
+.form__textarea{
+  height: 140px;
+  resize: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.nav-btns{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-top: 20px;
+  
+  &__item{
+    height: 45px;
+    width: auto;
+    @include flex-center;
+    flex: 1;
+    background-color: $green1;
+     padding: 15px 30px;
+    color: #fff;
+    border: 0;
+    border-right: 2px solid rgba(#ffffff, 0.5);
+    @include roboto(medium);
+    font-size: 16px;
+    outline: none;
+  
+
+    &:last-child{
+      border-right: none;
+    }
+
+    &:hover{
+      background-color: $green2;
+      cursor: pointer;
+    }
+
+
+  }
+
+  &__link{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    @include roboto(medium);
+    white-space: nowrap;
+   
+  }
+}
+
+.welcome__socials{
+  padding-top: 30px; 
+  padding-bottom: 85px;
+
+}
+
+//user-block
+.user-block{
+  background-color: rgba(#122620, .6);
+  height: 395px;
+  border-radius: 4px 4px 0 0;
+  padding-top: 40px;
+  // display: none;
+
+}
+
+
+//auth-form
+.auth-form{
+  background-color: rgba(#122620, .6);
+  height: 407px;
+  border-radius: 4px;
+  @include flex-center;
+  flex-direction: column;
+  // display: none;
+ 
+
+  &__label{
+    flex-direction: row-reverse;
+  }
+
+  &__input-fake{
+    background-color: #f0efe9;
+    width: 52px;
+    height: 45px;
+    @include flex-center;
+    border-radius: 19px 0 0 19px;
+  }
+
+  &__input{
+    // width: 295px;
+    border-radius: 0 19px 19px 0;
+    
+    &:focus + .auth-form__input-fake .auth-form__input-icon{
+       fill: $green1;
+    }   
+  }
+  
+  &__input-icon{
+    fill: #c4cbcd;
+  }
+
+// checkbox 
+  &__checkbox-label{
+    @include flex-center;
+    margin-bottom: 10px;
+  
+  }
+
+  &__checkbox-input{
+    display: none;
+  }
+
+  &__checkbox-fake{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    margin-right: 11px;
+    position: relative;
+    @include flex-center;
+  }
+
+  &__checkbox-icon{
+    fill: #fff;
+    display: none;
+    
+  }
+
+  &__checkbox-input:checked + .auth-form__checkbox-fake{
+    background-color: $green1;
+  }
+
+  &__checkbox-input:checked + .auth-form__checkbox-fake .auth-form__checkbox-icon{
+    display: inline;
+  }
+
+  // radio
+  &__radio-block{
+    @include flex-center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  &__label-text_radio{
+    margin-bottom: 10px;
+    @include roboto(medium);
+  }
+
+  &__radio-input-block,
+  &__radio-label{
+    @include flex-center;
+    flex-direction: row;
+  }
+
+  &__radio-input{
+    display: none;
+  }
+
+  &__radio-fake{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #cccbca;
+    margin-right: 10px;
+    position: relative;
+
+    &:after{
+      content:"";
+      @include circle(8px, $green1);
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      display: none;
+    }
+  }
+    
+  &__radio-input:checked + .auth-form__radio-fake:after{
+      display: inline-block;
+  }
+
+	 &__radio-input:checked + .form__radio-fake.auth-form__radio-fake +.form__label-text.auth-form__label-text{
+      color: $green1;
+  }
+  
+  &__radio-fake:not(:first-child){
+    margin-left: 40px;
+  }
+}
+
+// contact form на странице reviews
+.contact-form{
+	padding-top: 15px;
+  height: 460px;
+  border-radius: 4px;
+  background-color: rgba(#dadbd6, 0.6);
+	justify-content: flex-start;
+   //filter: url(#blurFilter);
+
+
+
+  &__input{
+    border-radius: 20px;
+  }
+}

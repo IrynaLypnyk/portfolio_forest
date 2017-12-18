@@ -1,0 +1,90 @@
+.header{
+  width: 100%;
+  position: relative;
+  background-image: url('../images/decor/bg1800.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+ 
+  &_about,
+  &_my-works{
+    min-height: 600px;
+    position: relative;
+  }
+
+  &_blog{
+    min-height: 467px;
+  }
+}
+
+
+.header__links{
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 32px 0;
+  margin-bottom: 98px;
+
+  &_blog{
+    margin-bottom: 0;
+  }
+}
+.header__user-block_about,
+.header__user-block_my-works{
+	position: relative;
+
+}
+
+.header__user-block_blog{
+  margin-top: 10px;
+  position: relative;
+   }
+
+.user-info__bg-icon{
+  fill: rgba(#fff, 0.2);
+  position: absolute;
+  width: 100%;
+	top: 0;
+
+	&_blog{
+	left: 0;
+	right: 0;
+	fill: rgba(#fff, 0.2);
+	top: 145px;
+	}
+
+}
+
+
+
+
+// down arrow
+.header__arrow-btn{
+  position: absolute;
+  bottom: 42px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+
+   &:hover{
+     cursor: pointer;
+   }
+
+  &_blog{
+    display: none;
+
+     
+}
+
+.arrow__link{
+  display: block;
+}
+
+.arrow__icon{
+  fill:rgba(#fff, 0.5);
+
+  &:hover{
+    fill: #fff;
+  }
+}
+}

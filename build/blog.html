@@ -38,21 +38,176 @@
 <p class="browserupgrade">Вы используете устаревший браузер. <a href="https://browsehappy.com/">Обновите браузер</a> абсолютно бесплатно.</p>
 <![endif]-->
     <div class="wrapper">
-      <h1>Блог</h1>
-      <ul>
-        <li>
-          <h2>Заголовок статьи</h2>
-          <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
-        </li>
-        <li>
-          <h2>Ещё статья</h2>
-          <p>Далеко-далеко за словесными горами в стране.</p>
-        </li>
-        <li>
-          <h2>Последняя статья</h2>
-          <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Курсивных то осталось за.</p>
-        </li>
-      </ul>
+      <header class="header header_blog">
+        <div class="header__links header__links_blog">
+          <div class="header__socials">
+            <ul class="socials">
+              <li class="socials__item"><a class="socials__link" href="#">
+                  <svg class="socials__icon socials__icon_fb" width="26px" height="26px">
+                    <use xlink:href="assets/images/icons/sprite.svg#fb"> </use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="#">
+                  <svg class="socials__icon socials__icon_github" width="26px" height="26px">
+                    <use xlink:href="assets/images/icons/sprite.svg#github"> </use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="#">
+                  <svg class="socials__icon socials__icon_in" width="26px" height="26px">
+                    <use xlink:href="assets/images/icons/sprite.svg#in"> </use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="header__burger-menu">
+            <div class="burger-menu"><span class="burger-menu__line"></span><span class="burger-menu__line"></span><span class="burger-menu__line"></span></div>
+          </div>
+        </div>
+        <div class="header__user-block header__user-block_blog">
+          <div class="user user_blog">
+            <div class="user__img-block">
+              <div class="user__img"></div>
+            </div>
+          </div>
+          <svg class="user-info__bg-icon user-info__bg-icon_blog" viewbox="0 0 346px 190px">
+            <use xlink:href="assets/images/icons/sprite.svg#blog_header"></use>
+          </svg>
+          <div class="block-title block-title_blog">Блог</div>
+          <div class="user__title">Статьи, которые я написал</div>
+        </div>
+        <div class="header__arrow-btn header__arrow-btn_blog"><a class="arrow__link" href="#">
+            <svg class="arrow__icon" width="27" height="19">
+              <use xlink:href="assets/images/icons/sprite.svg#arrow_down"></use>
+            </svg></a></div>
+      </header>
+      <section class="section section_blog">
+        <div class="triangles triangles_blog">
+          <svg class="triangles__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1800 213" preserveaspectratio="none">
+            <polygon class="triangles__svg_blog" points="0,0 0,213 1800,213 1800,0 900,163"></polygon>
+          </svg>
+        </div>
+        <div class="blog__content-container">
+          <div class="blog__col blog__col_left">
+            <div class="blog-nav">
+              <ul class="blog-nav__list">
+                <li class="blog-nav__items"><a class="blog-nav__links" href="#">Самое важное в SASS</a></li>
+                <li class="blog-nav__items"><a class="blog-nav__links" href="#">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
+                <li class="blog-nav__items"><a class="blog-nav__links" href="#">Самый необходимый набор Gulp плагинов</a></li>
+                <li class="blog-nav__items"><a class="blog-nav__links" href="#">Почему я выбрал Jade</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="blog__col blog__col_right">
+            <div class="blog-articles">
+              <ul class="blog-articles__list">
+                <li class="blog-articles__item">
+                  <article class="article">
+                    <div class="article__title"> 
+                      <p>Самое важное в SASS</p>
+                    </div>
+                    <div class="article__pubdate"> 
+                      <time>22 ноября 2016</time>
+                    </div>
+                    <div class="article__text">
+                      <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. </p>
+                      <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+                      <div class="article__img-container">
+                        <div class="article__img"><img src="assets/images/content/post-img.jpg" alt=""></div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <li class="blog-articles__item">
+                  <article class="article">
+                    <div class="article__title"> 
+                      <p>Приёмы в вёрстке, без которых не обходится ни один сайт</p>
+                    </div>
+                    <div class="article__pubdate"> 
+                      <time>13 ноября 2016</time>
+                    </div>
+                    <div class="article__text">
+                      <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. </p>
+                      <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="blog-articles__item" hidden>
+                  <article class="article">
+                    <div class="article__title"> 
+                      <p>Самый необходимый набор Gulp плагинов</p>
+                    </div>
+                    <div class="article__pubdate"> 
+                      <time>13 ноября 2016</time>
+                    </div>
+                    <div class="article__text">
+                      <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. </p>
+                      <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="blog-articles__item" hidden>
+                  <article class="article">
+                    <div class="article__title"> 
+                      <p>Приёмы в вёрстке, без которых не обходится ни один сайт</p>
+                    </div>
+                    <div class="article__pubdate"> 
+                      <time>13 ноября 2016</time>
+                    </div>
+                    <div class="article__text">
+                      <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. </p>
+                      <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="footer">
+        <div class="footer__top">
+          <div class="footer__col footer__col_left">
+            <div class="footer__copyright-block">Этот сайт я сделалa в рамках обучения в Школе онлайн образования LoftSchool.</div>
+          </div>
+          <div class="footer__col footer__col_center">
+            <div class="footer__nav-block">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item"><a class="nav__link" href="my-works.html">Мои работы</a></li>
+                  <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
+                  <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
+                  <li class="nav__item"><a class="nav__link" href="index.html">Авторизация</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__socials-block">
+              <ul class="socials">
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <svg class="socials__icon socials__icon_fb" width="26px" height="26px">
+                      <use xlink:href="assets/images/icons/sprite.svg#fb"> </use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <svg class="socials__icon socials__icon_github" width="26px" height="26px">
+                      <use xlink:href="assets/images/icons/sprite.svg#github"> </use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <svg class="socials__icon socials__icon_in" width="26px" height="26px">
+                      <use xlink:href="assets/images/icons/sprite.svg#in"> </use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col footer__col_right">
+            <div class="footer__cite-block">
+              <blockquote class="footer__cite">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</blockquote>
+              <cite class="footer__cite-author">— Martin Golding</cite>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="copyright">
+            <p class="copyright__item">&copy; Ирина Лыпник</p>
+            <p class="copyright__item">создано с &#10084; в LoftSchool | 2017</p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

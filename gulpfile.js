@@ -176,20 +176,20 @@ exports.favicons = favicons;
 
 
 // контрольная сборка на продакшн
+// gulp.task('default', gulp.series(
+// 	clean,
+// 	gulp.parallel(styles, templates, images, fonts, scripts, toSprite, favicons),
+// 	gulp.parallel(watch, server)
+// ));
+
+// просто работаем
 gulp.task('default', gulp.series(
-	clean,
-	gulp.parallel(styles, templates, images, fonts, scripts, toSprite, favicons),
-	gulp.parallel(watch, server)
+    gulp.parallel(styles, templates, images, fonts, scripts, toSprite),
+    gulp.parallel(watch, server)
 ));
 
-// // просто работаем
-// gulp.task('default', gulp.series(
-//     gulp.parallel(styles, templates, images, fonts, scripts, toSprite),
-//     gulp.parallel(watch, server)
-// ));
-//
-// // контрольная сборка на продакшен
-// gulp.task('build', gulp.series(
-//     clean,
-//     gulp.parallel(styles, templates, images, fonts, scripts, toSprite)
-// ));
+// контрольная сборка на продакшен
+gulp.task('build', gulp.series(
+    clean,
+    gulp.parallel(styles, templates, images, fonts, scripts, toSprite)
+));

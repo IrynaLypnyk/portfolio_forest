@@ -1,38 +1,57 @@
 extends ../template
 
 block variables
-    - var title = 'Добро пожаловать'
+  - var title = 'Добро пожаловать'
 
 block content
-    .welcome
-        .welcome__auth
-            button.auth-btn Авторизоваться
-        .welcome__flipper.flipper
-            .flipper__side.flipper__side--front
-                .welcome__hero-info
-                    +hero(['Владимир Астахов', 'Личный сайт веб-разработчика'])
-                .welcome__socials.socials
-                    +socials('socials', [['Facebook', 'fb'], ['GitHub', 'github'], ['LinkedIn','in']])
-                nav.nav
-                    +nav-btns([['Мои работы', 'my-works.html'], ['Обо мне', 'about.html'], ['Блог', 'blog.html']])
-            .flipper__side.flipper__side--back
-                form.auth-form
-                    .auth-form__title Авторизуйтесь
-                    .auth-form__fields
-                        input.auth-form__input(type="text" placeholder="Логин")
-                        input.auth-form__input(type="password" placeholder="Пароль")
-                        .auth-form__checkbox
-                            label.auth-form__label.auth-form__label--checkbox Я человек
-                                input(type="checkbox" checked).auth-form__checkbox-input
-                        .auth-form__radio
-                            p.auth-form__radio-text Вы точно не робот?
-                            label.auth-form__label.auth-form__label--radio Да
-                                input(type="radio" name="isRobot" checked).auth-form__radio-input
-                            label.auth-form__label.auth-form__label--radio Нет
-                                input(type="radio" name="isRobot" checked).auth-form__radio-input
-                nav.nav
-                    +nav-btns([['На главную', 'index.html'], ['Войти', '#']])
-        .welcomepage__copyright.copyright
-                ul.copyright__list
-                    each item in ['&copy; Ирина Лыпник', 'создано с любовью в LoftSchool', '2017']
-                        li.copyright__item!= item
+  .welcome
+    .welcome__auth-btn
+      button.auth-btn Авторизоваться
+    .welcome__flipper
+      .welcome__user-block
+        .user-block.form-container
+          include ../components/_user.pug
+          .welcome__socials
+            +socials('socials', ["fb", "github", "in"])
+          .welcome__nav-btns
+            +nav-btns([['Мои работы', 'my-works.html'], ['Обо мне', 'about.html'], ['Блог', 'blog.html']])
+      .welcome__auth-form
+        .auth-form.form-container
+          .form__title.auth-form__title
+            .block-subtitle.block-subtitle_auth-form Авторизуйтесь
+          form.form(action="", method="get")
+            label.form__label.auth-form__label
+              input(type="text" placeholder="Логин").form__input.auth-form__input.auth-form__input_login
+              .form__input-fake.auth-form__input-fake.auth-form__input-fake_login
+                svg(width="15" height="15").form__input-icon.auth-form__input-icon.auth-form__input-icon_login
+                  use(xlink:href="assets/images/icons/sprite.svg#login")
+            label.form__label.auth-form__label
+              input(type="password" placeholder="Пароль").form__input.auth-form__input.auth-form__input_pswd
+              .form__input-fake.auth-form__input-fake.auth-form__input-fake-pswd
+                svg(width="17" height="17").form__input-icon.auth-form__input-icon.auth-form__input-icon_pswd
+                  use(xlink:href="assets/images/icons/sprite.svg#password")
+            label.form__checkbox-label.auth-form__checkbox-label
+              input(type="checkbox" checked).form__checkbox-input.auth-form__checkbox-input
+              .form__checkbox-fake.auth-form__checkbox-fake
+                svg(width="11" height="11").form__checkbox-icon.auth-form__checkbox-icon
+                  use(xlink:href="assets/images/icons/sprite.svg#check")
+              .form__label-text.auth-form__label-text Я человек
+            .form__radio-block.auth-form__radio-block
+              .form__label-text.auth-form__label-text.auth-form__label-text_radio Вы точно не робот?
+              .form__radio-input-block.auth-form__radio-input-block
+                label.form__radio-label.auth-form__radio-label
+                  input(type="radio" name="isrobot" checked).form__radio-input.auth-form__radio-input
+                  .form__radio-fake.auth-form__radio-fake
+                  .form__label-text.auth-form__label-text Да
+                label.form__radio-label.auth-form__radio-label
+                  input(type="radio" name="isrobot").form__radio-input.auth-form__radio-input
+                  .form__radio-fake.auth-form__radio-fake
+                  .form__label-text.auth-form__label-text Я не уверен
+          .auth-form__nav-btns
+            +nav-btns([['На главную', 'index.html'], ['Войти', '#']])
+    .welcome__copyright
+      ul.copyright
+        li.copyright__item &copy; Ирина Лыпник
+        li.copyright__item создано с &#10084; в LoftSchool
+        li.copyright__item 2017
+

@@ -1,0 +1,123 @@
+.section_my-works{
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: flex-start;
+  position: relative;
+}
+
+.my-works{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f8f9f5;
+}
+
+
+.my-works__title{
+  padding: 50px 0;
+  @include flex-center;
+  text-align: center;
+  position: relative;
+  
+    // @include smallphones{
+    //   padding: 25px 0;
+    // }
+}
+
+.my-works__slider{
+  width: 100%;
+}
+
+.section_reviews{
+  background-image: url("../images/decor/bgreviews1800.jpg");
+  @include cover;
+  min-height: 1287px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding-bottom: 147px;
+
+  
+}
+
+.reviews{
+  margin-bottom: 65px;
+
+   &__title{
+    padding-top: 70px;
+    text-align: center;
+    @include flex-center;
+    margin-bottom: 65px;
+    position: relative;
+  }
+  
+  &__list{
+    display: flex;
+    justify-content: center;
+    padding: 0 25px;
+    width: 100%;
+  }
+
+  &__item{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+		align-items: center;
+
+      &:first-child{
+      margin-right: 30px;
+
+    }
+  }
+
+  &__text{
+		@include roboto(regularitalic);
+    color: #5d5a55;
+    margin-bottom: 20px;
+		background: url('../images/decor/quotes.png') no-repeat;
+	  padding-top: 28px;
+
+  }
+  &__author{
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar{
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 23px;
+  }
+
+  &__img{
+    max-width: 100%;
+  }
+
+  &__author-name{
+    @include roboto(bolditalic);
+    color: $green2;
+  }
+
+  &__author-title{
+    color: #373e42;
+	  @include roboto(regularitalic);
+  }
+}
+
+.my-works__arrow-btn{
+  transform: rotate(180deg);
+  height: 160px;
+  @include flex-center;
+  // position: absolute;
+  // bottom: 215px;
+  // left: 50%;
+  // transform: translateX(-50%);
+
+}
+
