@@ -4,6 +4,8 @@ node_modules
 src/images/
 src/fonts/
 src/favicons/
+bash.exe.stackdump
+
 
 # Compiled source #
 ###################
