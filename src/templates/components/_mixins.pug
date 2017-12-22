@@ -11,7 +11,7 @@ mixin nav-btns (pages)
   ul.nav-btns 
     each page in pages
       li.nav-btns__item
-        a(href=`${page[1]}`).nav-btns__link= `${page[0]}`
+        a(href=`${page[1]}` class='nav-btns__link ' + 'nav-btns__link_' + `${page[2]}`)= `${page[0]}`
 
 
 //- user (кроме страницы "Блог")
