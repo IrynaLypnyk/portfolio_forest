@@ -246,13 +246,13 @@
 
 // contact form на странице reviews
 .contact-form{
+  margin: 0 auto;
 	padding-top: 15px;
   height: 460px;
   border-radius: 4px;
   background-color: rgba(#dadbd6, 0.6);
 	justify-content: flex-start;
    //filter: url(#blurFilter);
-
 
 
   &__input{
