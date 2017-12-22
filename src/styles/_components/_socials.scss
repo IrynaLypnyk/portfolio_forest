@@ -1,0 +1,34 @@
+.socials__item{
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: bottom;
+
+}
+
+.socials__icon{
+  fill: rgba(#fff, 0.5);
+  vertical-align: bottom;
+
+
+  &:hover{
+    fill: $green1;
+  }
+}
+
+.header__socials .socials__icon{
+      fill: #fff;
+
+    &:hover{
+    fill: $green1;
+  }
+}
+
+.footer .socials__icon{
+    fill: #a9acad;
+
+    &:hover{
+      fill: #fff;
+    }
+
+
+}

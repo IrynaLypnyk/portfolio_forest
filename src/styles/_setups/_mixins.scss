@@ -1,0 +1,34 @@
+@mixin clearfix {
+&:before,
+&:after {
+content: "";
+display: table;
+}
+
+&:after {
+clear: both;
+}
+}
+
+@mixin circle($width, $color) {
+width: $width;
+height: $width;
+border-radius: $width/2;
+background-color: $color;
+}
+
+@mixin cover() {
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+}
+
+@mixin flex-center() {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+@mixin skill-circle($radius, $percent) {
+  stroke-dasharray: 2*3.1415*$radius*$percent/100 2*3.1415*$radius;
+}

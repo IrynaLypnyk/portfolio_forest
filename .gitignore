@@ -1,6 +1,11 @@
 node_modules
 .idea/
 .vscode/
+src/images/
+src/fonts/
+src/favicons/
+bash.exe.stackdump
+
 
 # Compiled source #
 ###################

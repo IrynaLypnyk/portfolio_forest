@@ -1,0 +1,65 @@
+.welcome{
+  height: 100vh;
+  width: 100%;
+  background-image: url("../images/decor/bg1800.jpg");
+  @include cover;
+  @include flex-center;
+  position: relative;
+
+  }
+
+.auth-btn{
+  @include roboto(medium);
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 19px;
+  padding: 14px 28px;
+  position: absolute;
+  top: 25px;
+  right:100px;
+  outline: none;
+
+ 
+
+  &:hover{
+    color: #fff;
+    background-color: $green1;
+    cursor: pointer;
+    letter-spacing: 0;
+    border-color: #729e19;
+  }
+
+}
+
+.welcome__user-block{
+  padding-top: 40px;
+  background-color: rgba(#122620, .6);
+}
+
+// copyright
+.welcome__copyright{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 38px;
+  display: flex;
+  justify-content: center;
+  
+
+ }
+
+.copyright{
+  display: flex;
+  flex-direction: row;
+
+  &__item:not(:last-child):after{
+    content: "|";
+    display: inline;
+    color: #fff;
+    margin: 0 6px; 
+  }
+   
+}

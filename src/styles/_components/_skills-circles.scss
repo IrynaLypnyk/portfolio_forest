@@ -1,0 +1,127 @@
+.skills-row__title {
+  @include roboto(medium);
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: $green2;
+
+}
+
+.skills-row__list{
+  display: flex;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.skills-row__item{
+  margin-right: 40px; 
+  position: relative;
+
+
+  // &:nth-child(odd):not(:last-child){
+  //   @include phones{
+  //     margin-right: 30px; 
+  //   }
+  // }
+  
+}
+
+.skill-circle__svg-img {
+  fill: none;
+  stroke-width: 20px;
+  width: 120px;
+  height: 120px;
+
+}
+
+.circle_base {
+  stroke: #dfdcd5;
+  
+}
+
+.circle_fill {
+  stroke: rgba($green1, 0.93);
+  stroke-dasharray: 0 2*3.1415*50;
+  transform: rotate(-90deg);
+  transform-origin: (50% 50%);
+  transition: all 1s;
+  
+}
+
+.skill-circle__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 13.95px;
+  @include roboto(medium);
+  color: $green2;
+  }
+
+.skill-circle__svg-img:hover .circle-0 {
+    @include skill-circle(50, 0);
+ }
+ .skill-circle__svg-img:hover .circle-5 {
+    @include skill-circle(50, 5);
+}
+.skill-circle__svg-img:hover .circle-10 {
+  @include skill-circle(50, 10);
+}
+.skill-circle__svg-img:hover .circle-15 {
+  @include skill-circle(50, 15);
+}
+.skill-circle__svg-img:hover .circle-20 {
+  @include skill-circle(50, 20);
+}
+.skill-circle__svg-img:hover .circle-25 {
+  @include skill-circle(50, 25);
+}
+.skill-circle__svg-img:hover .circle-30 {
+  @include skill-circle(50, 30);
+}
+.skill-circle__svg-img:hover .circle-35 {
+  @include skill-circle(50, 35);
+}
+.skill-circle__svg-img:hover .circle-40 {
+  @include skill-circle(50, 40);
+}
+.skill-circle__svg-img:hover .circle-45 {
+  @include skill-circle(50, 45);
+}
+.skill-circle__svg-img:hover .circle-50 {
+  @include skill-circle(50, 50);
+}
+.skill-circle__svg-img:hover .circle-55 {
+  @include skill-circle(50, 55);
+}
+.skill-circle__svg-img:hover .circle-60 {
+  @include skill-circle(50, 60);
+}
+.skill-circle__svg-img:hover .circle-65 {
+  @include skill-circle(50, 65);
+}
+.skill-circle__svg-img:hover .circle-70 {
+  @include skill-circle(50, 70);
+}
+.skill-circle__svg-img:hover .circle-75 {
+  @include skill-circle(50, 75);
+}
+.skill-circle__svg-img:hover .circle-80 {
+  @include skill-circle(50, 80);
+}
+.skill-circle__svg-img:hover .circle-85 {
+  @include skill-circle(50, 85);
+}
+.skill-circle__svg-img:hover .circle-90 {
+  @include skill-circle(50, 90);
+}
+.skill-circle__svg-img:hover .circle-95 {
+  @include skill-circle(50, 95);
+}
+.skill-circle__svg-img:hover .circle-100 {
+  @include skill-circle(50, 100);
+}
+
+
+
+

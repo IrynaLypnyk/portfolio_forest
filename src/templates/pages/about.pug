@@ -1,8 +1,63 @@
 extends ../template
 
 block variables
-    - var title = 'Обо мне'
+  - var title = 'Обо мне'
 
 block content
-    h1 Обо мне
-    include ../common/technologies.pug
+  +header('about', 'portfolio', '1170', '285')
+  section.section.section_about
+    .triangles
+      svg.triangles__svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1800 163" preserveaspectratio="none")
+        polygon(points="0,0 0,163 900,163").triangles__svg_about-left
+        polygon(points="1800,0 1800,163 900,163").triangles__svg_about-right
+    .about__content-container
+      .about__col.about__col_left
+        .about__leftcol-title
+          .block-title.block-title_about Обо мне
+          svg.block-title__bg-svg.block-title__bg-svg_about(viewBox="0 0 361 126")
+            use(xlink:href="assets/images/icons/sprite.svg#about_header")
+        .about__leftcol-content
+          .user-description
+            .user-description__image-block
+              img.user-description__img(src="assets/images/content/hero.jpg")
+            .user-description__title
+              .block-subtitle Кто я
+            .user-description__text
+              p Я веб-разработчик из Киева. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      .about__col.about__col_right
+        .about__right-title
+          .block-subtitle 
+            | Чем я могу быть 
+            br
+            | Вам полезен
+        .about__right-text
+          p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.
+        .about__right-skills-block
+          ul.skills
+            li.skills__item
+              .skills-row
+                .skills-row__title Frontend
+                +skills-circles([['HTML5', '90'], ['CSS3', '90'], ['JavaScript & jQuery','50']])
+            li.skills__item
+              .skills-row
+                .skills-row__title Backend
+                +skills-circles([['Node.js & npm', '75'], ['PHP', '15'], ['mySQL', '20'], ['Mongo.db','10']])
+            li.skills__item
+              .skills-row
+                .skills-row__title Workflow
+                +skills-circles([['Git', '60'], ['Gulp', '75'], ['Webpack', '50'], ['Sass & Pug(Jade)','80']])
+  section.section.section_map
+    .google-map
+    .map-contacts
+      .map-contacts__title
+        .block-subtitle Контакты
+      .map-contacts__list
+        +contacts('map', [['skype', 'skype_iryna.lypnyk', 'skype:iryna.lypnyk '], ['email', 'iryna.lypnyk@gmail.com', 'mailto:iryna.lypnyk@gmail.com'], ['phone', '+38 (063) 76 989 77', 'tel:+380637698977'], ['address', 'Киев, Украина', '#map']])
+  include ../components/_footer.pug
+
+  
+
+    
+   
+   

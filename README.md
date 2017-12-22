@@ -4,7 +4,7 @@
 
 <p><strong>Наставник:</strong> Андрей Иващенко</p>
 
-<h3><strong>Демо:</strong><a href="https://irynalypnyk.github.io/portfolio_forest/build/">https://irynalypnyk.github.io/portfolio_forest</a></h3>
+<h3><strong>Демо:</strong><a href="https://irynalypnyk.github.io">https://irynalypnyk.github.io</a></h3>
 
 
 <h4>Сборка gulp + webpack</h4>
