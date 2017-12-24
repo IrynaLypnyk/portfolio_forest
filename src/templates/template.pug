@@ -36,9 +36,6 @@ html(lang="ru")
         meta(name="theme-color" content="#ffffff")
         //css
         link(rel='stylesheet' href='assets/styles/app.min.css')
-        //scripts
-        script(src='assets/scripts/bundle.js' defer)
-
 
     body
         |
@@ -48,6 +45,13 @@ html(lang="ru")
         <![endif]-->
         .wrapper
             block content
+
+        //scripts
+        block add-scripts
+        script(src='assets/scripts/bundle.js')
+
+
+
 
 
 

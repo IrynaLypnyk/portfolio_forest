@@ -48,16 +48,12 @@ block content
                 .skills-row__title Workflow
                 +skills-circles([['Git', '60'], ['Gulp', '75'], ['Webpack', '50'], ['Sass & Pug(Jade)','80']])
   section.section.section_map
-    .google-map
+    #map
     .map-contacts
       .map-contacts__title
         .block-subtitle Контакты
       .map-contacts__list
         +contacts('map', [['skype', 'skype_iryna.lypnyk', 'skype:iryna.lypnyk '], ['email', 'iryna.lypnyk@gmail.com', 'mailto:iryna.lypnyk@gmail.com'], ['phone', '+38 (063) 76 989 77', 'tel:+380637698977'], ['address', 'Киев, Украина', '#map']])
   include ../components/_footer.pug
-
-  
-
-    
-   
-   
+block add-scripts
+  script(src!='https://maps.googleapis.com/maps/api/js?key=AIzaSyAa3Dwo3IxCqa3Z-_ZZpCGbElFEMKxfKcg')

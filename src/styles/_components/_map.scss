@@ -1,24 +1,14 @@
 .section_map{
-  // height: 1100px;
-  // width: 100%;
   position: relative;
-  background: url("../images/decor/map1800.jpg");
-  @include cover;
-
- }
-
-.google-map{
-  height: 1074px;
-  
-  
+   height: 1074px;
 }
 
 #map{
   width: 100%;
   height: 100%;
-  
-}
+ }
 
+//map__contacts
 .map-contacts{
   width: 381px;
   padding: 30px 40px;
@@ -30,15 +20,10 @@
   top: 340px;
   left: 50%;
   transform: translateX(-50%);
-
- 
-  
 }
 
 .map-contacts__title{
   margin-bottom: 35px;
-
- 
 }
 
 .map-contacts__list{
@@ -56,7 +41,6 @@
     margin-bottom: 0;
   }
 
-  
 }
 
 .contacts__icon{
