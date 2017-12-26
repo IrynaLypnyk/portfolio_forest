@@ -6,9 +6,15 @@
   @include flex-center;
   flex-direction: column;
   width: 380px;
-  padding: 0 20px;
+  padding: 0 rem(20px);
 
- 
+  @include tablets{
+    width: 348px;
+  }
+
+  @include w360{
+    width: 300px;
+  }
 }
 
 .form{
@@ -24,7 +30,7 @@
 .form__label{
   // width: 340px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
   @include flex-center;
   //flex-direction: row-reverse;
 }
@@ -32,10 +38,10 @@
 .form__input,
 .form__textarea{
   border: 1px solid #fff;
-  padding: 15px 10px 15px 20px; 
+  padding: 15px 10px 15px 20px;
   @include roboto(regular);
   color: rgba($grey1, .5);
-  font-size: 16px;
+  font-size: rem(16px);
   outline: none; 
   width: 100%;
 
@@ -57,73 +63,11 @@
   margin-bottom: 20px;
 }
 
-.nav-btns{
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin-top: 20px;
-  
-  &__item{
-    height: 45px;
-    width: auto;
-    @include flex-center;
-    flex: 1;
-    background-color: $green1;
-     padding: 15px 30px;
-    color: #fff;
-    border: 0;
-    border-right: 2px solid rgba(#ffffff, 0.5);
-    @include roboto(medium);
-    font-size: 16px;
-    outline: none;
-  
-
-    &:last-child{
-      border-right: none;
-    }
-
-    &:hover{
-      background-color: $green2;
-      cursor: pointer;
-    }
-
-
-  }
-
-  &__link{
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
-    @include roboto(medium);
-    white-space: nowrap;
-   
-  }
-}
-
-.welcome__socials{
-  padding-top: 30px; 
-  padding-bottom: 85px;
-
-}
-
-//user-block
-.user-block{
-  //background-color: rgba(#122620, .6);
-  height: 395px;
-  border-radius: 4px 4px 0 0;
-  //padding-top: 40px;
-  // display: none;
-
-}
-
 
 //auth-form
 .auth-form{
   background-color: rgba(#122620, .6);
-  height: 407px;
+  height: rem(407px);
   border-radius: 4px;
   @include flex-center;
   flex-direction: column;
@@ -240,7 +184,7 @@
   }
   
   &__radio-fake:not(:first-child){
-    margin-left: 40px;
+    margin-left: rem(40px);
   }
 }
 

@@ -11,18 +11,25 @@
 .auth-btn{
   @include roboto(medium);
   color: #fff;
-  font-size: 16px;
+  font-size: rem(16px);
   border: 1px solid #fff;
   background-color: transparent;
-  border-radius: 19px;
+  border-radius: 18px;
   padding: 14px 28px;
   position: absolute;
   top: 25px;
-  right:100px;
+  right: 100px;
   outline: none;
 
- 
+  @include phones{
+    right: 50%;
+    transform: translateX(50%);
+  }
 
+  @include w360{
+    top: 10px;
+  }
+ 
   &:hover{
     color: #fff;
     background-color: $green1;
@@ -30,24 +37,93 @@
     letter-spacing: 0;
     border-color: #729e19;
   }
-
 }
 
+//user-block
 .welcome__user-block{
   padding-top: 40px;
   background-color: rgba(#122620, .6);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
+.user-block{
+  height: 395px;
+}
+
+
+//socials
+.welcome__socials{
+  padding-top: 30px;
+  padding-bottom: 85px;
+
+  @include w360{
+    padding-bottom: 30px;
+  }
+}
+
+//nav-btns
+.nav-btns{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-top: 20px;
+
+  &__item{
+    height: 45px;
+    width: auto;
+    @include flex-center;
+    flex: 1;
+    background-color: $green1;
+    padding: 15px 30px;
+    color: #fff;
+    border: 0;
+    border-right: 2px solid rgba(#ffffff, 0.5);
+    @include roboto(medium);
+    font-size: rem(16px);
+    outline: none;
+
+    @include w450{
+      padding: 20px;
+    }
+
+
+    &:last-child{
+      border-right: none;
+    }
+
+    &:hover{
+      background-color: $green2;
+      cursor: pointer;
+    }
+ }
+
+  &__link{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    @include roboto(medium);
+    white-space: nowrap;
+
+  }
+}
 // copyright
 .welcome__copyright{
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding-bottom: 38px;
+  padding-bottom: rem(38px);
   display: flex;
   justify-content: center;
-  
+
+  @include w450{
+    padding-bottom: 5px;
+    @include roboto(light);
+  }
 
  }
 
@@ -55,11 +131,20 @@
   display: flex;
   flex-direction: row;
 
+  @include w450{
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__item:not(:last-child):after{
     content: "|";
     display: inline;
     color: #fff;
-    margin: 0 6px; 
+    margin: 0 6px;
+
+    @include w450{
+      display: none;
+    }
   }
    
 }

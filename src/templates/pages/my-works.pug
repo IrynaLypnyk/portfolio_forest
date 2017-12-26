@@ -8,8 +8,8 @@ block content
   section.section.section_my-works
     .triangles.triangles_my-works
       svg.triangles__svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1800 163" preserveaspectratio="none")
-        polygon(points="0,0 0,163 900,163 900,162").triangles__svg_my-works
-        polygon(points="1800,0 1800,163 900,163 900,162").triangles__svg_my-works
+        polygon(points="0,0 0,163 901,163 901,160").triangles__svg_my-works
+        polygon(points="1800,0 1800,163 899,163 899,160").triangles__svg_my-works
     .my-works
       .my-works__title
         .block-title.block-title_my-works Мои работы
@@ -17,32 +17,25 @@ block content
           use(xlink:href="assets/images/icons/sprite.svg#works_header")
       .my-works__slider
         .slider
-          .slider__col.slider__col_left
-            .slider__desc
-              .slider__title
-                .block-subtitle.block-subtitle_my-works 
-                  | Сайт школы онлайн 
-                  br
-                  | Образования
-              .slider__skills
-                .slider__skills-list HTML , CSS, JAVASCRIPT
-              .slider__btn
-                a.slider__btn-link(href="#")
-                  svg.slider__link-icon(width="19" height="19")
-                    use(xlink:href="assets/images/icons/sprite.svg#link")
-                  span.slider__link-text Посмотреть сайт
-          .slider__col.slider__col_right
-            .slider__slides-preview
-              img.slider__slide-img(src="assets/images/content/work-1.png", alt="")
-            .slider__slides-nav
-              .slider__control.slider__control_prev
-                a.slider__controls-link(href="#")
-                  svg.slider__arrow-svg(width="43" height="27")
-                    use(xlink:href="assets/images/icons/sprite.svg#portf_arrow_down")
-              .slider__control.slider__control_next
-                a.slider__controls-link(href="#")
-                  svg.slider__arrow-svg(width="43" height="27")
-                    use(xlink:href="assets/images/icons/sprite.svg#portf_arrow_up")
+          .slider__slide-desc
+            .slider__slide-title.block-subtitle.block-subtitle_my-works Сайт школы онлайн образования
+            .slider__desc-skills HTML , CSS, JAVASCRIPT
+            .slider__btn
+              a.slider__btn-link(href="#")
+                svg.slider__link-icon(width="19" height="19")
+                  use(xlink:href="assets/images/icons/sprite.svg#link")
+                span.slider__link-text Посмотреть сайт
+          .slider__slides-preview
+            img.slider__slide-img(src="assets/images/content/work-1.png", alt="")
+          .slider__slides-nav
+            .slider__control.slider__control_toprev
+              a.slider__controls-link(href="#")
+                svg.slider__arrow-svg(width="43" height="27")
+                  use(xlink:href="assets/images/icons/sprite.svg#portf_arrow_down")
+            .slider__control.slider__control_tonext
+              a.slider__controls-link(href="#")
+                svg.slider__arrow-svg(width="43" height="27")
+                  use(xlink:href="assets/images/icons/sprite.svg#portf_arrow_up")
   section.section.section_reviews
     .reviews__title
       .block-title.block-title_reviews 
@@ -92,4 +85,4 @@ block content
       a.arrow__link(href="#")
         svg.arrow__icon(width="27" height="19")
           use(xlink:href="assets/images/icons/sprite.svg#arrow_down")
-  include ../components/_footer.pug
+  +footer('my-works')

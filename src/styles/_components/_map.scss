@@ -1,6 +1,14 @@
 .section_map{
   position: relative;
    height: 1074px;
+
+  @include desktops{
+    height: 975px;
+  }
+
+  @include tablets{
+    height: 907px;
+  }
 }
 
 #map{
@@ -17,13 +25,33 @@
   @include flex-center;
   flex-direction: column;
   position: absolute;
-  top: 340px;
+  top: 330px;
   left: 50%;
   transform: translateX(-50%);
+
+   @include desktops{
+    top: 220px;
+  }
+
+  @include tablets{
+   width: 348px;
+   padding: 25px 40px;
+   top: 170px;
+  }
+
+  @include w360{
+    top: 0;
+    width: 100%;
+    padding: 23px 28px;
+  }
 }
 
 .map-contacts__title{
   margin-bottom: 35px;
+
+  @include tablets{
+    margin-bottom: 30px;
+  }
 }
 
 .map-contacts__list{
@@ -37,10 +65,13 @@
   align-items: center;
   margin-bottom: 25px;
 
+  @include tablets{
+    margin-bottom: 20px;
+  }
+
   &:last-child{
     margin-bottom: 0;
   }
-
 }
 
 .contacts__icon{

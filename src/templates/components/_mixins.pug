@@ -95,5 +95,22 @@ mixin contacts(classMixin, contactTypes)
         li(class='contacts__item ' + `contacts__item_${classMixin}`)
           div(class='contacts__data')= `${contactType[1]}`
 
-
+mixin footer(page)
+  div(class='footer '+ 'footer_'+`${page}`)
+    .footer__top
+      .footer__col.footer__col_left
+        .footer__copyright-block Этот сайт я сделалa в рамках обучения в Школе онлайн образования LoftSchool.
+      .footer__col.footer__col_center
+        .footer__nav-block
+          +nav-links([['Мои работы', 'my-works.html'], ['Обо мне', 'about.html'], ['Блог', 'blog.html'], ['Авторизация', 'index.html']])
+        .footer__socials-block
+          +socials('socials', ["fb", "github", "in"])
+      .footer__col.footer__col_right
+        .footer__cite-block
+          blockquote.footer__cite-text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+          cite.footer__cite-author — Martin Golding
+    .footer__bottom
+      .copyright
+        p.copyright__item &copy; Ирина Лыпник
+        p.copyright__item создано с &#10084; в LoftSchool | 2017
 

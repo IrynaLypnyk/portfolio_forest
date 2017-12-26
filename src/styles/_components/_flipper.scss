@@ -1,14 +1,22 @@
 // flipper
-
 .welcome__flipper{
   display: flex;
   position: relative;
-  width: 380px;
-  height: 395px;
+  width: rem(380px);
+  height: rem(395px);
  	transition: 0.7s;
 	transform-style: preserve-3d;
   position: relative;
   perspective: 1000px;
+
+
+	@include tablets{
+    width: 348px;
+  }
+
+  @include w360{
+    width: 300px;
+  }
 }
 
 .welcome__user-block,

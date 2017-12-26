@@ -28,13 +28,17 @@ ul {
 html,
 body {
   height: 100%;
+
+  @include tablets{
+    font-size: 14px;
+  }
 }
 
 body{
   @include roboto(regular);
   background-color: $bg1;
   color: #fff;
-  font-size: 16px;
+  font-size: rem(16px);
   line-height: 1.42;
 }
 
@@ -54,6 +58,14 @@ body{
   color: $grey2;
   @include flex-center;
   flex-direction: column;
+
+    @include w810{
+      font-size: 49px;
+    }
+
+    @include w380{
+      font-size: 35px;
+    }
 
 
   &:after {
@@ -98,12 +110,38 @@ body{
     &_about{
       top: -30px;
       width: 346px;
+
+      @include w810{
+        width: 250px;
+        top: -20px;
+      }
+
+      @include w360{
+        width: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -15px;
+      }
+
     }
 
 		&_my-works,
 		&_reviews{
      	width: 510px;
 			top: 8px;
+
+      @include w810{
+        width: 380px;
+			 	top: 0;
+      }
+
+			@include w450{
+        width: 340px;
+      }
+
+			@include w380{
+      	width: 250px;
+    	}
     }
   }
 }
@@ -116,31 +154,35 @@ body{
   @include flex-center;
   flex-direction: column;
 
-&:after {
-  content: "";
-  width: 88px;
-  height: 3px;
-  display: block;
-  background-color: $grey1;
-  margin-top: 15px;
+  @include w360{
+    font-size: 21px;
+  }
+
+  &:after {
+    content: "";
+    width: 88px;
+    height: 3px;
+    display: block;
+    background-color: $grey1;
+    margin-top: 15px;
+  }
+
+  &_auth-form {
+    color: #fff;
+
+    &:after {
+    background-color: #fff;
+    }
 }
 
-&_auth-form {
-color: #fff;
+  &__my-works {
+  flex-direction: column;
+  }
 
-&:after {
-background-color: #fff;
-}
-}
-
-&__my-works {
-flex-direction: column;
-}
-
-%_blog:after {
-	background-color: #fff;
-	margin-bottom: 20px;
-}
+  &_blog:after {
+    background-color: #fff;
+    margin-bottom: 20px;
+  }
 }
 
 

@@ -1,14 +1,16 @@
 .burger-menu{
   flex-direction: column;
   justify-content: space-between;
-  height: 35px;
+  height: 36px;
   display: flex;
+
+  @include w360{
+    height: 23px;
+  }
 
   &:hover{
     cursor: pointer;
   }
-
-  
 }
 
 .burger-menu__line {
@@ -17,7 +19,10 @@
   background-color: #fff;
   border-radius: 2px;
 
-  
+  @include w360{
+    width: 26px;
+		height: 3px;
+  }
 }
 
 
