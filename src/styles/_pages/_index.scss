@@ -5,6 +5,14 @@
   @include cover;
   @include flex-center;
   position: relative;
+
+  @include laptops{
+    background-image: url("../images/decor/bg1000.jpg");
+    }
+
+  @include phones{
+    background-image: url("../images/decor/bg500.jpg");
+    }
   }
 
 .welcome__auth-btn{

@@ -5,10 +5,9 @@
 }
 .socials__item{
   display: inline-block;
-  margin-right: 20px;
   vertical-align: bottom;
 
-  @include w360{
+  &:not(:last-child){
     margin-right: 20px;
   }
 }
