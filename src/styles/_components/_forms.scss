@@ -3,18 +3,9 @@
 .form-container{
   position: relative;
   overflow: hidden;
-  @include flex-center;
-  flex-direction: column;
-  width: 380px;
-  padding: 0 rem(20px);
+  padding: 0 20px;
 
-  @include tablets{
-    width: 348px;
-  }
 
-  @include w360{
-    width: 300px;
-  }
 }
 
 .form{
@@ -28,12 +19,10 @@
 }
 
 .form__label{
-  // width: 340px;
   width: 100%;
   margin-bottom: rem(20px);
   @include flex-center;
-  //flex-direction: row-reverse;
-}
+ }
 
 .form__input,
 .form__textarea{
@@ -67,11 +56,11 @@
 //auth-form
 .auth-form{
   background-color: rgba(#122620, .6);
-  height: rem(407px);
-  border-radius: 4px;
+  height: 380px;
+  border-radius: 4px 4px 0 0;
   @include flex-center;
   flex-direction: column;
-  // display: none;
+
  
 
   &__label{
@@ -87,7 +76,6 @@
   }
 
   &__input{
-    // width: 295px;
     border-radius: 0 19px 19px 0;
     
     &:focus + .auth-form__input-fake .auth-form__input-icon{
@@ -138,7 +126,7 @@
   &__radio-block{
     @include flex-center;
     flex-direction: column;
-    margin-bottom: 20px;
+
   }
 
   &__label-text_radio{
@@ -192,14 +180,20 @@
 .contact-form{
   margin: 0 auto;
 	padding-top: 15px;
+  width: 380px;
   height: 460px;
   border-radius: 4px;
   background-color: rgba(#dadbd6, 0.6);
 	justify-content: flex-start;
-   //filter: url(#blurFilter);
-
 
   &__input{
     border-radius: 20px;
   }
+
 }
+  .form__btns{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }

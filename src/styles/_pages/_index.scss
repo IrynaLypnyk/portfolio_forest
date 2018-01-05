@@ -5,9 +5,22 @@
   @include cover;
   @include flex-center;
   position: relative;
-
   }
 
+.welcome__auth-btn{
+  position: absolute;
+  top: 25px;
+  right: 100px;
+
+   @include phones{
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  @include w360{
+    top: 10px;
+  }
+}
 .auth-btn{
   @include roboto(medium);
   color: #fff;
@@ -16,20 +29,8 @@
   background-color: transparent;
   border-radius: 18px;
   padding: 14px 28px;
-  position: absolute;
-  top: 25px;
-  right: 100px;
   outline: none;
 
-  @include phones{
-    right: 50%;
-    transform: translateX(50%);
-  }
-
-  @include w360{
-    top: 10px;
-  }
- 
   &:hover{
     color: #fff;
     background-color: $green1;
@@ -40,45 +41,49 @@
 }
 
 //user-block
-.welcome__user-block{
-  padding-top: 40px;
-  background-color: rgba(#122620, .6);
-  border-radius: 4px;
+.welcome__user-block,
+.welcome__auth-form{
+  //background-color: rgba(#122620, .6);
+  //border-radius: 4px;
   overflow: hidden;
+  width: 100%;
 }
 
 .user-block{
-  height: 395px;
+  height: 350px;
+  background-color: rgba(#122620, .6);
+  border-radius: 4px 4px 0 0;
+  @include flex-center;
+  flex-direction: column;
 }
 
 
 //socials
 .welcome__socials{
   padding-top: 30px;
-  padding-bottom: 85px;
+  //padding-bottom: 85px;
 
   @include w360{
-    padding-bottom: 30px;
+    //padding-bottom: 30px;
   }
 }
 
 //nav-btns
+
 .nav-btns{
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin-top: 20px;
+  height: 45px;
+
 
   &__item{
-    height: 45px;
+
     width: auto;
     @include flex-center;
     flex: 1;
     background-color: $green1;
-    padding: 15px 30px;
+    padding-left: 30px;
+    padding-right: 30px;
     color: #fff;
     border: 0;
     border-right: 2px solid rgba(#ffffff, 0.5);

@@ -13,8 +13,8 @@ block content
           include ../components/_user.pug
           .welcome__socials
             +socials('socials', ["fb", "github", "in"])
-          .welcome__nav-btns
-            +nav-btns([['Мои работы', 'my-works.html'], ['Обо мне', 'about.html'], ['Блог', 'blog.html']])
+        .welcome__nav-btns
+          +nav-btns([['Мои работы', 'my-works.html'], ['Обо мне', 'about.html'], ['Блог', 'blog.html']])
       .welcome__auth-form
         .auth-form.form-container
           .form__title.auth-form__title
@@ -47,8 +47,8 @@ block content
                   input(type="radio" name="isrobot").form__radio-input.auth-form__radio-input
                   .form__radio-fake.auth-form__radio-fake
                   .form__label-text.auth-form__label-text Я не уверен
-          .auth-form__nav-btns
-            +nav-btns([['На главную', 'index.html', 'to-main-page'], ['Войти', '#', 'to-enter']])
+        .auth-form__nav-btns
+          +nav-btns([['На главную', 'index.html', 'to-main-page'], ['Войти', '#', 'to-enter']])
     .welcome__copyright
       ul.copyright
         li.copyright__item &copy; Ирина Лыпник

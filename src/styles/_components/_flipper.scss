@@ -2,12 +2,14 @@
 .welcome__flipper{
   display: flex;
   position: relative;
-  width: rem(380px);
-  height: rem(395px);
+  width: 380px;
+	height: 426px;
  	transition: 0.7s;
 	transform-style: preserve-3d;
   position: relative;
   perspective: 1000px;
+	align-items: center;
+
 
 
 	@include tablets{
@@ -22,16 +24,16 @@
 .welcome__user-block,
 .welcome__auth-form{
   position: absolute;
-  top: 0;
-  left: 0;
   backface-visibility: hidden;
+
 }
 
 .welcome__user-block{
-  z-index: 5;
+	z-index: 5;
+
 }
 
 .welcome__auth-form{
-  	transform: rotateY(180deg);
+		transform: rotateY(180deg);
 }
 

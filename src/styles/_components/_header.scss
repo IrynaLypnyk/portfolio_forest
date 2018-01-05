@@ -98,34 +98,33 @@
 }
 
 // down arrow
-.header__arrow-btn{
-  position: absolute;
-  bottom: 42px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 20;
+.header__arrow-btn {
+position: absolute;
+bottom: 42px;
+left: 50%;
+transform: translateX(-50%);
+z-index: 20;
 
-   &:hover{
-     cursor: pointer;
-   }
-
-  &_blog{
-    display: none;
-
-    @include phones{
-      display: block;
-    }
+&:hover {
+cursor: pointer;
 }
 
+&_blog {
+display: none;
+
+@include phones {
+display: block;
+	}
+	}
+}
 .arrow__link{
   display: block;
 }
 
 .arrow__icon{
-  fill:rgba(#fff, 0.5);
+  fill:rgba(#fff, 0.7);
 
   &:hover{
     fill: #fff;
   }
-}
 }

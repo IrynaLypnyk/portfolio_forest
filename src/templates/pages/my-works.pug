@@ -73,12 +73,13 @@ block content
       .form__title.form__title_contact-form
         .block-subtitle.block-subtitle_contact-form Связаться со мной
       form.form
-        label.form__label.contact-form__label
-          input(type="text", name="name" placeholder="Имя").form__input.contact-form__input
-        label.form__label.contact-form__label 
-          input(type="e-mail", name="e-mail" placeholder="E-mail").form__input.contact-form__input
-        textarea(placeholder ="Ваше сообщение").form__textarea.contact-form__textarea
-        .nav-btns
+        .form__fields
+          label.form__label.contact-form__label
+            input(type="text", name="name" placeholder="Имя").form__input.contact-form__input
+          label.form__label.contact-form__label
+            input(type="e-mail", name="e-mail" placeholder="E-mail").form__input.contact-form__input
+          textarea(placeholder ="Ваше сообщение").form__textarea.contact-form__textarea
+        .form__btns.nav-btns
             button.nav-btns__item.form__submit-btn.form__submit-btn_contact-form(type="submit" value="Отправить") Отправить
             button.nav-btns__item.form__reset-btn.form__reset-btn_contact-form(type="reset" value="Очистить") Очистить
     .my-works__arrow-btn
