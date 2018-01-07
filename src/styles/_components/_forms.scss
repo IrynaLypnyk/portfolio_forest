@@ -1,11 +1,8 @@
-
 //common styles for all three forms
 .form-container{
   position: relative;
   overflow: hidden;
   padding: 0 20px;
-
-
 }
 
 .form{
@@ -42,16 +39,14 @@
 
 .form__input{
   height: 45px;
-
 }
 
 .form__textarea{
   height: 140px;
   resize: none;
   border-radius: 20px;
-  margin-bottom: 20px;
+  //margin-bottom: 20px;
 }
-
 
 //auth-form
 .auth-form{
@@ -176,6 +171,7 @@
   }
 }
 
+
 // contact form на странице reviews
 .contact-form{
   margin: 0 auto;
@@ -190,10 +186,64 @@
     border-radius: 20px;
   }
 
-}
-  .form__btns{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  @include tablets{
+    width: 348px;
   }
+
+  @include w360{
+    width: 300px;
+  }
+}
+
+//nav-btns
+.nav-btns{
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+
+  &__item{
+
+    width: auto;
+    @include flex-center;
+    flex: 1;
+    background-color: $green1;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #fff;
+    border: 0;
+    border-right: 2px solid rgba(#ffffff, 0.5);
+    @include roboto(medium);
+    font-size: rem(16px);
+    outline: none;
+
+    @include w450{
+      padding-left: 20px;
+    padding-right: 20px;
+    }
+
+
+    &:last-child{
+      border-right: none;
+    }
+
+    &:hover{
+      background-color: $green2;
+      cursor: pointer;
+    }
+ }
+
+  &__link{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    @include roboto(medium);
+    white-space: nowrap;
+  }
+}
+
+.nav-btns_contact-form{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

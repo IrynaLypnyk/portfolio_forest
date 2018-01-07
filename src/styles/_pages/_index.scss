@@ -75,54 +75,6 @@
     //padding-bottom: 30px;
   }
 }
-
-//nav-btns
-
-.nav-btns{
-  display: flex;
-  justify-content: space-between;
-  height: 45px;
-
-
-  &__item{
-
-    width: auto;
-    @include flex-center;
-    flex: 1;
-    background-color: $green1;
-    padding-left: 30px;
-    padding-right: 30px;
-    color: #fff;
-    border: 0;
-    border-right: 2px solid rgba(#ffffff, 0.5);
-    @include roboto(medium);
-    font-size: rem(16px);
-    outline: none;
-
-    @include w450{
-      padding: 20px;
-    }
-
-
-    &:last-child{
-      border-right: none;
-    }
-
-    &:hover{
-      background-color: $green2;
-      cursor: pointer;
-    }
- }
-
-  &__link{
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
-    @include roboto(medium);
-    white-space: nowrap;
-
-  }
-}
 // copyright
 .welcome__copyright{
   position: absolute;
@@ -137,27 +89,24 @@
     padding-bottom: 5px;
     @include roboto(light);
   }
-
- }
-
-.copyright{
+}
+.copyright {
   display: flex;
   flex-direction: row;
 
-  @include w450{
+  @include w450 {
     flex-direction: column;
     align-items: center;
   }
 
-  &__item:not(:last-child):after{
+  &__item:not(:last-child):after {
     content: "|";
     display: inline;
     color: #fff;
     margin: 0 6px;
 
-    @include w450{
+    @include w450 {
       display: none;
     }
   }
-   
 }
