@@ -1,4 +1,11 @@
-//- nav-links (burger-menu, footer)
+//- nav-links (burger-menu)
+mixin nav-links_burger(pages)
+  ul.nav__list_burger
+    each page in pages
+      li.nav__item_burger
+        a.nav__link_burger(href=`${page[1]}`)= `${page[0]}`
+
+//- nav-links (footer)
 mixin nav-links(pages)
   nav.nav
     ul.nav__list
