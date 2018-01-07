@@ -20,9 +20,13 @@
   text-align: center;
   position: relative;
   
-    // @include smallphones{
-    //   padding: 25px 0;
-    // }
+    @include tablets{
+      padding: 40px 0;
+    }
+
+    @include w600{
+      padding: 30px 0;
+    }
 }
 
 .my-works__slider{
@@ -40,26 +44,66 @@
 	position: relative;
   padding-bottom: 147px;
 
-  
+  @include w1015{
+    padding-bottom: 215px;
+  }
+
+  @include w600{
+    padding-bottom: 260px;
+  }
+
+  @include phones{
+    padding-bottom: 290px;
+  }
+
+  @include w360{
+    padding-bottom: 305px;
+  }
 }
 
 .reviews{
   margin-bottom: 65px;
 
+  @include tablets{
+    margin-bottom: 45px;
+  }
+
+  @include phones{
+    margin-bottom: 0px;
+  }
+
    &__title{
-    padding-top: 70px;
+	 	padding-top: 70px;
     text-align: center;
     //@include flex-center;
     margin-bottom: 65px;
     position: relative;
+    display: flex;
+    justify-content: center;
+
+    @include tablets{
+      padding-top: 50px;
+      margin-bottom: 40px;
+    }
+
+    @include phones{
+      padding-top: 35px;
+      margin-bottom: 30px;
+    }
   }
   
   &__list{
-    //display: flex;
-    //justify-content: center;
+    display: flex;
+    justify-content: center;
     text-align: center;
 		padding: 0 25px;
     width: 100%;
+
+    @include w600{
+      flex-direction: column;
+      align-items: center;
+      padding: 0 16px 0 10px;
+    }
   }
 
   &__item{
@@ -71,24 +115,22 @@
     justify-content: center;
 		align-items: center;
 
+    @include tablets{
+      width: 50%;
+    }
+
+    @include w600{
+      width: 100%;
+      margin-bottom: 35px;
+    }
+
       &:first-child{
       margin-right: 30px;
 
+				@include w600{
+					margin-right: 0px;
+				}
     }
-  }
-
-  &__text{
-		@include roboto(regularitalic);
-    color: #5d5a55;
-    margin-bottom: 20px;
-		background: url('../images/decor/quotes.png') no-repeat;
-	  padding-top: 28px;
-		width: 100%;
-
-  }
-  &__author{
-    display: flex;
-    align-items: center;
   }
 
   &__avatar{
@@ -97,12 +139,38 @@
     border-radius: 50%;
     overflow: hidden;
     margin-right: 23px;
+		margin-bottom: 28px;
+
+		@include w600{
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
   }
 
   &__img{
     max-width: 100%;
   }
 
+	&__text{
+		@include roboto(regularitalic);
+    color: #5d5a55;
+    margin-bottom: 20px;
+		background: url('../images/decor/quotes.png') no-repeat;
+	  //padding-top: 28px;
+		width: 100%;
+
+    @include w600{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__author{
+    display: flex;
+    align-items: center;
+  }
   &__author-name{
     @include roboto(bolditalic);
     color: $green2;
@@ -114,7 +182,7 @@
   }
 }
 
-.my-works__arrow-btn{
+.my-works__arrow-btn {
   transform: rotate(180deg);
   height: 160px;
   @include flex-center;
@@ -123,5 +191,16 @@
   // left: 50%;
   // transform: translateX(-50%);
 
+  @include tablets {
+    height: 120px;
+  }
+
+  @include phones {
+    height: 110px;
+  }
+
+  @include w360 {
+    height: 90px;
+  }
 }
 

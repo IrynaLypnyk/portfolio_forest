@@ -7,13 +7,30 @@ $grey3: #f0efe9;
 $red: #e44845;
 $blue: #6da3bd;
 $bg1: #f6f6f6;
-$bg2: #f6f6f6;
-$bgabout1: #ebefe2;
-$bgabout2:#f4f5f0;
-$bgblog: #faf8f0;
-$bgworks1: #f8f9f5;
-$bgworks2: #e1e4d7;
 
+
+/*resolutions*/
+$desktops: 1200px;
+$laptops: 992px;
+$tablets: 768px;
+$phones: 480px;
+$smallest: 320px;
+
+/*additional resolutions*/
+$w1450: 1450px;
+$w1280: 1280px;
+$w1270: 1270px;
+$w1100: 1100px;
+$w1015: 1015px;
+$w995: 995px;
+$w920: 920px;
+$w810: 810px;
+$w700: 700px;
+$w640: 640px;
+$w600: 600px;
+$w450: 450px;
+$w380: 380px;
+$w360: 360px;
 
 /* normalize.css */
 @import "../../node_modules/normalize.css/normalize";
@@ -21,6 +38,7 @@ $bgworks2: #e1e4d7;
 /* _setups */
 @import '_setups/_fonts';
 @import '_setups/_mixins';
+@import '_setups/_media';
 @import '_setups/_base';
 
 /* _components */

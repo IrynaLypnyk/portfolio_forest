@@ -15,7 +15,10 @@
 //-         a.hamburger__link(href="about.html") Обо мне
 //-       li.hamburger__item
 //-         a.hamburger__link(href="index.html") Авторизация
-.burger-menu
-  span.burger-menu__line
-  span.burger-menu__line
-  span.burger-menu__line
+button#burger-menu
+  .burger-menu__icon
+    span.burger-menu__line
+    span.burger-menu__line
+    span.burger-menu__line
+  nav.burger-menu__list
+    +nav-links_burger([['Мои работы', 'my-works.html'], ['Обо мне', 'about.html'], ['Блог', 'blog.html'], ['Авторизация', 'index.html']])

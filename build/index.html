@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Добро пожаловать</title>
-    <!--meta(content="width=device-width, initial-scale=1" name="viewport")-->
-    <meta content="width=1800" name="viewport">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!--meta(content="width=1800" name="viewport")-->
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <!-- SEO-->
     <meta content="" name="description">
@@ -30,8 +30,6 @@
     <meta name="theme-color" content="#ffffff">
     <!--css-->
     <link rel="stylesheet" href="assets/styles/app.min.css">
-    <!--scripts-->
-    <script src="assets/scripts/bundle.js" defer></script>
   </head>
   <body>
     <!--[if lte IE 8]>
@@ -43,7 +41,7 @@
         <div class="welcome__auth-btn">
           <button class="auth-btn">Авторизоваться</button>
         </div>
-        <div class="welcome__flipper">
+        <div class="welcome__flipper" id="flipper">
           <div class="welcome__user-block">
             <div class="user-block form-container">
               <div class="user__img-block"><img class="user__img" src="assets/images/content/hero.jpg" alt="Моя фото"/></div>
@@ -65,13 +63,13 @@
                       </svg></a></li>
                 </ul>
               </div>
-              <div class="welcome__nav-btns">
-                <ul class="nav-btns"> 
-                  <li class="nav-btns__item"><a class="nav-btns__link" href="my-works.html">Мои работы</a></li>
-                  <li class="nav-btns__item"><a class="nav-btns__link" href="about.html">Обо мне</a></li>
-                  <li class="nav-btns__item"><a class="nav-btns__link" href="blog.html">Блог</a></li>
-                </ul>
-              </div>
+            </div>
+            <div class="welcome__nav-btns">
+              <ul class="nav-btns"> 
+                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="my-works.html">Мои работы</a></li>
+                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="about.html">Обо мне</a></li>
+                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="blog.html">Блог</a></li>
+              </ul>
             </div>
           </div>
           <div class="welcome__auth-form">
@@ -121,23 +119,24 @@
                   </div>
                 </div>
               </form>
-              <div class="auth-form__nav-btns">
-                <ul class="nav-btns"> 
-                  <li class="nav-btns__item"><a class="nav-btns__link" href="index.html">На главную</a></li>
-                  <li class="nav-btns__item"><a class="nav-btns__link" href="#">Войти</a></li>
-                </ul>
-              </div>
+            </div>
+            <div class="auth-form__nav-btns">
+              <ul class="nav-btns"> 
+                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_to-main-page" href="index.html">На главную</a></li>
+                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_to-enter" href="#">Войти</a></li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="welcome__copyright">
           <ul class="copyright">
             <li class="copyright__item">&copy; Ирина Лыпник</li>
-            <li class="copyright__item">создано с &#10084; в LoftSchool</li>
-            <li class="copyright__item">2017</li>
+            <li class="copyright__item">создано с &#10084; в LoftSchool | 2017</li>
           </ul>
         </div>
       </div>
     </div>
+    <!--scripts-->
+    <script src="assets/scripts/bundle.js"></script>
   </body>
 </html>

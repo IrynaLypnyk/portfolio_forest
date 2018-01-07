@@ -1,14 +1,29 @@
+.soacials{
+    @include w360{
+        text-align: center;
+  }
+}
 .socials__item{
   display: inline-block;
-  margin-right: 20px;
   vertical-align: bottom;
 
+  &:not(:last-child){
+    margin-right: 20px;
+  }
+}
+
+.socials__link{
+    display: inline-block;
 }
 
 .socials__icon{
   fill: rgba(#fff, 0.5);
   vertical-align: bottom;
+  height: 26px;
 
+  @include w360{
+    height: 17px;
+  }
 
   &:hover{
     fill: $green1;
@@ -16,7 +31,7 @@
 }
 
 .header__socials .socials__icon{
-      fill: #fff;
+    fill: #fff;
 
     &:hover{
     fill: $green1;
@@ -26,9 +41,16 @@
 .footer .socials__icon{
     fill: #a9acad;
 
+    @include tablets{
+        margin-left: -7px;
+    }
+
+    @include w360{
+        text-align: center;
+        margin-left: 0;
+    }
+
     &:hover{
       fill: #fff;
     }
-
-
 }

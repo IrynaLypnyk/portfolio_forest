@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Обо мне</title>
-    <!--meta(content="width=device-width, initial-scale=1" name="viewport")-->
-    <meta content="width=1800" name="viewport">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!--meta(content="width=1800" name="viewport")-->
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <!-- SEO-->
     <meta content="" name="description">
@@ -30,8 +30,6 @@
     <meta name="theme-color" content="#ffffff">
     <!--css-->
     <link rel="stylesheet" href="assets/styles/app.min.css">
-    <!--scripts-->
-    <script src="assets/scripts/bundle.js" defer></script>
   </head>
   <body>
     <!--[if lte IE 8]>
@@ -58,7 +56,17 @@
             </ul>
           </div>
           <div class="header__burger-menu">
-            <div class="burger-menu"><span class="burger-menu__line"></span><span class="burger-menu__line"></span><span class="burger-menu__line"></span></div>
+            <button id="burger-menu">
+              <div class="burger-menu__icon"><span class="burger-menu__line"></span><span class="burger-menu__line"></span><span class="burger-menu__line"></span></div>
+              <nav class="burger-menu__list">
+                <ul class="nav__list_burger">
+                  <li class="nav__item_burger"><a class="nav__link_burger" href="my-works.html">Мои работы</a></li>
+                  <li class="nav__item_burger"><a class="nav__link_burger" href="about.html">Обо мне</a></li>
+                  <li class="nav__item_burger"><a class="nav__link_burger" href="blog.html">Блог</a></li>
+                  <li class="nav__item_burger"><a class="nav__link_burger" href="index.html">Авторизация</a></li>
+                </ul>
+              </nav>
+            </button>
           </div>
         </div>
         <div class="header__user-block header__user-block_about">
@@ -79,8 +87,8 @@
       <section class="section section_about">
         <div class="triangles">
           <svg class="triangles__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1800 163" preserveaspectratio="none">
-            <polygon class="triangles__svg_about-left" points="0,0 0,163 900,163"></polygon>
-            <polygon class="triangles__svg_about-right" points="1800,0 1800,163 900,163"></polygon>
+            <polygon class="triangles__svg_about-left" points="0,0 0,163 901,163 901,160"></polygon>
+            <polygon class="triangles__svg_about-right" points="1800,0 1800,163 899,163 899,160"></polygon>
           </svg>
         </div>
         <div class="about__content-container">
@@ -229,7 +237,7 @@
         </div>
       </section>
       <section class="section section_map">
-        <div class="google-map"></div>
+        <div id="map"></div>
         <div class="map-contacts">
           <div class="map-contacts__title">
             <div class="block-subtitle">Контакты</div>
@@ -260,7 +268,7 @@
           </div>
         </div>
       </section>
-      <div class="footer">
+      <div class="footer footer_about">
         <div class="footer__top">
           <div class="footer__col footer__col_left">
             <div class="footer__copyright-block">Этот сайт я сделалa в рамках обучения в Школе онлайн образования LoftSchool.</div>
@@ -295,7 +303,7 @@
           </div>
           <div class="footer__col footer__col_right">
             <div class="footer__cite-block">
-              <blockquote class="footer__cite">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</blockquote>
+              <blockquote class="footer__cite-text">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</blockquote>
               <cite class="footer__cite-author">— Martin Golding</cite>
             </div>
           </div>
@@ -308,5 +316,8 @@
         </div>
       </div>
     </div>
+    <!--scripts-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa3Dwo3IxCqa3Z-_ZZpCGbElFEMKxfKcg"></script>
+    <script src="assets/scripts/bundle.js"></script>
   </body>
 </html>
