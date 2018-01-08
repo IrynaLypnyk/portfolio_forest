@@ -66,7 +66,7 @@ mixin header (classMixin, svgImg, svgWidth, svgHeight)
       div(class='header__user-block ' + `header__user-block_${classMixin}`)
         div(class='user ' + `user_${classMixin}`)
           +user-img
-        svg(class='user-info__bg-icon ' + `user-info__bg-icon_${classMixin}` viewbox="0 0" + ` ${svgWidth}` + ` ${svgHeight}`)
+        svg(class='user-info__bg-icon ' + `user-info__bg-icon_${classMixin}` width=`${svgWidth}` height=`${svgHeight}`)
           use(xlink:href="assets/images/icons/sprite.svg#" + `${svgImg}` + "_header")
         div(class='block-title ' + `block-title_${classMixin}`) Блог
         .user__title Статьи, которые я написал

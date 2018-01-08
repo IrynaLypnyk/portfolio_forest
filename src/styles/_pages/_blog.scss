@@ -1,7 +1,6 @@
 .section_blog{
   position: relative;
 
-
 }
 
 .blog__content-container{
@@ -9,15 +8,18 @@
   color: $grey1;
   display: flex;
 	margin-bottom: 30px;
+  justify-content: flex-end;//?
 
-  @include w920{
-    flex-direction: column;
-  }
+	@include w920{
+		flex-direction: column;
+	}
  }
 
 .blog__col_left{
   width: 28.33%;  //510px;
   padding: 10px 6.67%; //10px 120px;
+  overflow: hidden;
+	height: 100%;
 
   @include w1280{
     width: 33.67%;  //404px;
@@ -29,6 +31,12 @@
     padding: 10px 23px;
     // display: none;
   }
+}
+
+#blog__sidebar.fixed{
+	position: fixed;
+	left: 0;
+	top: 0;
 }
 
 .blog__col_right{
@@ -64,9 +72,13 @@
     border-left: 3px solid transparent;
   }
 
-  &:hover{
+  	&.active{
     border-color: $green1;
-  }
+	}
+
+	&.active .blog-nav__links{
+		color: $green2;
+	}
 }
 
 .blog-nav__links{
