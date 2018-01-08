@@ -26,7 +26,7 @@ module.exports = function () {
           document.body.style.overflow = 'auto';
         }
 
-      }, 1000);
+      }, 2000);
     }
   }
 

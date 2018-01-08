@@ -45,7 +45,7 @@ mixin socials (className, items)
 
 //- header
 mixin header (classMixin, svgImg, svgWidth, svgHeight)
-  header(class='header ' + `header_${classMixin}`)
+  header(class='header ' + `header_${classMixin}` + ' section')
     div(class="header__links " + `header__links_${classMixin}`)
       .header__socials.socials
         +socials('socials', ["fb", "github", "in"])
@@ -58,7 +58,7 @@ mixin header (classMixin, svgImg, svgWidth, svgHeight)
         svg(class='user-info__bg-icon ' + `user-info__bg-icon_${classMixin}` width=`${svgWidth}` height=`${svgHeight}`)
           use(xlink:href="assets/images/icons/sprite.svg#" + `${svgImg}` + "_header")
 
-      .header__arrow-btn
+      button.header__arrow-btn
         a.arrow__link(href="#")
           svg.arrow__icon(width="27" height="19")
             use(xlink:href="assets/images/icons/sprite.svg#arrow_down")
@@ -70,7 +70,7 @@ mixin header (classMixin, svgImg, svgWidth, svgHeight)
           use(xlink:href="assets/images/icons/sprite.svg#" + `${svgImg}` + "_header")
         div(class='block-title ' + `block-title_${classMixin}`) Блог
         .user__title Статьи, которые я написал
-      .header__arrow-btn.header__arrow-btn_blog
+      button.header__arrow-btn.header__arrow-btn_blog
         a.arrow__link(href="#")
           svg.arrow__icon(width="27" height="19")
             use(xlink:href="assets/images/icons/sprite.svg#arrow_down")

@@ -114,6 +114,8 @@ bottom: 42px;
 left: 50%;
 transform: translateX(-50%);
 z-index: 20;
+border: 1px solid transparent;
+background-color: transparent;
 
 &:hover {
 cursor: pointer;
@@ -129,6 +131,7 @@ display: block;
 }
 .arrow__link{
   display: block;
+	z-index: 25;
 }
 
 .arrow__icon{

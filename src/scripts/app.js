@@ -2,6 +2,7 @@ const preloader = require('./components/preloader');
 const flipper = require('./components/flipper.js');
 const map = require('./components/map.js');
 const burgerMenu = require('./components/burger-menu.js');
+const arrows = require('./components/arrows.js');
 //const $ = require('jquery');
 
 // const body = document.querySelector('body');
@@ -33,7 +34,11 @@ if (burgerId) {
 //googlemap
 const mapContainer = document.getElementById('map');
 if (mapContainer) {
-  map.event.addDomListener(window, 'load', map.init);
+  google.maps.event.addDomListener(window, 'load', map.init);
 }
 
+const arrowBtn = document.getElementsByClassName('header__arrow-btn');
+if (arrowBtn.length > 0) {
+  arrows();
+}
 
