@@ -116,25 +116,80 @@
             </svg>
           </div>
           <div class="my-works__slider">
-            <div class="slider">
+            <div class="slider" id="slider">
               <div class="slider__slide-desc">
-                <div class="slider__slide-title block-subtitle block-subtitle_my-works">Сайт школы онлайн образования</div>
-                <div class="slider__desc-skills">HTML , CSS, JAVASCRIPT</div>
-                <div class="slider__btn"><a class="slider__btn-link" href="#">
-                    <svg class="slider__link-icon" width="19" height="19">
-                      <use xlink:href="assets/images/icons/sprite.svg#link"></use>
-                    </svg><span class="slider__link-text">Посмотреть сайт</span></a></div>
+                <ul class="slide-desc__list">
+                  <li class="slide-desc__item active">
+                    <div class="slider__slide-title block-subtitle block-subtitle_my-works">Школа онлайн-образования "LoftSchool"</div>
+                    <div class="slider__desc-skills">HTML, CSS, JAVASCRIPT</div>
+                    <div class="slider__btn"><a class="slider__btn-link" href="http://loftschool.com/" target="_blank">
+                        <svg class="slider__link-icon" width="19" height="19">
+                          <use xlink:href="assets/images/icons/sprite.svg#link"></use>
+                        </svg><span class="slider__link-text">Посмотреть сайт</span></a></div>
+                  </li>
+                  <li class="slide-desc__item">
+                    <div class="slider__slide-title block-subtitle block-subtitle_my-works">Агентство интернет решений "ITLoft"</div>
+                    <div class="slider__desc-skills">HTML, CSS, JAVASCRIPT</div>
+                    <div class="slider__btn"><a class="slider__btn-link" href="http://itloft.ru/" target="_blank">
+                        <svg class="slider__link-icon" width="19" height="19">
+                          <use xlink:href="assets/images/icons/sprite.svg#link"></use>
+                        </svg><span class="slider__link-text">Посмотреть сайт</span></a></div>
+                  </li>
+                  <li class="slide-desc__item">
+                    <div class="slider__slide-title block-subtitle block-subtitle_my-works">Портал обучающих уроков "LoftBlog"</div>
+                    <div class="slider__desc-skills">HTML, CSS, JAVASCRIPT</div>
+                    <div class="slider__btn"><a class="slider__btn-link" href="http://loftblog.ru/" target="_blank">
+                        <svg class="slider__link-icon" width="19" height="19">
+                          <use xlink:href="assets/images/icons/sprite.svg#link"></use>
+                        </svg><span class="slider__link-text">Посмотреть сайт</span></a></div>
+                  </li>
+                  <li class="slide-desc__item">
+                    <div class="slider__slide-title block-subtitle block-subtitle_my-works">Сайт "Атма йога"</div>
+                    <div class="slider__desc-skills">HTML, CSS, JAVASCRIPT</div>
+                    <div class="slider__btn"><a class="slider__btn-link" href="http://atmayoga.ru/" target="_blank">
+                        <svg class="slider__link-icon" width="19" height="19">
+                          <use xlink:href="assets/images/icons/sprite.svg#link"></use>
+                        </svg><span class="slider__link-text">Посмотреть сайт</span></a></div>
+                  </li>
+                </ul>
               </div>
-              <div class="slider__slides-preview"><img class="slider__slide-img" src="assets/images/content/work-1.png" alt=""></div>
-              <div class="slider__slides-nav">
-                <div class="slider__control slider__control_toprev"><a class="slider__controls-link" href="#">
-                    <svg class="slider__arrow-svg" width="43" height="27">
+              <div class="slider__slides-preview">
+                <ul class="slides-preview__list">
+                  <li class="slides-preview__item active"><img class="slides-preview__img" src="assets/images/content/work-1.png" alt="Школа онлайн-образования &quot;LoftSchool&quot;"></li>
+                  <li class="slides-preview__item"><img class="slides-preview__img" src="assets/images/content/work-2.png" alt="Агентство интернет решений &quot;ITLoft&quot;"></li>
+                  <li class="slides-preview__item"><img class="slides-preview__img" src="assets/images/content/work-3.png" alt="Портал обучающих уроков &quot;LoftBlog&quot;"></li>
+                  <li class="slides-preview__item"><img class="slides-preview__img" src="assets/images/content/work-4.png" alt="Сайт &quot;Атма йога&quot;"></li>
+                </ul>
+              </div>
+              <div class="slider__slides-nav-container">
+                <div class="slides-nav slides-nav__prev">
+                  <ul class="slides-nav__list slides-nav__list_prev">
+                    <li class="slides-nav__item slides-nav__item_prev"><img class="slides-nav__img" src="assets/images/content/work-1.png" alt="Школа онлайн-образования &quot;LoftSchool&quot;"></li>
+                    <li class="slides-nav__item slides-nav__item_prev"><img class="slides-nav__img" src="assets/images/content/work-2.png" alt="Агентство интернет решений &quot;ITLoft&quot;"></li>
+                    <li class="slides-nav__item slides-nav__item_prev"><img class="slides-nav__img" src="assets/images/content/work-3.png" alt="Портал обучающих уроков &quot;LoftBlog&quot;"></li>
+                    <li class="slides-nav__item slides-nav__item_prev active"><img class="slides-nav__img" src="assets/images/content/work-4.png" alt="Сайт &quot;Атма йога&quot;"></li>
+                  </ul>
+                  <div class="slides-nav__controls slides-nav__controls_prev">
+                    <svg class="slides-nav__arrow-svg slides-nav__arrow-svg_prev" width="43" height="27">
                       <use xlink:href="assets/images/icons/sprite.svg#portf_arrow_down"></use>
-                    </svg></a></div>
-                <div class="slider__control slider__control_tonext"><a class="slider__controls-link" href="#">
-                    <svg class="slider__arrow-svg" width="43" height="27">
+                    </svg>
+                  </div>
+                  <div class="slides-nav__controls-bg slides-nav__controls-bg_next"></div>
+                </div>
+                <div class="slides-nav slides-nav__next">
+                  <ul class="slides-nav__list slides-nav__list_next">
+                    <li class="slides-nav__item slides-nav__item_next"><img class="slides-nav__img" src="assets/images/content/work-1.png" alt="Школа онлайн-образования &quot;LoftSchool&quot;"></li>
+                    <li class="slides-nav__item slides-nav__item_next active"><img class="slides-nav__img" src="assets/images/content/work-2.png" alt="Агентство интернет решений &quot;ITLoft&quot;"></li>
+                    <li class="slides-nav__item slides-nav__item_next"><img class="slides-nav__img" src="assets/images/content/work-3.png" alt="Портал обучающих уроков &quot;LoftBlog&quot;"></li>
+                    <li class="slides-nav__item slides-nav__item_next"><img class="slides-nav__img" src="assets/images/content/work-4.png" alt="Сайт &quot;Атма йога&quot;"></li>
+                  </ul>
+                  <div class="slides-nav__controls slides-nav__controls_next">
+                    <svg class="slides-nav__arrow-svg slides-nav__arrow-svg_next" width="43" height="27">
                       <use xlink:href="assets/images/icons/sprite.svg#portf_arrow_up"></use>
-                    </svg></a></div>
+                    </svg>
+                  </div>
+                  <div class="slides-nav__controls-bg slides-nav__controls-bg_next"></div>
+                </div>
               </div>
             </div>
           </div>

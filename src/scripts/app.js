@@ -7,7 +7,7 @@ const map = require('./components/map');
 const burgerMenu = require('./components/burger-menu');
 const arrows = require('./components/arrows');
 const blogNav = require('./components/blog');
-
+const slider = require('./components/slider');
 
 if (document.images.length > 0) {
   preloader();
@@ -38,10 +38,10 @@ if (arrowBtn) {
   arrows();
 }
 
-//const blogSidebar = document.getElementById('blog__sidebar');
-//if (blogSidebar) {
-//  blogNav();
-//}
+const sliderID = document.getElementById('slider');
+if (sliderID) {
+  slider();
+}
 
 //googlemap
 const mapContainer = document.getElementById('map');

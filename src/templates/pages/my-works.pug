@@ -16,26 +16,80 @@ block content
         svg.block-title__bg-svg.block-title__bg-svg_my-works(viewBox="0 0 505 165")
           use(xlink:href="assets/images/icons/sprite.svg#works_header")
       .my-works__slider
-        .slider
+        #slider.slider
           .slider__slide-desc
-            .slider__slide-title.block-subtitle.block-subtitle_my-works Сайт школы онлайн образования
-            .slider__desc-skills HTML , CSS, JAVASCRIPT
-            .slider__btn
-              a.slider__btn-link(href="#")
-                svg.slider__link-icon(width="19" height="19")
-                  use(xlink:href="assets/images/icons/sprite.svg#link")
-                span.slider__link-text Посмотреть сайт
+            ul.slide-desc__list
+              li.slide-desc__item.active
+                .slider__slide-title.block-subtitle.block-subtitle_my-works Школа онлайн-образования "LoftSchool"
+                .slider__desc-skills HTML, CSS, JAVASCRIPT
+                .slider__btn
+                  a.slider__btn-link(href="http://loftschool.com/" target="_blank")
+                    svg.slider__link-icon(width="19" height="19")
+                      use(xlink:href="assets/images/icons/sprite.svg#link")
+                    span.slider__link-text Посмотреть сайт
+              li.slide-desc__item
+                .slider__slide-title.block-subtitle.block-subtitle_my-works Агентство интернет решений "ITLoft"
+                .slider__desc-skills HTML, CSS, JAVASCRIPT
+                .slider__btn
+                  a.slider__btn-link(href="http://itloft.ru/" target="_blank")
+                    svg.slider__link-icon(width="19" height="19")
+                      use(xlink:href="assets/images/icons/sprite.svg#link")
+                    span.slider__link-text Посмотреть сайт
+              li.slide-desc__item
+                .slider__slide-title.block-subtitle.block-subtitle_my-works Портал обучающих уроков "LoftBlog"
+                .slider__desc-skills HTML, CSS, JAVASCRIPT
+                .slider__btn
+                  a.slider__btn-link(href="http://loftblog.ru/" target="_blank")
+                    svg.slider__link-icon(width="19" height="19")
+                      use(xlink:href="assets/images/icons/sprite.svg#link")
+                    span.slider__link-text Посмотреть сайт
+              li.slide-desc__item
+                .slider__slide-title.block-subtitle.block-subtitle_my-works Сайт "Атма йога"
+                .slider__desc-skills HTML, CSS, JAVASCRIPT
+                .slider__btn
+                  a.slider__btn-link(href="http://atmayoga.ru/" target="_blank")
+                    svg.slider__link-icon(width="19" height="19")
+                      use(xlink:href="assets/images/icons/sprite.svg#link")
+                    span.slider__link-text Посмотреть сайт
           .slider__slides-preview
-            img.slider__slide-img(src="assets/images/content/work-1.png", alt="")
-          .slider__slides-nav
-            .slider__control.slider__control_toprev
-              a.slider__controls-link(href="#")
-                svg.slider__arrow-svg(width="43" height="27")
+            ul.slides-preview__list
+              li.slides-preview__item.active
+                img.slides-preview__img(src='assets/images/content/work-1.png' alt="Школа онлайн-образования \"LoftSchool\"")
+              li.slides-preview__item
+                img.slides-preview__img(src='assets/images/content/work-2.png' alt="Агентство интернет решений \"ITLoft\"")
+              li.slides-preview__item
+                img.slides-preview__img(src='assets/images/content/work-3.png' alt="Портал обучающих уроков \"LoftBlog\"")
+              li.slides-preview__item
+                img.slides-preview__img(src='assets/images/content/work-4.png' alt="Сайт \"Атма йога\"")
+          .slider__slides-nav-container
+            .slides-nav.slides-nav__prev
+              ul.slides-nav__list.slides-nav__list_prev
+                li.slides-nav__item.slides-nav__item_prev
+                  img.slides-nav__img(src='assets/images/content/work-1.png' alt="Школа онлайн-образования \"LoftSchool\"")
+                li.slides-nav__item.slides-nav__item_prev
+                  img.slides-nav__img(src='assets/images/content/work-2.png' alt="Агентство интернет решений \"ITLoft\"")
+                li.slides-nav__item.slides-nav__item_prev
+                  img.slides-nav__img(src='assets/images/content/work-3.png' alt="Портал обучающих уроков \"LoftBlog\"")
+                li.slides-nav__item.slides-nav__item_prev.active
+                  img.slides-nav__img(src='assets/images/content/work-4.png' alt="Сайт \"Атма йога\"")
+              .slides-nav__controls.slides-nav__controls_prev
+                svg.slides-nav__arrow-svg.slides-nav__arrow-svg_prev(width="43" height="27")
                   use(xlink:href="assets/images/icons/sprite.svg#portf_arrow_down")
-            .slider__control.slider__control_tonext
-              a.slider__controls-link(href="#")
-                svg.slider__arrow-svg(width="43" height="27")
+              .slides-nav__controls-bg.slides-nav__controls-bg_next
+            .slides-nav.slides-nav__next
+              ul.slides-nav__list.slides-nav__list_next
+                li.slides-nav__item.slides-nav__item_next
+                  img.slides-nav__img(src='assets/images/content/work-1.png' alt="Школа онлайн-образования \"LoftSchool\"")
+                li.slides-nav__item.slides-nav__item_next.active
+                  img.slides-nav__img(src='assets/images/content/work-2.png' alt="Агентство интернет решений \"ITLoft\"")
+                li.slides-nav__item.slides-nav__item_next
+                  img.slides-nav__img(src='assets/images/content/work-3.png' alt="Портал обучающих уроков \"LoftBlog\"")
+                li.slides-nav__item.slides-nav__item_next
+                  img.slides-nav__img(src='assets/images/content/work-4.png' alt="Сайт \"Атма йога\"")
+              .slides-nav__controls.slides-nav__controls_next
+                svg.slides-nav__arrow-svg.slides-nav__arrow-svg_next(width="43" height="27")
                   use(xlink:href="assets/images/icons/sprite.svg#portf_arrow_up")
+              .slides-nav__controls-bg.slides-nav__controls-bg_next
   section.section.section_reviews
     .reviews__title
       .block-title.block-title_reviews 
