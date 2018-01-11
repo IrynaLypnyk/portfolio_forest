@@ -7,6 +7,7 @@ const map = require('./components/map');
 const burgerMenu = require('./components/burger-menu');
 const arrows = require('./components/arrows');
 const blogNav = require('./components/blog');
+const blogNavHidden = require('./components/blog-nav-hidden');
 const slider = require('./components/slider');
 const skills = require('./components/skills');
 
@@ -28,6 +29,11 @@ if(flipperId){
 //blog-menu
 if (document.getElementsByClassName('blog-nav__items').length > 0) {
   blogNav();
+
+}
+const blogNavHiddenId=document.querySelector('#blog-nav_hidden');
+if(blogNavHiddenId){
+  blogNavHidden();
 }
 
 

@@ -88,6 +88,21 @@ mixin skills-circles (skills)
             circle(r="50" cx="50%" cy="50%" class='circle' + ' circle_fill ' + `circle-${skill[1]}`).circle_second
           span.skill-circle__title= `${skill[0]}`
 
+
+// - nav-items in blog
+mixin blog-nav-items
+  .blog-nav
+    ul.blog-nav__list
+      li.blog-nav__items
+        a.blog-nav__links(href="#") Самое важное в SASS
+      li.blog-nav__items
+        a.blog-nav__links(href="#") Приёмы в вёрстке, без которых не обходится ни один сайт
+      li.blog-nav__items
+        a.blog-nav__links(href="#") Самый необходимый набор Gulp плагинов
+      li.blog-nav__items
+        a.blog-nav__links(href="#") Почему я выбрал Jade
+
+
 //- contacts
 mixin contacts(classMixin, contactTypes)
   ul(class='contacts ' + `contacts_${classMixin}`)
