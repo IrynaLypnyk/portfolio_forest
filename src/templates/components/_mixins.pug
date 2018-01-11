@@ -13,9 +13,9 @@ mixin nav-links(pages)
         li.nav__item
           a.nav__link(href=`${page[1]}`)= `${page[0]}`
 
-//- nav-btns в авторизационной форме
+//- nav-btns to pages
 mixin nav-btns (pages)
-  ul.nav-btns 
+  ul.nav-btns
     each page in pages
       li.nav-btns__item
         a(href=`${page[1]}` class='nav-btns__link ' + 'nav-btns__link_' + `${page[2]}`)= `${page[0]}`

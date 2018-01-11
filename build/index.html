@@ -83,7 +83,7 @@
               </div>
             </div>
             <div class="welcome__nav-btns">
-              <ul class="nav-btns"> 
+              <ul class="nav-btns">
                 <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="my-works.html">Мои работы</a></li>
                 <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="about.html">Обо мне</a></li>
                 <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="blog.html">Блог</a></li>
@@ -95,7 +95,7 @@
               <div class="form__title auth-form__title">
                 <div class="block-subtitle block-subtitle_auth-form">Авторизуйтесь</div>
               </div>
-              <form class="form" action="" method="get">
+              <form class="form" action="server.php" method="post" id="auth-form">
                 <label class="form__label auth-form__label">
                   <input class="form__input auth-form__input auth-form__input_login" type="text" placeholder="Логин">
                   <div class="form__input-fake auth-form__input-fake auth-form__input-fake_login">
@@ -113,7 +113,7 @@
                   </div>
                 </label>
                 <label class="form__checkbox-label auth-form__checkbox-label">
-                  <input class="form__checkbox-input auth-form__checkbox-input" type="checkbox" checked>
+                  <input class="form__checkbox-input auth-form__checkbox-input" type="checkbox" id="is-human" name="is-human" value="1" checked>
                   <div class="form__checkbox-fake auth-form__checkbox-fake">
                     <svg class="form__checkbox-icon auth-form__checkbox-icon" width="11" height="11">
                       <use xlink:href="assets/images/icons/sprite.svg#check"></use>
@@ -125,12 +125,12 @@
                   <div class="form__label-text auth-form__label-text auth-form__label-text_radio">Вы точно не робот?</div>
                   <div class="form__radio-input-block auth-form__radio-input-block">
                     <label class="form__radio-label auth-form__radio-label">
-                      <input class="form__radio-input auth-form__radio-input" type="radio" name="isrobot" checked>
+                      <input class="form__radio-input auth-form__radio-input" type="radio" name="not-robot" value="yes" checked>
                       <div class="form__radio-fake auth-form__radio-fake"></div>
                       <div class="form__label-text auth-form__label-text">Да</div>
                     </label>
                     <label class="form__radio-label auth-form__radio-label">
-                      <input class="form__radio-input auth-form__radio-input" type="radio" name="isrobot">
+                      <input class="form__radio-input auth-form__radio-input" type="radio" name="not-robot" value="not-sure">
                       <div class="form__radio-fake auth-form__radio-fake"></div>
                       <div class="form__label-text auth-form__label-text">Я не уверен</div>
                     </label>
@@ -138,11 +138,9 @@
                 </div>
               </form>
             </div>
-            <div class="auth-form__nav-btns">
-              <ul class="nav-btns"> 
-                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_to-main-page" href="index.html">На главную</a></li>
-                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_to-enter" href="#">Войти</a></li>
-              </ul>
+            <div class="auth-form__nav-btns nav-btns nav-btns_auth-form">
+              <button class="nav-btns__item form__submit-btn form__goto-btn_auth-form" type="button" value="На главную">На главную</button>
+              <button class="nav-btns__item form__submit-btn form__auth-btn_auth-form" type="submit" value="Войти">Войти</button>
             </div>
           </div>
         </div>

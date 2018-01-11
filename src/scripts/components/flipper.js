@@ -1,7 +1,7 @@
 module.exports = function () {
   var btn = document.querySelector('.auth-btn');
   var flipper = document.querySelector('.welcome__flipper');
-  var toMainPageBtn = document.querySelector('.nav-btns__link_to-main-page');
+  var toMainPageBtn = document.querySelector('.form__goto-btn_auth-form');
 
   function toAuthForm() {
     btn.style.visibility = 'hidden';

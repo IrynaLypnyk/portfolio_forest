@@ -126,7 +126,7 @@ block content
     .contact-form.form-container
       .form__title.form__title_contact-form
         .block-subtitle.block-subtitle_contact-form Связаться со мной
-      form.form
+      form(action="server.php", method="post" id="contact-form").form
         .form__fields
           label.form__label.contact-form__label
             input(type="text", name="name" placeholder="Имя").form__input.contact-form__input
