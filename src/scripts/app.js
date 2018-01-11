@@ -41,10 +41,7 @@ const mapId = document.getElementById('map');
 if (mapId) {
   google.maps.event.addDomListener(window, 'load', map.init);
 }
-const skillsId = document.getElementById('skills');
-if (skillsId) {
-  skills();
-}
+
 
 const arrowBtn = document.getElementsByClassName('header__arrow-btn');
 if (arrowBtn) {
@@ -56,4 +53,8 @@ if (sliderId) {
   slider();
 }
 
+const skillsId = document.getElementById('skills');
+if (skillsId) {
+  skills;
+}
 

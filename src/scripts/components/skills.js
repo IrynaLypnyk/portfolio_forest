@@ -1,7 +1,7 @@
 export let skillAnimate = (function (options){
   const skillList = document.querySelectorAll(options.skillList),
     section = document.querySelector(options.section);
-  console.log('i am in skills');
+
   let fillSkill = function () {
     let scrollY = window.scrollY;
     let sectionTop = section.offsetTop;
@@ -28,7 +28,7 @@ export let skillAnimate = (function (options){
   if (section){
     return{
 
-      init: window.addEventListener('scroll', fillSkill)
+      init: window.addEventListener('scroll', fillSkill),
     };
   }
 
