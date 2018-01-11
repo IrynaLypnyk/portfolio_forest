@@ -82,6 +82,7 @@
 .contacts__link{
   text-decoration: none;
   color: $grey1;
+  transition: all 0.3s;
 
   &:hover{
     color: $green2;

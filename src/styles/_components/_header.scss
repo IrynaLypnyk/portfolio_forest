@@ -136,6 +136,7 @@ display: block;
 
 .arrow__icon{
   fill:rgba(#fff, 0.7);
+ transition: all 0.3s;
 
   &:hover{
     fill: #fff;
