@@ -11,7 +11,7 @@ const blogNavHidden = require('./components/blog-nav-hidden');
 const slider = require('./components/slider');
 const skills = require('./components/skills');
 const submitForm = require('./components/contact-form');
-const loginForm = require('./components/login-form');
+
 
 //preloader
 if (document.images.length > 0) {

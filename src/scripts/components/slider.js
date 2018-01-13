@@ -57,9 +57,8 @@ module.exports = function () {
 
       //-по событию window.onload вызваем function
     [].forEach.call(controls, function(item) {
-      window.onload = function () {
-        moveItems(currentIndex);
-      };
+      moveItems(currentIndex);
+
       item.addEventListener('click', (e) => {
         e.preventDefault();
         const button = e.currentTarget;
