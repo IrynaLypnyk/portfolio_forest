@@ -13,14 +13,16 @@ const skills = require('./components/skills');
 const submitForm = require('./components/contact-form');
 
 
-//preloader
-if (document.images.length > 0) {
-  preloader();
+// preloader
+// if (document.images.length > 0) {
+////preloader();
 
-} else {
-  document.getElementById('js-preloader').classList.add('done');
-  // document.body.style.overflow = 'auto';
-}
+// } else {
+//   document.getElementById('js-preloader').classList.add('done');
+// document.body.style.overflow = 'auto';
+// }
+
+preloader();
 
 //flipper
 const flipperId=document.querySelector('.welcome__flipper');
