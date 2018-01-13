@@ -1,7 +1,6 @@
 //common styles for all three forms
 .form-container{
   position: relative;
-  overflow: hidden;
   padding: 0 20px;
 }
 
@@ -56,6 +55,7 @@
   @include flex-center;
   flex-direction: column;
 
+
  
 
   &__label{
@@ -80,6 +80,15 @@
   
   &__input-icon{
     fill: #c4cbcd;
+  }
+
+  &__nav-btns{
+    width: 100%;
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 100%;
+
   }
 
 // checkbox 
@@ -247,4 +256,12 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.form-success{
+  color: $green2;
+}
+
+.form-errorr{
+  color: orangered;
 }

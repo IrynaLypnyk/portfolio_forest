@@ -21,12 +21,12 @@ block content
             .block-subtitle.block-subtitle_auth-form Авторизуйтесь
           form.form(action="server.php", method="post" id="auth-form")
             label.form__label.auth-form__label
-              input(type="text" placeholder="Логин").form__input.auth-form__input.auth-form__input_login
+              input(type="text" placeholder="Логин" required).form__input.auth-form__input.auth-form__input_login
               .form__input-fake.auth-form__input-fake.auth-form__input-fake_login
                 svg(width="15" height="15").form__input-icon.auth-form__input-icon.auth-form__input-icon_login
                   use(xlink:href="assets/images/icons/sprite.svg#login")
             label.form__label.auth-form__label
-              input(type="password" placeholder="Пароль").form__input.auth-form__input.auth-form__input_pswd
+              input(type="password" placeholder="Пароль" required).form__input.auth-form__input.auth-form__input_pswd
               .form__input-fake.auth-form__input-fake.auth-form__input-fake-pswd
                 svg(width="17" height="17").form__input-icon.auth-form__input-icon.auth-form__input-icon_pswd
                   use(xlink:href="assets/images/icons/sprite.svg#password")
@@ -47,9 +47,9 @@ block content
                   input(type="radio" name="not-robot" value="not-sure").form__radio-input.auth-form__radio-input
                   .form__radio-fake.auth-form__radio-fake
                   .form__label-text.auth-form__label-text Я не уверен
-        .auth-form__nav-btns.nav-btns.nav-btns_auth-form
-          button.nav-btns__item.form__submit-btn.form__goto-btn_auth-form(type="button" value="На главную") На главную
-          button.nav-btns__item.form__submit-btn.form__auth-btn_auth-form(type="submit" value="Войти") Войти
+            .auth-form__nav-btns.nav-btns.nav-btns_auth-form
+              button.nav-btns__item.form__submit-btn.form__goto-btn_auth-form(type="button" value="На главную") На главную
+              button.nav-btns__item.form__submit-btn.form__auth-btn_auth-form(type="submit" value="Войти") Войти
     .welcome__copyright
       ul.copyright
         li.copyright__item &copy; Ирина Лыпник

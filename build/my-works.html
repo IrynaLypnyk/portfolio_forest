@@ -244,15 +244,15 @@
           <div class="form__title form__title_contact-form">
             <div class="block-subtitle block-subtitle_contact-form">Связаться со мной</div>
           </div>
-          <form class="form" action="server.php" method="post" id="contact-form">
+          <form class="form" action="assets/php/contact-form.php" method="post" id="contact-form">
             <div class="form__fields">
               <label class="form__label contact-form__label">
-                <input class="form__input contact-form__input" type="text" name="name" placeholder="Имя">
+                <input class="form__input contact-form__input" type="text" name="name" placeholder="Имя" required>
               </label>
               <label class="form__label contact-form__label">
-                <input class="form__input contact-form__input" type="e-mail" name="e-mail" placeholder="E-mail">
+                <input class="form__input contact-form__input" type="email" name="email" placeholder="E-mail" required>
               </label>
-              <textarea class="form__textarea contact-form__textarea" placeholder="Ваше сообщение"></textarea>
+              <textarea class="form__textarea contact-form__textarea" placeholder="Ваше сообщение" name="message" required></textarea>
             </div>
             <div class="nav-btns nav-btns_contact-form">
               <button class="nav-btns__item form__submit-btn form__submit-btn_contact-form" type="submit" value="Отправить">Отправить</button>

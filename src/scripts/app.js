@@ -1,6 +1,6 @@
 'use strict';
 
-const $ = require('jquery');
+//const $ = require('jquery');
 const preloader = require('./components/preloader');
 const flipper = require('./components/flipper');
 const map = require('./components/map');
@@ -10,6 +10,8 @@ const blogNav = require('./components/blog');
 const blogNavHidden = require('./components/blog-nav-hidden');
 const slider = require('./components/slider');
 const skills = require('./components/skills');
+const submitForm = require('./components/contact-form');
+const loginForm = require('./components/login-form');
 
 //preloader
 if (document.images.length > 0) {
@@ -63,4 +65,9 @@ const skillsId = document.getElementById('skills');
 if (skillsId) {
   skills;
 }
+
+// const contactFormId = document.getElementById('contact-form');
+// if (contactFormId) {
+// $('#contact-form').on('submit', testForm);
+submitForm();
 

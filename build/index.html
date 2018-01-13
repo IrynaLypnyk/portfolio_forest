@@ -97,7 +97,7 @@
               </div>
               <form class="form" action="server.php" method="post" id="auth-form">
                 <label class="form__label auth-form__label">
-                  <input class="form__input auth-form__input auth-form__input_login" type="text" placeholder="Логин">
+                  <input class="form__input auth-form__input auth-form__input_login" type="text" placeholder="Логин" required>
                   <div class="form__input-fake auth-form__input-fake auth-form__input-fake_login">
                     <svg class="form__input-icon auth-form__input-icon auth-form__input-icon_login" width="15" height="15">
                       <use xlink:href="assets/images/icons/sprite.svg#login"></use>
@@ -105,7 +105,7 @@
                   </div>
                 </label>
                 <label class="form__label auth-form__label">
-                  <input class="form__input auth-form__input auth-form__input_pswd" type="password" placeholder="Пароль">
+                  <input class="form__input auth-form__input auth-form__input_pswd" type="password" placeholder="Пароль" required>
                   <div class="form__input-fake auth-form__input-fake auth-form__input-fake-pswd">
                     <svg class="form__input-icon auth-form__input-icon auth-form__input-icon_pswd" width="17" height="17">
                       <use xlink:href="assets/images/icons/sprite.svg#password"></use>
@@ -136,11 +136,11 @@
                     </label>
                   </div>
                 </div>
+                <div class="auth-form__nav-btns nav-btns nav-btns_auth-form">
+                  <button class="nav-btns__item form__submit-btn form__goto-btn_auth-form" type="button" value="На главную">На главную</button>
+                  <button class="nav-btns__item form__submit-btn form__auth-btn_auth-form" type="submit" value="Войти">Войти</button>
+                </div>
               </form>
-            </div>
-            <div class="auth-form__nav-btns nav-btns nav-btns_auth-form">
-              <button class="nav-btns__item form__submit-btn form__goto-btn_auth-form" type="button" value="На главную">На главную</button>
-              <button class="nav-btns__item form__submit-btn form__auth-btn_auth-form" type="submit" value="Войти">Войти</button>
             </div>
           </div>
         </div>
