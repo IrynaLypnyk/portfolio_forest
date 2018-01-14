@@ -1,5 +1,3 @@
-var $ = require('jquery');
-
 module.exports = function(){
   var animateSidebar = (function () {
 
@@ -52,7 +50,7 @@ module.exports = function(){
 
           if (article.nextArticle.length) {
             if (checkDistance(scrollTop, article.nextArticle)) {
-              newEq = article.nextArticle.index();
+              var newEq = article.nextArticle.index();
               activeAdd(newEq);
             }
 
@@ -80,6 +78,22 @@ module.exports = function(){
           $('html, body').animate({
             scrollTop : target,
           }, 700);
+
+        });
+
+
+        var blogNavHidden = $('#blog-nav_hidden');
+        var blogNavBtn = $('.blog-nav-hidden__trigger');
+        var blogNavTitles = $('#blog-nav_hidden').find('.blog-nav__items');
+
+        blogNavBtn.on('click', function() {
+          blogNavHidden.toggleClass('active');
+
+        });
+
+        blogNavTitles.on('click', function(e){
+          e.preventDefault();
+          blogNavHidden.removeClass('active');
 
         });
       },

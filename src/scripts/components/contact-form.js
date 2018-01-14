@@ -5,8 +5,6 @@ module.exports = function (){
     console.log(ev);
 
     var form = $(ev.target);
-    console.log(form);
-    //
 
 
     var ajaxForm = function (form) {
@@ -23,7 +21,6 @@ module.exports = function (){
 
     };
     var request = ajaxForm(form);
-    console.log(request);
 
 
     request.done(function (msg) {
@@ -41,6 +38,5 @@ module.exports = function (){
     });
 
   }
-  console.log('hello');
   return $('#contact-form').on('submit', submitForm);
 };
