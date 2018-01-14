@@ -1,0 +1,8 @@
+script(type="text/x-template" id="modal-template")
+  transition(name='modal')
+    .modal-mask
+      .modal-wrapper
+        .modal-container
+          .modal-body
+            slot(name='body') default body
+               button.modal-default-button(@click="$emit('close')") OK

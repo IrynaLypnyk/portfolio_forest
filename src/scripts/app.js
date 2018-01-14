@@ -44,3 +44,27 @@ if(blog) {
   blogNav();
 }
 
+
+new Vue({
+  el: '#app',
+  data: {
+    loading: false,
+    text: 'Hello All from Vue.js!',
+  },
+
+  components: {
+    hello: require('./components/modal'),
+  },
+
+  mounted: function () {
+    console.log('Runnig app version ! ');
+
+    const that = this;
+  },
+
+  methods:{
+    wasClicked: function(msg){
+      console.log('parent click', msg);
+    },
+  },
+});

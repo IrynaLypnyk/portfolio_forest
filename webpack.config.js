@@ -13,7 +13,11 @@ const config = {
       $: 'jquery',
       jQuery: 'jquery',
     }),
+    new webpack.ProvidePlugin({
+      Vue: ['../../node_modules/vue/dist/vue.esm.js', 'default'],
+    }),
   ],
 };
+
 
 module.exports = config;

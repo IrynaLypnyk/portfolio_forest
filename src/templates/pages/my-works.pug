@@ -136,6 +136,13 @@ block content
         .nav-btns.nav-btns_contact-form
             button.nav-btns__item.form__submit-btn.form__submit-btn_contact-form(type="submit" value="Отправить") Отправить
             button.nav-btns__item.form__reset-btn.form__reset-btn_contact-form(type="reset" value="Очистить") Очистить
+      #app
+        modal(
+          :text="text",
+          :show="loading"
+           @clicked="wasClicked"
+          )
+      include ../components/_modal
     button.my-works__arrow-btn
       a.arrow__link(href="#")
         svg.arrow__icon(width="27" height="19")
