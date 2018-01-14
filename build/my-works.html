@@ -74,6 +74,7 @@
             </ul>
           </div>
           <div class="header__burger-menu">
+            <!--script(type="text/x-template" id"header__burger-menu"-->
             <button id="burger-menu">
               <div class="burger-menu__icon"><span class="burger-menu__line"></span><span class="burger-menu__line"></span><span class="burger-menu__line"></span></div>
               <nav class="burger-menu__list">
@@ -254,32 +255,10 @@
               </label>
               <textarea class="form__textarea contact-form__textarea" placeholder="Ваше сообщение" name="message" required></textarea>
             </div>
-            <div class="nav-btns nav-btns_contact-form" id="app">
-              <button class="nav-btns__item form__submit-btn form__submit-btn_contact-form" id="show-modal" value="Отправить">Отправить</button>
+            <div class="nav-btns nav-btns_contact-form">
+              <button class="nav-btns__item form__submit-btn form__submit-btn_contact-form" id="show-modal" type="submit" value="Отправить">Отправить</button>
               <button class="nav-btns__item form__reset-btn form__reset-btn_contact-form" type="reset" value="Очистить">Очистить</button>
-              <modal v-if="showModal" @close="showModal = false"></modal>
             </div>
-            <script type="text/x-template" id="modal-template">
-              <transition name="modal">
-                <div class="modal-mask">
-                  <div class="modal-wrapper">
-                    <div class="modal-container">
-                      <div class="modal-body">
-                        <h3 class="modal-text">default body
-                          <button class="modal-default-button" @click="$emit('close')">OK
-                            <!--modal(-->
-                          </button>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </transition>
-            </script>
-            <!--  :text="text",-->
-            <!--  :show="loading"-->
-            <!--   @clicked="wasClicked"-->
-            <!--  )-->
           </form>
         </div>
         <button class="my-works__arrow-btn"><a class="arrow__link" href="#">

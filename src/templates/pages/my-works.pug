@@ -133,18 +133,9 @@ block content
           label.form__label.contact-form__label
             input(type="email", name="email" placeholder="E-mail" required).form__input.contact-form__input
           textarea(placeholder ="Ваше сообщение" name="message" required).form__textarea.contact-form__textarea
-        .nav-btns.nav-btns_contact-form#app
-          button.nav-btns__item.form__submit-btn.form__submit-btn_contact-form#show-modal(value="Отправить" @click=submit) Отправить
+        .nav-btns.nav-btns_contact-form
+          button.nav-btns__item.form__submit-btn.form__submit-btn_contact-form#show-modal(type="submit" value="Отправить") Отправить
           button.nav-btns__item.form__reset-btn.form__reset-btn_contact-form(type="reset" value="Очистить") Очистить
-          modal(v-if='showModal', @close='showModal = false')
-        include ../components/_modal
-
-         //modal(
-        //  :text="text",
-        //  :show="loading"
-        //   @clicked="wasClicked"
-        //  )
-
     button.my-works__arrow-btn
       a.arrow__link(href="#")
         svg.arrow__icon(width="27" height="19")
