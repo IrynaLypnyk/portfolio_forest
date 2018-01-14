@@ -23,9 +23,9 @@ if(welcomepage){
   flipper(); //флиппер
 }
 
-if(!welcomepage){
-  burgerMenu(); //гамбургер меню в хедере
-}
+// if(!welcomepage){
+//   burgerMenu(); //гамбургер меню в хедере
+// }
 
 if(aboutpage){
   arrows(); //навигационные стрелки вверх-вниз
@@ -48,11 +48,11 @@ if(blog) {
 new Vue({
   el: '#app',
   data: {
-    showModal: false,
+    text: 'Hello all from Vue.js!!',
   },
 
   components: {
-    modal: require('./components/modal'),
+    burger: require('./components/burger-menu'),
   },
 
   // mounted: function () {

@@ -50,6 +50,10 @@ mixin header (classMixin, svgImg, svgWidth, svgHeight)
       .header__socials.socials
         +socials('socials', ["fb", "github", "in"])
       .header__burger-menu
+        #app
+          burger(
+            :text = "text",
+          )
         include ../components/_burger-menu.pug
     if classMixin !== 'blog'
       div(class='header__user-block ' + `header__user-block_${classMixin}`)
