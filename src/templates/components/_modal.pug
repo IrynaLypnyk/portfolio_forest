@@ -4,5 +4,5 @@ script(type="text/x-template" id="modal-template")
       .modal-wrapper
         .modal-container
           .modal-body
-            slot(name='body') default body
+            h3.modal-text default body
                button.modal-default-button(@click="$emit('close')") OK
