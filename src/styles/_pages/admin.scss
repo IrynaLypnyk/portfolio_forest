@@ -1,0 +1,212 @@
+//_____main style for admin-template____
+.admin {
+    width: 100%;
+    min-height: 100%;
+    @include roboto(medium);
+    font-size: rem(16px);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header_admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: $green1;
+    color: #fff;
+    padding: 0 30px;
+}
+
+//.header__title {
+//    font-size: 28px;
+//}
+
+.header__link {
+    display: block;
+}
+
+.header__link-toMainPage {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: underline;
+}
+
+.admin__main{
+    background: url("../images/decor/bg_admin.jpg") center center no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+}
+.admin__tabs {
+    background-color: #f0efe9;
+    height: 70px;
+}
+
+.tab {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.tab__item {
+    border-right: 3px solid #fff;
+    text-transform: uppercase;
+    color: $grey2;
+}
+
+.tab__item:hover a{
+    color: $green1;
+}
+
+.tab__item.active a{
+    color: $green1;
+    background-color: #fff;
+}
+
+.tab__link {
+    display: inline-block;
+    padding: 25px 68px 24px 70px;
+    text-decoration: none;
+    color: $grey1;
+}
+
+.tab__link:hover {
+    background-color: #fff;
+}
+
+
+.content-tab{
+    color: $grey1;
+    @include roboto(regular);
+    height: 100%;
+}
+.content-tab__title {
+    font-size: 21px;
+    margin-bottom: 45px;
+    @include roboto(medium);
+}
+
+//_____style for admin-tab-1____
+
+.content-tab {
+    padding: 50px 30px 40px;
+    position: relative;
+}
+
+.skill {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 560px;
+}
+
+.skill__item {
+    margin-bottom: 30px;
+    margin-right: 95px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+tr {
+    //margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+
+.name {
+    //margin-bottom: 20px;
+    display: inline-block;
+    @include roboto(medium);
+}
+
+.skill__subtitle {
+    @include roboto(regular);
+    margin-right: 30px;
+}
+
+.admin-input {
+    border-radius: 5px;
+    //margin-bottom: 20px;
+    //height: 35px;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    box-sizing: border-box;
+    color: #9b9ea0;
+    @include roboto(regular);
+    font-size: rem(16px);
+}
+
+.skill__input {
+    width: 50px;
+    padding: 3px;
+
+}
+
+.skill__amount, .skill__amount-char, .admin-input, .skill__input {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-admin {
+    border-radius: 5px;
+    background-color:  $green1;
+    padding: 15px 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.pop-up {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    height: 115px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include roboto(regular);
+}
+
+
+
+.btn-admin--close {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.80);
+    padding: 14px 20px 12px 19px;
+}
+
+//_____style for admin-tab-2____
+
+.content-tab2__addArticle, .content-tab3__addproject {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-tab2__name, .content-tab3__name, .content-tab2__data, .content-tab3__tech {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.content-tab2__text {
+    width: 500px;
+    height: 165px;
+    vertical-align: top;
+    padding: 10px 20px;
+    resize: none;
+}
+
+.btn-admin--add {
+    margin-top: 30px;
+}
