@@ -44,6 +44,7 @@
 	position: relative;
   padding-bottom: 147px;
 
+
   @include w1015{
     padding-bottom: 215px;
   }
@@ -186,10 +187,13 @@
   transform: rotate(180deg);
   height: 160px;
   @include flex-center;
-  // position: absolute;
-  // bottom: 215px;
-  // left: 50%;
-  // transform: translateX(-50%);
+  margin: 0 auto;
+   //position: absolute;
+   //bottom: 215px;
+   //left: 50%;
+   //transform: translateX(-50%);
+  border: none;
+  background-color: transparent;
 
   @include tablets {
     height: 120px;

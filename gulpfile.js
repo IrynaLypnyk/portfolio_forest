@@ -56,6 +56,10 @@ const paths = {
 		src: 'src/favicons/**/*.*',
 		dest: 'build/favicons/',
 	},
+  php: {
+    src: 'src/php/**/*.*',
+    dest: 'build/assets/php/',
+	},
 };
 
 // pug
@@ -87,6 +91,12 @@ function scripts() {
 		.pipe(gulp.dest(paths.scripts.dest));
 }
 
+// php
+function php() {
+  return gulp.src(paths.php.src)
+        .pipe(gulp.dest(paths.php.dest));
+}
+
 // очистка
 function clean() {
 	return del(paths.root);
@@ -99,6 +109,7 @@ function watch() {
 	gulp.watch(paths.images.src, images);
 	gulp.watch(paths.fonts.src, fonts);
 	gulp.watch(paths.scripts.src, scripts);
+	gulp.watch(paths.php.src, php);
 }
 
 // локальный сервер + livereload (встроенный)
@@ -173,6 +184,7 @@ exports.images = images;
 exports.fonts = fonts;
 exports.toSprite = toSprite;
 exports.favicons = favicons;
+exports.php = php;
 
 
 // контрольная сборка на продакшн
@@ -184,12 +196,12 @@ exports.favicons = favicons;
 
 // просто работаем
 gulp.task('default', gulp.series(
-    gulp.parallel(styles, templates, images, fonts, scripts, toSprite),
+    gulp.parallel(styles, templates, images, fonts, scripts, toSprite,php),
     gulp.parallel(watch, server)
 ));
 
 // контрольная сборка на продакшен
 gulp.task('build', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, fonts, scripts, toSprite)
+    gulp.parallel(styles, templates, images, fonts, scripts, toSprite, php)
 ));

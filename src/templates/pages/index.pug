@@ -1,7 +1,7 @@
 extends ../template
 
 block variables
-  - var title = 'Добро пожаловать'
+  - var title = 'Добро пожаловать', className = 'welcome'
 
 block content
   .welcome
@@ -19,19 +19,19 @@ block content
         .auth-form.form-container
           .form__title.auth-form__title
             .block-subtitle.block-subtitle_auth-form Авторизуйтесь
-          form.form(action="", method="get")
+          form.form(action="server.php", method="post" id="auth-form")
             label.form__label.auth-form__label
-              input(type="text" placeholder="Логин").form__input.auth-form__input.auth-form__input_login
+              input(type="text" placeholder="Логин" required).form__input.auth-form__input.auth-form__input_login
               .form__input-fake.auth-form__input-fake.auth-form__input-fake_login
                 svg(width="15" height="15").form__input-icon.auth-form__input-icon.auth-form__input-icon_login
                   use(xlink:href="assets/images/icons/sprite.svg#login")
             label.form__label.auth-form__label
-              input(type="password" placeholder="Пароль").form__input.auth-form__input.auth-form__input_pswd
+              input(type="password" placeholder="Пароль" required).form__input.auth-form__input.auth-form__input_pswd
               .form__input-fake.auth-form__input-fake.auth-form__input-fake-pswd
                 svg(width="17" height="17").form__input-icon.auth-form__input-icon.auth-form__input-icon_pswd
                   use(xlink:href="assets/images/icons/sprite.svg#password")
             label.form__checkbox-label.auth-form__checkbox-label
-              input(type="checkbox" checked).form__checkbox-input.auth-form__checkbox-input
+              input(type="checkbox" id="is-human" name="is-human" value="1" checked).form__checkbox-input.auth-form__checkbox-input
               .form__checkbox-fake.auth-form__checkbox-fake
                 svg(width="11" height="11").form__checkbox-icon.auth-form__checkbox-icon
                   use(xlink:href="assets/images/icons/sprite.svg#check")
@@ -40,15 +40,16 @@ block content
               .form__label-text.auth-form__label-text.auth-form__label-text_radio Вы точно не робот?
               .form__radio-input-block.auth-form__radio-input-block
                 label.form__radio-label.auth-form__radio-label
-                  input(type="radio" name="isrobot" checked).form__radio-input.auth-form__radio-input
+                  input(type="radio" name="not-robot" value="yes" checked).form__radio-input.auth-form__radio-input
                   .form__radio-fake.auth-form__radio-fake
                   .form__label-text.auth-form__label-text Да
                 label.form__radio-label.auth-form__radio-label
-                  input(type="radio" name="isrobot").form__radio-input.auth-form__radio-input
+                  input(type="radio" name="not-robot" value="not-sure").form__radio-input.auth-form__radio-input
                   .form__radio-fake.auth-form__radio-fake
                   .form__label-text.auth-form__label-text Я не уверен
-        .auth-form__nav-btns
-          +nav-btns([['На главную', 'index.html', 'to-main-page'], ['Войти', '#', 'to-enter']])
+            .auth-form__nav-btns.nav-btns.nav-btns_auth-form
+              button.nav-btns__item.form__submit-btn.form__goto-btn_auth-form(type="button" value="На главную") На главную
+              button.nav-btns__item.form__submit-btn.form__auth-btn_auth-form(type="submit" value="Войти") Войти
     .welcome__copyright
       ul.copyright
         li.copyright__item &copy; Ирина Лыпник

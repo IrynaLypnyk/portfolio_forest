@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!-- - nav-items in blog--><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -31,11 +32,28 @@
     <!--css-->
     <link rel="stylesheet" href="assets/styles/app.min.css">
   </head>
-  <body>
+  <body id="welcome">
     <!--[if lte IE 8]>
 <script>alert("Вы используете устаревший браузер. Пожалуйста, обновите браузер https://browsehappy.com/")</script>
 <p class="browserupgrade">Вы используете устаревший браузер. <a href="https://browsehappy.com/">Обновите браузер</a> абсолютно бесплатно.</p>
 <![endif]-->
+    <div class="preloader" id="js-preloader">
+      <div class="preloader__img">
+        <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="95.113px" viewbox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve">
+          <g>
+            <path class="path path_top" fill="none" stroke-opacity="0.4" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801                    c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801                    c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005"></path>
+            <animate attributename="stroke-opacity" attributetype="XML" dur="1s" values="0.4; 1.0; 0.4" repeatcount="indefinite"></animate>
+          </g>
+          <g>
+            <path class="path path_middle" fill="none" stroke-opacity="0.7" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801                    c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801                    c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684"></path>
+          </g>
+          <g>
+            <path class="path path_bottom" fill="none" stroke-opacity="1" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801                    c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801                    c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"></path>
+          </g>
+        </svg>
+        <div class="preloader__text" id="js-load-percent">0</div>
+      </div>
+    </div>
     <div class="wrapper">
       <div class="welcome">
         <div class="welcome__auth-btn">
@@ -65,7 +83,7 @@
               </div>
             </div>
             <div class="welcome__nav-btns">
-              <ul class="nav-btns"> 
+              <ul class="nav-btns">
                 <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="my-works.html">Мои работы</a></li>
                 <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="about.html">Обо мне</a></li>
                 <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="blog.html">Блог</a></li>
@@ -77,9 +95,9 @@
               <div class="form__title auth-form__title">
                 <div class="block-subtitle block-subtitle_auth-form">Авторизуйтесь</div>
               </div>
-              <form class="form" action="" method="get">
+              <form class="form" action="server.php" method="post" id="auth-form">
                 <label class="form__label auth-form__label">
-                  <input class="form__input auth-form__input auth-form__input_login" type="text" placeholder="Логин">
+                  <input class="form__input auth-form__input auth-form__input_login" type="text" placeholder="Логин" required>
                   <div class="form__input-fake auth-form__input-fake auth-form__input-fake_login">
                     <svg class="form__input-icon auth-form__input-icon auth-form__input-icon_login" width="15" height="15">
                       <use xlink:href="assets/images/icons/sprite.svg#login"></use>
@@ -87,7 +105,7 @@
                   </div>
                 </label>
                 <label class="form__label auth-form__label">
-                  <input class="form__input auth-form__input auth-form__input_pswd" type="password" placeholder="Пароль">
+                  <input class="form__input auth-form__input auth-form__input_pswd" type="password" placeholder="Пароль" required>
                   <div class="form__input-fake auth-form__input-fake auth-form__input-fake-pswd">
                     <svg class="form__input-icon auth-form__input-icon auth-form__input-icon_pswd" width="17" height="17">
                       <use xlink:href="assets/images/icons/sprite.svg#password"></use>
@@ -95,7 +113,7 @@
                   </div>
                 </label>
                 <label class="form__checkbox-label auth-form__checkbox-label">
-                  <input class="form__checkbox-input auth-form__checkbox-input" type="checkbox" checked>
+                  <input class="form__checkbox-input auth-form__checkbox-input" type="checkbox" id="is-human" name="is-human" value="1" checked>
                   <div class="form__checkbox-fake auth-form__checkbox-fake">
                     <svg class="form__checkbox-icon auth-form__checkbox-icon" width="11" height="11">
                       <use xlink:href="assets/images/icons/sprite.svg#check"></use>
@@ -107,24 +125,22 @@
                   <div class="form__label-text auth-form__label-text auth-form__label-text_radio">Вы точно не робот?</div>
                   <div class="form__radio-input-block auth-form__radio-input-block">
                     <label class="form__radio-label auth-form__radio-label">
-                      <input class="form__radio-input auth-form__radio-input" type="radio" name="isrobot" checked>
+                      <input class="form__radio-input auth-form__radio-input" type="radio" name="not-robot" value="yes" checked>
                       <div class="form__radio-fake auth-form__radio-fake"></div>
                       <div class="form__label-text auth-form__label-text">Да</div>
                     </label>
                     <label class="form__radio-label auth-form__radio-label">
-                      <input class="form__radio-input auth-form__radio-input" type="radio" name="isrobot">
+                      <input class="form__radio-input auth-form__radio-input" type="radio" name="not-robot" value="not-sure">
                       <div class="form__radio-fake auth-form__radio-fake"></div>
                       <div class="form__label-text auth-form__label-text">Я не уверен</div>
                     </label>
                   </div>
                 </div>
+                <div class="auth-form__nav-btns nav-btns nav-btns_auth-form">
+                  <button class="nav-btns__item form__submit-btn form__goto-btn_auth-form" type="button" value="На главную">На главную</button>
+                  <button class="nav-btns__item form__submit-btn form__auth-btn_auth-form" type="submit" value="Войти">Войти</button>
+                </div>
               </form>
-            </div>
-            <div class="auth-form__nav-btns">
-              <ul class="nav-btns"> 
-                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_to-main-page" href="index.html">На главную</a></li>
-                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_to-enter" href="#">Войти</a></li>
-              </ul>
             </div>
           </div>
         </div>

@@ -13,9 +13,9 @@ mixin nav-links(pages)
         li.nav__item
           a.nav__link(href=`${page[1]}`)= `${page[0]}`
 
-//- nav-btns в авторизационной форме
+//- nav-btns to pages
 mixin nav-btns (pages)
-  ul.nav-btns 
+  ul.nav-btns
     each page in pages
       li.nav-btns__item
         a(href=`${page[1]}` class='nav-btns__link ' + 'nav-btns__link_' + `${page[2]}`)= `${page[0]}`
@@ -45,11 +45,15 @@ mixin socials (className, items)
 
 //- header
 mixin header (classMixin, svgImg, svgWidth, svgHeight)
-  header(class='header ' + `header_${classMixin}`)
+  header(class='header ' + `header_${classMixin}` + ' section')
     div(class="header__links " + `header__links_${classMixin}`)
       .header__socials.socials
         +socials('socials', ["fb", "github", "in"])
       .header__burger-menu
+        #app
+          burger(
+            :text = "text",
+          )
         include ../components/_burger-menu.pug
     if classMixin !== 'blog'
       div(class='header__user-block ' + `header__user-block_${classMixin}`)
@@ -58,7 +62,7 @@ mixin header (classMixin, svgImg, svgWidth, svgHeight)
         svg(class='user-info__bg-icon ' + `user-info__bg-icon_${classMixin}` width=`${svgWidth}` height=`${svgHeight}`)
           use(xlink:href="assets/images/icons/sprite.svg#" + `${svgImg}` + "_header")
 
-      .header__arrow-btn
+      button.header__arrow-btn
         a.arrow__link(href="#")
           svg.arrow__icon(width="27" height="19")
             use(xlink:href="assets/images/icons/sprite.svg#arrow_down")
@@ -66,11 +70,11 @@ mixin header (classMixin, svgImg, svgWidth, svgHeight)
       div(class='header__user-block ' + `header__user-block_${classMixin}`)
         div(class='user ' + `user_${classMixin}`)
           +user-img
-        svg(class='user-info__bg-icon ' + `user-info__bg-icon_${classMixin}` viewbox="0 0" + ` ${svgWidth}` + ` ${svgHeight}`)
+        svg(class='user-info__bg-icon ' + `user-info__bg-icon_${classMixin}` width=`${svgWidth}` height=`${svgHeight}`)
           use(xlink:href="assets/images/icons/sprite.svg#" + `${svgImg}` + "_header")
         div(class='block-title ' + `block-title_${classMixin}`) Блог
         .user__title Статьи, которые я написал
-      .header__arrow-btn.header__arrow-btn_blog
+      button.header__arrow-btn.header__arrow-btn_blog
         a.arrow__link(href="#")
           svg.arrow__icon(width="27" height="19")
             use(xlink:href="assets/images/icons/sprite.svg#arrow_down")
@@ -85,8 +89,23 @@ mixin skills-circles (skills)
         .skill-circle
           svg(viewBox="0 0 120 120").skill-circle__svg-img
             circle(r="50" cx="50%" cy="50%").circle.circle_base
-            circle(r="50" cx="50%" cy="50%" class='circle' + ' circle_fill ' + `circle-${skill[1]}`)
+            circle(r="50" cx="50%" cy="50%" class='circle' + ' circle_fill ' + `circle-${skill[1]}`).circle_second
           span.skill-circle__title= `${skill[0]}`
+
+
+// - nav-items in blog
+mixin blog-nav-items
+  .blog-nav
+    ul.blog-nav__list
+      li.blog-nav__items
+        a.blog-nav__links(href="#") Самое важное в SASS
+      li.blog-nav__items
+        a.blog-nav__links(href="#") Приёмы в вёрстке, без которых не обходится ни один сайт
+      li.blog-nav__items
+        a.blog-nav__links(href="#") Самый необходимый набор Gulp плагинов
+      li.blog-nav__items
+        a.blog-nav__links(href="#") Почему я выбрал Jade
+
 
 //- contacts
 mixin contacts(classMixin, contactTypes)

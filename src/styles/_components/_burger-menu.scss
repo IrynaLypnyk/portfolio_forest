@@ -23,11 +23,13 @@
   position: absolute;
   z-index: 51;
   top: 0;
+  opacity: 1;
+  transition: 0.3s;
 
   &:hover{
     cursor: pointer;
+    opacity: 0.7;
   }
-
  }
 
 .burger-menu__line {

@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!-- - nav-items in blog--><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -31,13 +32,30 @@
     <!--css-->
     <link rel="stylesheet" href="assets/styles/app.min.css">
   </head>
-  <body>
+  <body id="my-works">
     <!--[if lte IE 8]>
 <script>alert("Вы используете устаревший браузер. Пожалуйста, обновите браузер https://browsehappy.com/")</script>
 <p class="browserupgrade">Вы используете устаревший браузер. <a href="https://browsehappy.com/">Обновите браузер</a> абсолютно бесплатно.</p>
 <![endif]-->
+    <div class="preloader" id="js-preloader">
+      <div class="preloader__img">
+        <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="95.113px" viewbox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve">
+          <g>
+            <path class="path path_top" fill="none" stroke-opacity="0.4" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801                    c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801                    c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005"></path>
+            <animate attributename="stroke-opacity" attributetype="XML" dur="1s" values="0.4; 1.0; 0.4" repeatcount="indefinite"></animate>
+          </g>
+          <g>
+            <path class="path path_middle" fill="none" stroke-opacity="0.7" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801                    c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801                    c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684"></path>
+          </g>
+          <g>
+            <path class="path path_bottom" fill="none" stroke-opacity="1" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801                    c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801                    c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"></path>
+          </g>
+        </svg>
+        <div class="preloader__text" id="js-load-percent">0</div>
+      </div>
+    </div>
     <div class="wrapper">
-      <header class="header header_my-works">
+      <header class="header header_my-works section">
         <div class="header__links header__links_my-works">
           <div class="header__socials socials">
             <ul class="socials__list">
@@ -56,17 +74,22 @@
             </ul>
           </div>
           <div class="header__burger-menu">
-            <button id="burger-menu">
-              <div class="burger-menu__icon"><span class="burger-menu__line"></span><span class="burger-menu__line"></span><span class="burger-menu__line"></span></div>
-              <nav class="burger-menu__list">
-                <ul class="nav__list_burger">
-                  <li class="nav__item_burger"><a class="nav__link_burger" href="my-works.html">Мои работы</a></li>
-                  <li class="nav__item_burger"><a class="nav__link_burger" href="about.html">Обо мне</a></li>
-                  <li class="nav__item_burger"><a class="nav__link_burger" href="blog.html">Блог</a></li>
-                  <li class="nav__item_burger"><a class="nav__link_burger" href="index.html">Авторизация</a></li>
-                </ul>
-              </nav>
-            </button>
+            <div id="app">
+              <burger :text="text"></burger>
+            </div>
+            <script type="text/x-template" id="burger-menu_template">
+              <button id="burger-menu">
+                <div class="burger-menu__icon"><span class="burger-menu__line"></span><span class="burger-menu__line"></span><span class="burger-menu__line"></span></div>
+                <nav class="burger-menu__list">
+                  <ul class="nav__list_burger">
+                    <li class="nav__item_burger"><a class="nav__link_burger" href="my-works.html">Мои работы</a></li>
+                    <li class="nav__item_burger"><a class="nav__link_burger" href="about.html">Обо мне</a></li>
+                    <li class="nav__item_burger"><a class="nav__link_burger" href="blog.html">Блог</a></li>
+                    <li class="nav__item_burger"><a class="nav__link_burger" href="index.html">Авторизация</a></li>
+                  </ul>
+                </nav>
+              </button>
+            </script>
           </div>
         </div>
         <div class="header__user-block header__user-block_my-works">
@@ -79,10 +102,10 @@
             <use xlink:href="assets/images/icons/sprite.svg#portfolio_header"></use>
           </svg>
         </div>
-        <div class="header__arrow-btn"><a class="arrow__link" href="#">
+        <button class="header__arrow-btn"><a class="arrow__link" href="#">
             <svg class="arrow__icon" width="27" height="19">
               <use xlink:href="assets/images/icons/sprite.svg#arrow_down"></use>
-            </svg></a></div>
+            </svg></a></button>
       </header>
       <section class="section section_my-works">
         <div class="triangles triangles_my-works">
@@ -99,25 +122,80 @@
             </svg>
           </div>
           <div class="my-works__slider">
-            <div class="slider">
+            <div class="slider" id="slider">
               <div class="slider__slide-desc">
-                <div class="slider__slide-title block-subtitle block-subtitle_my-works">Сайт школы онлайн образования</div>
-                <div class="slider__desc-skills">HTML , CSS, JAVASCRIPT</div>
-                <div class="slider__btn"><a class="slider__btn-link" href="#">
-                    <svg class="slider__link-icon" width="19" height="19">
-                      <use xlink:href="assets/images/icons/sprite.svg#link"></use>
-                    </svg><span class="slider__link-text">Посмотреть сайт</span></a></div>
+                <ul class="slide-desc__list">
+                  <li class="slide-desc__item active">
+                    <div class="slider__slide-title block-subtitle block-subtitle_my-works">Школа онлайн-образования "LoftSchool"</div>
+                    <div class="slider__desc-skills">HTML, CSS, JAVASCRIPT</div>
+                    <div class="slider__btn"><a class="slider__btn-link" href="http://loftschool.com/" target="_blank">
+                        <svg class="slider__link-icon" width="19" height="19">
+                          <use xlink:href="assets/images/icons/sprite.svg#link"></use>
+                        </svg><span class="slider__link-text">Посмотреть сайт</span></a></div>
+                  </li>
+                  <li class="slide-desc__item">
+                    <div class="slider__slide-title block-subtitle block-subtitle_my-works">Агентство интернет решений "ITLoft"</div>
+                    <div class="slider__desc-skills">HTML, CSS, JAVASCRIPT</div>
+                    <div class="slider__btn"><a class="slider__btn-link" href="http://itloft.ru/" target="_blank">
+                        <svg class="slider__link-icon" width="19" height="19">
+                          <use xlink:href="assets/images/icons/sprite.svg#link"></use>
+                        </svg><span class="slider__link-text">Посмотреть сайт</span></a></div>
+                  </li>
+                  <li class="slide-desc__item">
+                    <div class="slider__slide-title block-subtitle block-subtitle_my-works">Портал обучающих уроков "LoftBlog"</div>
+                    <div class="slider__desc-skills">HTML, CSS, JAVASCRIPT</div>
+                    <div class="slider__btn"><a class="slider__btn-link" href="http://loftblog.ru/" target="_blank">
+                        <svg class="slider__link-icon" width="19" height="19">
+                          <use xlink:href="assets/images/icons/sprite.svg#link"></use>
+                        </svg><span class="slider__link-text">Посмотреть сайт</span></a></div>
+                  </li>
+                  <li class="slide-desc__item">
+                    <div class="slider__slide-title block-subtitle block-subtitle_my-works">Сайт "Атма йога"</div>
+                    <div class="slider__desc-skills">HTML, CSS, JAVASCRIPT</div>
+                    <div class="slider__btn"><a class="slider__btn-link" href="http://atmayoga.ru/" target="_blank">
+                        <svg class="slider__link-icon" width="19" height="19">
+                          <use xlink:href="assets/images/icons/sprite.svg#link"></use>
+                        </svg><span class="slider__link-text">Посмотреть сайт</span></a></div>
+                  </li>
+                </ul>
               </div>
-              <div class="slider__slides-preview"><img class="slider__slide-img" src="assets/images/content/work-1.png" alt=""></div>
-              <div class="slider__slides-nav">
-                <div class="slider__control slider__control_toprev"><a class="slider__controls-link" href="#">
-                    <svg class="slider__arrow-svg" width="43" height="27">
+              <div class="slider__slides-preview">
+                <ul class="slides-preview__list">
+                  <li class="slides-preview__item active"><img class="slides-preview__img" src="assets/images/content/work-1.png" alt="Школа онлайн-образования &quot;LoftSchool&quot;"></li>
+                  <li class="slides-preview__item"><img class="slides-preview__img" src="assets/images/content/work-2.png" alt="Агентство интернет решений &quot;ITLoft&quot;"></li>
+                  <li class="slides-preview__item"><img class="slides-preview__img" src="assets/images/content/work-3.png" alt="Портал обучающих уроков &quot;LoftBlog&quot;"></li>
+                  <li class="slides-preview__item"><img class="slides-preview__img" src="assets/images/content/work-4.png" alt="Сайт &quot;Атма йога&quot;"></li>
+                </ul>
+              </div>
+              <div class="slider__slides-nav-container">
+                <div class="slides-nav slides-nav__prev">
+                  <ul class="slides-nav__list slides-nav__list_prev">
+                    <li class="slides-nav__item slides-nav__item_prev"><img class="slides-nav__img" src="assets/images/content/work-1.png" alt="Школа онлайн-образования &quot;LoftSchool&quot;"></li>
+                    <li class="slides-nav__item slides-nav__item_prev"><img class="slides-nav__img" src="assets/images/content/work-2.png" alt="Агентство интернет решений &quot;ITLoft&quot;"></li>
+                    <li class="slides-nav__item slides-nav__item_prev"><img class="slides-nav__img" src="assets/images/content/work-3.png" alt="Портал обучающих уроков &quot;LoftBlog&quot;"></li>
+                    <li class="slides-nav__item slides-nav__item_prev active"><img class="slides-nav__img" src="assets/images/content/work-4.png" alt="Сайт &quot;Атма йога&quot;"></li>
+                  </ul>
+                  <div class="slides-nav__controls slides-nav__controls_prev">
+                    <svg class="slides-nav__arrow-svg slides-nav__arrow-svg_prev" width="43" height="27">
                       <use xlink:href="assets/images/icons/sprite.svg#portf_arrow_down"></use>
-                    </svg></a></div>
-                <div class="slider__control slider__control_tonext"><a class="slider__controls-link" href="#">
-                    <svg class="slider__arrow-svg" width="43" height="27">
+                    </svg>
+                  </div>
+                  <div class="slides-nav__controls-bg slides-nav__controls-bg_next"></div>
+                </div>
+                <div class="slides-nav slides-nav__next">
+                  <ul class="slides-nav__list slides-nav__list_next">
+                    <li class="slides-nav__item slides-nav__item_next"><img class="slides-nav__img" src="assets/images/content/work-1.png" alt="Школа онлайн-образования &quot;LoftSchool&quot;"></li>
+                    <li class="slides-nav__item slides-nav__item_next active"><img class="slides-nav__img" src="assets/images/content/work-2.png" alt="Агентство интернет решений &quot;ITLoft&quot;"></li>
+                    <li class="slides-nav__item slides-nav__item_next"><img class="slides-nav__img" src="assets/images/content/work-3.png" alt="Портал обучающих уроков &quot;LoftBlog&quot;"></li>
+                    <li class="slides-nav__item slides-nav__item_next"><img class="slides-nav__img" src="assets/images/content/work-4.png" alt="Сайт &quot;Атма йога&quot;"></li>
+                  </ul>
+                  <div class="slides-nav__controls slides-nav__controls_next">
+                    <svg class="slides-nav__arrow-svg slides-nav__arrow-svg_next" width="43" height="27">
                       <use xlink:href="assets/images/icons/sprite.svg#portf_arrow_up"></use>
-                    </svg></a></div>
+                    </svg>
+                  </div>
+                  <div class="slides-nav__controls-bg slides-nav__controls-bg_next"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -171,26 +249,26 @@
           <div class="form__title form__title_contact-form">
             <div class="block-subtitle block-subtitle_contact-form">Связаться со мной</div>
           </div>
-          <form class="form">
+          <form class="form" action="assets/php/contact-form.php" method="post" id="contact-form">
             <div class="form__fields">
               <label class="form__label contact-form__label">
-                <input class="form__input contact-form__input" type="text" name="name" placeholder="Имя">
+                <input class="form__input contact-form__input" type="text" name="name" placeholder="Имя" required>
               </label>
               <label class="form__label contact-form__label">
-                <input class="form__input contact-form__input" type="e-mail" name="e-mail" placeholder="E-mail">
+                <input class="form__input contact-form__input" type="email" name="email" placeholder="E-mail" required>
               </label>
-              <textarea class="form__textarea contact-form__textarea" placeholder="Ваше сообщение"></textarea>
+              <textarea class="form__textarea contact-form__textarea" placeholder="Ваше сообщение" name="message" required></textarea>
             </div>
             <div class="nav-btns nav-btns_contact-form">
-              <button class="nav-btns__item form__submit-btn form__submit-btn_contact-form" type="submit" value="Отправить">Отправить</button>
+              <button class="nav-btns__item form__submit-btn form__submit-btn_contact-form" id="show-modal" type="submit" value="Отправить">Отправить</button>
               <button class="nav-btns__item form__reset-btn form__reset-btn_contact-form" type="reset" value="Очистить">Очистить</button>
             </div>
           </form>
         </div>
-        <div class="my-works__arrow-btn"><a class="arrow__link" href="#">
+        <button class="my-works__arrow-btn"><a class="arrow__link" href="#">
             <svg class="arrow__icon" width="27" height="19">
               <use xlink:href="assets/images/icons/sprite.svg#arrow_down"></use>
-            </svg></a></div>
+            </svg></a></button>
       </section>
       <div class="footer footer_my-works">
         <div class="footer__top">

@@ -1,7 +1,7 @@
 extends ../template
 
 block variables
-  - var title = 'Обо мне'
+  - var title = 'Обо мне', className = 'about'
 
 block content
   +header('about', 'portfolio', '1170', '285')
@@ -33,20 +33,20 @@ block content
             | Вам полезен
         .about__right-text
           p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.
-        .about__right-skills-block
+        #skills.about__right-skills-block
           ul.skills
             li.skills__item
               .skills-row
                 .skills-row__title Frontend
-                +skills-circles([['HTML5', '90'], ['CSS3', '90'], ['JavaScript & jQuery','50']])
+                +skills-circles([['HTML5', '90'], ['CSS3', '90'], ['JavaScript & jQuery','60']])
             li.skills__item
               .skills-row
                 .skills-row__title Backend
-                +skills-circles([['Node.js & npm', '75'], ['PHP', '15'], ['mySQL', '20'], ['Mongo.db','10']])
+                +skills-circles([['Node.js & npm', '20'], ['PHP', '15'], ['mySQL', '20'], ['Mongo.db','10']])
             li.skills__item
               .skills-row
                 .skills-row__title Workflow
-                +skills-circles([['Git', '60'], ['Gulp', '75'], ['Webpack', '50'], ['Sass & Pug(Jade)','80']])
+                +skills-circles([['Git', '80'], ['Gulp', '75'], ['Webpack', '50'], ['Sass & Pug(Jade)','90']])
   section.section.section_map
     #map
     .map-contacts
@@ -56,4 +56,4 @@ block content
         +contacts('map', [['skype', 'skype_iryna.lypnyk', 'skype:iryna.lypnyk '], ['email', 'iryna.lypnyk@gmail.com', 'mailto:iryna.lypnyk@gmail.com'], ['phone', '+38 (063) 76 989 77', 'tel:+380637698977'], ['address', 'Киев, Украина', '#map']])
   +footer('about')
 block add-scripts
-  script(src!='https://maps.googleapis.com/maps/api/js?key=AIzaSyAa3Dwo3IxCqa3Z-_ZZpCGbElFEMKxfKcg')
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAa3Dwo3IxCqa3Z-_ZZpCGbElFEMKxfKcg' type="text/javascript")
