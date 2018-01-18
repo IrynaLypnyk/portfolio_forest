@@ -1,0 +1,14 @@
+extends ../template_admin
+
+block title
+    title Панель администрирования - Таб_3
+
+block admin__content
+    .content-tab
+        h2.content-tab__title Страница "Мои работы"
+        form.content-tab3__addproject(action="")
+            .name.content-tab3__name Добавить работу
+            input(type="text" placeholder="Название проекта" name="").content-tab3__name.admin-input
+            input(type="text" placeholder="Технологии" name="").content-tab3__tech.admin-input
+            .content-tab3__button
+                button(type='submit').btn-admin.btn-admin--add Добавить

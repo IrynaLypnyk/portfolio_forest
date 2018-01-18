@@ -1,0 +1,48 @@
+extends ../template_admin
+
+block title
+    title Панель администрирования - Таб_1
+
+block admin__content
+    .content-tab
+        h2.content-tab__title Страница "Oбо мне"
+        form.content-tab1__skill
+            ul.skill
+                li.skill__item
+                    .skill__name.name Frontend
+                    table.skill__table
+                        - var items = ['Html', 'CSS', 'JavaScript'];
+                            each item in items
+                                tr
+                                    td
+                                        .skill__subtitle= item
+                                    td
+                                        .skill__amount
+                                            input(name="" type="text" placeholder="").skill__input.admin-input
+                                        .skill__amount-char %
+                li.skill__item
+                    .skill__name.name Backend
+                    table.skill__table(cellspacing="50")
+                        - var items = ['PHP', 'Node.js', 'Mongo.db'];
+                            each item in items
+                                tr
+                                    td
+                                        .skill__subtitle= item
+                                    td
+                                        .skill__amount
+                                            input(name="" type="text" placeholder="").skill__input.admin-input
+                                        .skill__amount-char %
+                li.skill__item
+                    .skill__name.name Workflow
+                    table.skill__table
+                        - var items = ['Git', 'Gulp', 'Bower'];
+                            each item in items
+                                tr
+                                    td
+                                        .skill__subtitle= item
+                                    td
+                                        .skill__amount
+                                            input(name="" type="text" placeholder="").skill__input.admin-input
+                                        .skill__amount-char %
+            .skill__button
+                button(type='submit').btn-admin.btn-admin--save Сохранить

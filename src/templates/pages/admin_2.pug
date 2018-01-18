@@ -1,0 +1,15 @@
+extends ../template_admin
+
+block title
+    title Панель администрирования - Таб_2
+
+block admin__content
+    .content-tab
+        h2.content-tab__title Страница "Блог"
+        form.content-tab2__addArticle(action="")
+            .name.content-tab2__name Добавить запись
+            input(type="text" placeholder="Название" name="").content-tab2__name.admin-input
+            input(type="text" placeholder="Дата" name="").content-tab2__data.admin-input
+            textarea(placeholder="Содержание" name='').content-tab2__text.admin-input
+            .content-tab2__button
+                button(type='submit').btn-admin.btn-admin--add Добавить
