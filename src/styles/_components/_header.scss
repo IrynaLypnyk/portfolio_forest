@@ -1,3 +1,5 @@
+@use "../_setups/media";
+
 .header{
   width: 100%;
   position: relative;
@@ -7,11 +9,11 @@
   background-repeat: no-repeat;
   position: relative;
 
-	@include laptops{
+	@include media.laptops{
     background-image: url("../images/decor/bg1000.jpg");
     }
 
-  @include phones{
+  @include media.phones{
     background-image: url("../images/decor/bg500.jpg");
     }
 
@@ -22,11 +24,11 @@
     min-height: 602px;
     position: relative;
 
-    @include w810{
+    @include media.w810{
       min-height: 506px;
     }
 
-    @include w600{
+    @include media.w600{
       min-height: 558px;
     }
   }
@@ -34,11 +36,11 @@
   &_blog{
     min-height: 467px;
 
-    @include tablets{
+    @include media.tablets{
       min-height: 553px;
     }
 
-    @include w360{
+    @include media.w360{
       min-height: 568px;
     }
   }
@@ -51,11 +53,11 @@
   padding: 30px 30px 0;
   margin-bottom: 98px;
 
-	@include tablets{
+	@include media.tablets{
     margin-bottom: 60px;
 	}
 
-	@include w360{
+	@include media.w360{
 		 padding: 10px 10px 0;
 			margin-bottom: 80px;
 	}
@@ -69,7 +71,7 @@
 	position: relative;
 
 
-  	 @include w360{
+    @include media.w360{
     margin-top: 80px;
   }
 }
@@ -79,11 +81,11 @@
   position: relative;
 
 
-  @include tablets{
+  @include media.tablets{
     margin-top: 50px;
   }
 
-  @include smallest{
+  @include media.smallest{
     margin-top: 80px;
   }
 }
@@ -94,7 +96,7 @@
   width: 100%;
 	top: 0;
 
-	@include laptops{
+	@include media.laptops{
 		padding-left: 5%;
 		padding-right: 5%;
 	}
@@ -124,7 +126,7 @@ cursor: pointer;
 &_blog {
 display: none;
 
-@include phones {
+@include media.phones {
 display: block;
 	}
 	}

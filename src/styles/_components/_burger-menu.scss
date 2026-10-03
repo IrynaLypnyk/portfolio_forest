@@ -1,3 +1,7 @@
+@use "../_setups/fonts";
+@use "../_setups/media";
+@use "../_setups/variables" as app;
+
 #burger-menu{
   position: relative;
   width: 40px;
@@ -8,7 +12,7 @@
   padding: 0;
 
 
-  @include w360{
+  @include media.w360{
     height: 23px;
     width: 26px;
   }
@@ -39,7 +43,7 @@
   border-radius: 2px;
 
 
-  @include w360 {
+  @include media.w360 {
     height: 3px;
   }
 }
@@ -71,7 +75,7 @@
   top: 0;
   height: 0%;
   width: 100%;
-  background-color: rgba($green1, .9);
+  background-color: rgba(app.$green1, .9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +98,7 @@
 
 }
 .nav__link_burger {
-@include sansus();
+@include fonts.sansus();
 font-size: 63px;
 text-transform: uppercase;
 text-decoration: none;
@@ -105,11 +109,11 @@ align-items: center;
 
 
 
-@include w810 {
+@include media.w810 {
 font-size: 49px;
 }
 
-@include w380 {
+@include media.w380 {
 font-size: 35px;
 }
 }

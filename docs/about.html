@@ -1,16 +1,16 @@
 
 <!-- - nav-items in blog--><!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Обо мне</title>
+    <title>About me</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <!--meta(content="width=1800" name="viewport")-->
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <!-- SEO-->
-    <meta content="" name="description">
+    <meta content="Iryna Lypnyk’s forest-themed web development portfolio." name="description">
     <meta content="" name="keywords">
-    <meta content="" name="author">
+    <meta content="Iryna Lypnyk" name="author">
     <!--favicons-->
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
@@ -27,16 +27,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
     <link rel="manifest" href="favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!--css-->
     <link rel="stylesheet" href="assets/styles/app.min.css">
+    <noscript>
+      <style>
+        #js-preloader { display: none; }
+
+      </style>
+    </noscript>
   </head>
   <body id="about">
-    <!--[if lte IE 8]>
-<script>alert("Вы используете устаревший браузер. Пожалуйста, обновите браузер https://browsehappy.com/")</script>
-<p class="browserupgrade">Вы используете устаревший браузер. <a href="https://browsehappy.com/">Обновите браузер</a> абсолютно бесплатно.</p>
-<![endif]-->
     <div class="preloader" id="js-preloader">
       <div class="preloader__img">
         <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="95.113px" viewbox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve">
@@ -59,18 +61,16 @@
         <div class="header__links header__links_about">
           <div class="header__socials socials">
             <ul class="socials__list">
-              <li class="socials__item"><a class="socials__link" href="#">
-                  <svg class="socials__icon socials__icon_fb" width="26px" height="26px">
-                    <use xlink:href="assets/images/icons/sprite.svg#fb"> </use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link" href="#">
+              <li class="socials__item"><a class="socials__link" href="https://github.com/IrynaLypnyk" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                   <svg class="socials__icon socials__icon_github" width="26px" height="26px">
-                    <use xlink:href="assets/images/icons/sprite.svg#github"> </use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link" href="#">
+                    <use xlink:href="assets/images/icons/sprite.svg#github"></use>
+                  </svg></a>
+              </li>
+              <li class="socials__item"><a class="socials__link" href="https://www.linkedin.com/in/irynalypnyk/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                   <svg class="socials__icon socials__icon_in" width="26px" height="26px">
-                    <use xlink:href="assets/images/icons/sprite.svg#in"> </use>
-                  </svg></a></li>
+                    <use xlink:href="assets/images/icons/sprite.svg#in"></use>
+                  </svg></a>
+              </li>
             </ul>
           </div>
           <div class="header__burger-menu">
@@ -79,10 +79,10 @@
               <div class="burger-menu__icon"><span class="burger-menu__line"></span><span class="burger-menu__line"></span><span class="burger-menu__line"></span></div>
               <nav class="burger-menu__list">
                 <ul class="nav__list_burger">
-                  <li class="nav__item_burger"><a class="nav__link_burger" href="my-works.html">Мои работы</a></li>
-                  <li class="nav__item_burger"><a class="nav__link_burger" href="about.html">Обо мне</a></li>
-                  <li class="nav__item_burger"><a class="nav__link_burger" href="blog.html">Блог</a></li>
-                  <li class="nav__item_burger"><a class="nav__link_burger" href="index.html">Авторизация</a></li>
+                  <li class="nav__item_burger"><a class="nav__link_burger" href="my-works.html">My work</a></li>
+                  <li class="nav__item_burger"><a class="nav__link_burger" href="about.html">About me</a></li>
+                  <li class="nav__item_burger"><a class="nav__link_burger" href="blog.html">Blog</a></li>
+                  <li class="nav__item_burger"><a class="nav__link_burger" href="index.html">Login</a></li>
                 </ul>
               </nav>
             </button>
@@ -90,9 +90,8 @@
         </div>
         <div class="header__user-block header__user-block_about">
           <div class="user user_about">
-            <div class="user__img-block"><img class="user__img" src="assets/images/content/hero.jpg" alt="Моя фото"/></div>
-            <div class="user__name">Владимир Астахов</div>
-            <div class="user__title">Личный сайт веб-разработчика</div>
+            <div class="block-title block-title_blog">Iryna Lypnyk</div>
+            <div class="user__title">My first web portfolio · 2017</div>
           </div>
           <svg class="user-info__bg-icon user-info__bg-icon_about" width="1170" height="285">
             <use xlink:href="assets/images/icons/sprite.svg#portfolio_header"></use>
@@ -113,31 +112,30 @@
         <div class="about__content-container">
           <div class="about__col about__col_left">
             <div class="about__leftcol-title">
-              <div class="block-title block-title_about">Обо мне</div>
+              <div class="block-title block-title_about">About me</div>
               <svg class="block-title__bg-svg block-title__bg-svg_about" viewBox="0 0 361 126">
                 <use xlink:href="assets/images/icons/sprite.svg#about_header"></use>
               </svg>
             </div>
             <div class="about__leftcol-content">
               <div class="user-description">
-                <div class="user-description__image-block"><img class="user-description__img" src="assets/images/content/hero.jpg"></div>
+                <div class="user-description__image-block"><img class="user-description__img" src="assets/images/content/iryna-lypnyk.jpg" alt="Iryna Lypnyk"></div>
                 <div class="user-description__title">
-                  <div class="block-subtitle">Кто я</div>
+                  <div class="block-subtitle">Who I am</div>
                 </div>
                 <div class="user-description__text">
-                  <p>Я веб-разработчик из Киева. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
-                  <p>Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
+                  <p>I am Iryna Lypnyk, a web developer. I enjoy building websites and applications with thoughtful interfaces and responsive layouts.</p>
+                  <p>I created this portfolio during the Loftschool web development course in 2017. It preserves the original forest design and learning exercises, with an updated build setup.</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="about__col about__col_right">
             <div class="about__right-title">
-              <div class="block-subtitle">
-                 Чем я могу быть <br>Вам полезен</div>
+              <div class="block-subtitle">What I<br>work with</div>
             </div>
             <div class="about__right-text">
-              <p>Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.</p>
+              <p>This project explores frontend development, from responsive layouts to JavaScript interactions. The skill charts below reflect the original course project.</p>
             </div>
             <div class="about__right-skills-block" id="skills">
               <ul class="skills">
@@ -259,29 +257,29 @@
         <div id="map"></div>
         <div class="map-contacts">
           <div class="map-contacts__title">
-            <div class="block-subtitle">Контакты</div>
+            <div class="block-subtitle">Contact</div>
           </div>
           <div class="map-contacts__list">
             <ul class="contacts contacts_map">
               <li class="contacts__item contacts__item_map">
                 <svg class="contacts__icon contacts__icon_skype" width="26" height="26">
-                  <use xlink:href="assets/images/icons/sprite.svg#skype"> </use>
+                  <use xlink:href="assets/images/icons/sprite.svg#skype"></use>
                 </svg><a class="contacts__link" href="skype:iryna.lypnyk ">skype_iryna.lypnyk</a>
               </li>
               <li class="contacts__item contacts__item_map">
                 <svg class="contacts__icon contacts__icon_email" width="26" height="26">
-                  <use xlink:href="assets/images/icons/sprite.svg#email"> </use>
+                  <use xlink:href="assets/images/icons/sprite.svg#email"></use>
                 </svg><a class="contacts__link" href="mailto:iryna.lypnyk@gmail.com">iryna.lypnyk@gmail.com</a>
               </li>
               <li class="contacts__item contacts__item_map">
                 <svg class="contacts__icon contacts__icon_phone" width="26" height="26">
-                  <use xlink:href="assets/images/icons/sprite.svg#phone"> </use>
+                  <use xlink:href="assets/images/icons/sprite.svg#phone"></use>
                 </svg><a class="contacts__link" href="tel:+380637698977">+38 (063) 76 989 77</a>
               </li>
               <li class="contacts__item contacts__item_map">
                 <svg class="contacts__icon contacts__icon_address" width="26" height="26">
-                  <use xlink:href="assets/images/icons/sprite.svg#address"> </use>
-                </svg><a class="contacts__link" href="#map">Киев, Украина</a>
+                  <use xlink:href="assets/images/icons/sprite.svg#address"></use>
+                </svg><a class="contacts__link" href="https://www.google.com/maps?q=50.4561854,30.5434603">Kyiv, Ukraine</a>
               </li>
             </ul>
           </div>
@@ -290,53 +288,51 @@
       <div class="footer footer_about">
         <div class="footer__top">
           <div class="footer__col footer__col_left">
-            <div class="footer__copyright-block">Этот сайт я сделалa в рамках обучения в Школе онлайн образования LoftSchool.</div>
+            <div class="footer__copyright-block">Built as my final project for the Loftschool web development course.</div>
           </div>
           <div class="footer__col footer__col_center">
             <div class="footer__nav-block">
               <nav class="nav">
                 <ul class="nav__list">
-                  <li class="nav__item"><a class="nav__link" href="my-works.html">Мои работы</a></li>
-                  <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
-                  <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
-                  <li class="nav__item"><a class="nav__link" href="index.html">Авторизация</a></li>
+                  <li class="nav__item"><a class="nav__link" href="my-works.html">My work</a></li>
+                  <li class="nav__item"><a class="nav__link" href="about.html">About me</a></li>
+                  <li class="nav__item"><a class="nav__link" href="blog.html">Blog</a></li>
+                  <li class="nav__item"><a class="nav__link" href="index.html">Login</a></li>
                 </ul>
               </nav>
             </div>
             <div class="footer__socials-block">
               <ul class="socials__list">
-                <li class="socials__item"><a class="socials__link" href="#">
-                    <svg class="socials__icon socials__icon_fb" width="26px" height="26px">
-                      <use xlink:href="assets/images/icons/sprite.svg#fb"> </use>
-                    </svg></a></li>
-                <li class="socials__item"><a class="socials__link" href="#">
+                <li class="socials__item"><a class="socials__link" href="https://github.com/IrynaLypnyk" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                     <svg class="socials__icon socials__icon_github" width="26px" height="26px">
-                      <use xlink:href="assets/images/icons/sprite.svg#github"> </use>
-                    </svg></a></li>
-                <li class="socials__item"><a class="socials__link" href="#">
+                      <use xlink:href="assets/images/icons/sprite.svg#github"></use>
+                    </svg></a>
+                </li>
+                <li class="socials__item"><a class="socials__link" href="https://www.linkedin.com/in/irynalypnyk/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                     <svg class="socials__icon socials__icon_in" width="26px" height="26px">
-                      <use xlink:href="assets/images/icons/sprite.svg#in"> </use>
-                    </svg></a></li>
+                      <use xlink:href="assets/images/icons/sprite.svg#in"></use>
+                    </svg></a>
+                </li>
               </ul>
             </div>
           </div>
           <div class="footer__col footer__col_right">
             <div class="footer__cite-block">
-              <blockquote class="footer__cite-text">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</blockquote>
+              <blockquote class="footer__cite-text">Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.</blockquote>
               <cite class="footer__cite-author">— Martin Golding</cite>
             </div>
           </div>
         </div>
         <div class="footer__bottom">
           <div class="copyright">
-            <p class="copyright__item">&copy; Ирина Лыпник</p>
-            <p class="copyright__item">создано с &#10084; в LoftSchool | 2017</p>
+            <p class="copyright__item">&copy; <a class="copyright__link" href="https://irynalypnyk.com">Iryna Lypnyk</a></p>
+            <p class="copyright__item">Made with &#10084; at Loftschool | 2017</p>
           </div>
         </div>
       </div>
     </div>
     <!--scripts-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa3Dwo3IxCqa3Z-_ZZpCGbElFEMKxfKcg" type="text/javascript"></script>
-    <script src="assets/scripts/bundle.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFEncp1nqhNSvTuFURaXmaz1zNu5_yVAg" type="text/javascript" defer></script>
+    <script src="assets/scripts/bundle.js" defer></script>
   </body>
 </html>

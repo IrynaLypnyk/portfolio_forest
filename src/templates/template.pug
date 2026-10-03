@@ -3,7 +3,7 @@ include components/_mixins.pug
 
 
 doctype html
-html(lang="ru")
+html(lang="en")
     head
         meta(charset="utf-8")
         title #{title}
@@ -12,9 +12,9 @@ html(lang="ru")
         meta(content="ie=edge" http-equiv="x-ua-compatible")
 
         // SEO
-        meta(content="" name="description")
+        meta(content="Iryna Lypnyk’s forest-themed web development portfolio." name="description")
         meta(content="" name="keywords")
-        meta(content="" name="author")
+        meta(content="Iryna Lypnyk" name="author")
 
         //favicons
         link(rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png")
@@ -32,17 +32,16 @@ html(lang="ru")
         link(rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png")
         link(rel="manifest" href="favicons/manifest.json")
         meta(name="msapplication-TileColor" content="#ffffff")
-        meta(name="msapplication-TileImage" content="ms-icon-144x144.png")
+        meta(name="msapplication-TileImage" content="favicons/ms-icon-144x144.png")
         meta(name="theme-color" content="#ffffff")
         //css
         link(rel='stylesheet' href='assets/styles/app.min.css')
 
+        noscript
+            style.
+                #js-preloader { display: none; }
+
     body(id= `${className}`)
-        |
-        <!--[if lte IE 8]>
-        <script>alert("Вы используете устаревший браузер. Пожалуйста, обновите браузер https://browsehappy.com/")</script>
-        <p class="browserupgrade">Вы используете устаревший браузер. <a href="https://browsehappy.com/">Обновите браузер</a> абсолютно бесплатно.</p>
-        <![endif]-->
         .preloader#js-preloader
             .preloader__img
                svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='80px', height='95.113px', viewbox='0 0 80 95.113', enable-background='new 0 0 80 95.113', xml:space='preserve')
@@ -65,7 +64,7 @@ html(lang="ru")
 
         //scripts
         block add-scripts
-        script(src='assets/scripts/bundle.js')
+        script(src='assets/scripts/bundle.js' defer)
 
 
 

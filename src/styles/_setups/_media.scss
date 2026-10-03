@@ -1,118 +1,121 @@
+@use "sass:math";
+@use "../_setups/variables" as app;
+
 @function rem($px) {
-    @return $px / 16px + 0rem;
+    @return math.div($px, 16px) + 0rem;
   }
 
   @mixin desktops {
-    @media screen and (max-width: $desktops) {
+    @media screen and (max-width: app.$desktops) {
       @content;
     }
   }
 
   @mixin laptops {
-    @media screen and (max-width: $laptops) {
+    @media screen and (max-width: app.$laptops) {
       @content;
     }
   }
 
   @mixin tablets {
-    @media screen and (max-width: $tablets) {
+    @media screen and (max-width: app.$tablets) {
       @content;
     }
   }
 
   @mixin phones {
-    @media screen and (max-width: $phones) {
+    @media screen and (max-width: app.$phones) {
       @content;
     }
   }
 
   @mixin smallest {
-    @media screen and (max-width: $smallest) {
+    @media screen and (max-width: app.$smallest) {
       @content;
     }
   }
 
 // additional points
   @mixin w1450{
-    @media screen and (max-width: $w1450) {
+    @media screen and (max-width: app.$w1450) {
       @content;
     }
   }
 
    @mixin w1280{
-    @media screen and (max-width: $w1280) {
+    @media screen and (max-width: app.$w1280) {
       @content;
     }
   }
 
   @mixin w1270{
-    @media screen and (max-width: $w1270) {
+    @media screen and (max-width: app.$w1270) {
       @content;
     }
   }
 
   @mixin w1100 {
-    @media screen and (max-width: $w1100) {
+    @media screen and (max-width: app.$w1100) {
       @content;
     }
   }
 
   @mixin w1015 {
-    @media screen and (max-width: $w1015) {
+    @media screen and (max-width: app.$w1015) {
       @content;
     }
   }
 
   @mixin w995 {
-    @media screen and (max-width: $w995) {
+    @media screen and (max-width: app.$w995) {
       @content;
     }
   }
 
    @mixin w920 {
-    @media screen and (max-width: $w920) {
+    @media screen and (max-width: app.$w920) {
       @content;
     }
   }
 
   @mixin w810 {
-    @media screen and (max-width: $w810) {
+    @media screen and (max-width: app.$w810) {
       @content;
     }
   }
 
 
   @mixin w700 {
-    @media screen and (max-width: $w700) {
+    @media screen and (max-width: app.$w700) {
       @content;
     }
   }
 
    @mixin w640 {
-    @media screen and (max-width: $w640) {
+    @media screen and (max-width: app.$w640) {
       @content;
     }
   }
   @mixin w600 {
-      @media screen and (max-width: $w600) {
+      @media screen and (max-width: app.$w600) {
         @content;
       }
     }
 
   @mixin w450 {
-    @media screen and (max-width: $w450) {
+    @media screen and (max-width: app.$w450) {
       @content;
     }
   }
 
   @mixin w380 {
-    @media screen and (max-width: $w380) {
+    @media screen and (max-width: app.$w380) {
       @content;
     }
   }
 
   @mixin w360 {
-    @media screen and (max-width: $w360) {
+    @media screen and (max-width: app.$w360) {
       @content;
     }
   }

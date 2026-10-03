@@ -3,6 +3,11 @@ module.exports = function () {
   var flipper = document.querySelector('.welcome__flipper');
   var toMainPageBtn = document.querySelector('.form__goto-btn_auth-form');
 
+  document.getElementById('auth-form')?.addEventListener('submit', event => {
+    event.preventDefault();
+    alert('This is a demo form. Authentication is not connected.');
+  });
+
   function toAuthForm() {
     btn.style.visibility = 'hidden';
     flipper.style.transform = 'rotateY(180deg)';

@@ -1,7 +1,7 @@
 extends ../template
 
 block variables
-  - var title = 'Обо мне', className = 'about'
+  - var title = 'About me', className = 'about'
 
 block content
   +header('about', 'portfolio', '1170', '285')
@@ -13,26 +13,26 @@ block content
     .about__content-container
       .about__col.about__col_left
         .about__leftcol-title
-          .block-title.block-title_about Обо мне
+          .block-title.block-title_about About me
           svg.block-title__bg-svg.block-title__bg-svg_about(viewBox="0 0 361 126")
             use(xlink:href="assets/images/icons/sprite.svg#about_header")
         .about__leftcol-content
           .user-description
             .user-description__image-block
-              img.user-description__img(src="assets/images/content/hero.jpg")
+              img.user-description__img(src="assets/images/content/iryna-lypnyk.jpg" alt="Iryna Lypnyk")
             .user-description__title
-              .block-subtitle Кто я
+              .block-subtitle Who I am
             .user-description__text
-              p Я веб-разработчик из Киева. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-              p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+              p I am Iryna Lypnyk, a web developer. I enjoy building websites and applications with thoughtful interfaces and responsive layouts.
+              p I created this portfolio during the Loftschool web development course in 2017. It preserves the original forest design and learning exercises, with an updated build setup.
       .about__col.about__col_right
         .about__right-title
-          .block-subtitle 
-            | Чем я могу быть 
+          .block-subtitle
+            | What I
             br
-            | Вам полезен
+            | work with
         .about__right-text
-          p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.
+          p This project explores frontend development, from responsive layouts to JavaScript interactions. The skill charts below reflect the original course project.
         #skills.about__right-skills-block
           ul.skills
             li.skills__item
@@ -51,9 +51,10 @@ block content
     #map
     .map-contacts
       .map-contacts__title
-        .block-subtitle Контакты
+        .block-subtitle Contact
       .map-contacts__list
-        +contacts('map', [['skype', 'skype_iryna.lypnyk', 'skype:iryna.lypnyk '], ['email', 'iryna.lypnyk@gmail.com', 'mailto:iryna.lypnyk@gmail.com'], ['phone', '+38 (063) 76 989 77', 'tel:+380637698977'], ['address', 'Киев, Украина', '#map']])
+        +contacts('map', [['skype', 'skype_iryna.lypnyk', 'skype:iryna.lypnyk '], ['email', 'iryna.lypnyk@gmail.com', 'mailto:iryna.lypnyk@gmail.com'], ['phone', '+38 (063) 76 989 77', 'tel:+380637698977'], ['address', 'Kyiv, Ukraine', 'https://www.google.com/maps?q=50.4561854,30.5434603']])
   +footer('about')
 block add-scripts
-  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAa3Dwo3IxCqa3Z-_ZZpCGbElFEMKxfKcg' type="text/javascript")
+  if googleMapsApiKey
+    script(src='https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(googleMapsApiKey) type="text/javascript" defer)

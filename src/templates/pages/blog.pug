@@ -1,7 +1,7 @@
 extends ../template
 
 block variables
-  - var title = 'Блог', className = 'blog'
+  - var title = 'Blog', className = 'blog'
 
 block content
   +header('blog', 'blog', '346px', '190px')
@@ -17,13 +17,13 @@ block content
           ul.blog-articles__list
             li.blog-articles__item
               article.article
-                .article__title 
-                  p Самое важное в SASS
-                .article__pubdate 
-                  time 22 ноября 2016
+                .article__title
+                  p Sass essentials
+                .article__pubdate
+                  span Course project notes
                 .article__text
-                  p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. 
-                  p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                  p Sass variables and mixins help keep recurring colours, spacing and responsive rules consistent. This portfolio uses them to share its forest palette across pages.
+                  p The original stylesheet used Sass imports. The updated build uses modules with @use while retaining the original layout. The example below comes from the learning project.
                   .article__img-container
                     //.article__img
                     p.codepen(data-height='150', data-theme-id='0', data-slug-hash='ZvOOwb', data-default-tab='html', data-user='Lirra', data-embed-version='2', data-pen-title='form__reviews', data-preview='true')
@@ -37,31 +37,31 @@ block content
                     script(async='', src='https://production-assets.codepen.io/assets/embed/ei.js')
             li.blog-articles__item
               article.article
-                .article__title 
-                  p Приёмы в вёрстке, без которых не обходится ни один сайт
-                .article__pubdate 
-                  time 13 ноября 2016
+                .article__title
+                  p Everyday layout techniques
+                .article__pubdate
+                  span Course project notes
                 .article__text
-                  p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. 
-                  p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
-            li.blog-articles__item
-              article.article
-                .article__title  
-                  p Самый необходимый набор Gulp плагинов
-                .article__pubdate 
-                  time 13 ноября 2016
-                .article__text
-                  p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. 
-                  p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                  p Responsive layouts need to work with different screen widths and text lengths. This project combines flexible containers, media queries and scalable images.
+                  p The navigation, project slider and contact section provide examples of adapting the same content for desktop and mobile screens.
             li.blog-articles__item
               article.article
                 .article__title
-                  p Почему я выбрал Jade
+                  p The original Gulp workflow
                 .article__pubdate
-                  time 13 ноября 2016
+                  span Course project notes
                 .article__text
-                  p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
-                  p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                  p The original Gulp setup compiled templates and styles, bundled scripts and copied assets. It was part of the coursework workflow.
+                  p The updated project uses a small Node.js build script with Pug, Sass and esbuild. Source files remain separate from the generated site.
+            li.blog-articles__item
+              article.article
+                .article__title
+                  p Templates with Jade and Pug
+                .article__pubdate
+                  span Course project notes
+                .article__text
+                  p Jade, now called Pug, provides a compact syntax for HTML templates. Shared layouts and mixins keep repeated markup in one place.
+                  p This portfolio uses mixins for navigation, social links, skill charts and the footer. Updating a shared component keeps the pages consistent.
   +footer('blog')
   #blog-nav_hidden
     .blog-nav-hidden__trigger

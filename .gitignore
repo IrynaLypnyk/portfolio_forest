@@ -1,9 +1,6 @@
 node_modules
 .idea/
 .vscode/
-src/images/
-src/fonts/
-src/favicons/
 bash.exe.stackdump
 
 
@@ -42,3 +39,11 @@ bash.exe.stackdump
 .Trashes
 ehthumbs.db
 Thumbs.db
+node_modules/
+test-results/
+playwright-report/
+
+.env.local
+
+# Local build output
+/build/

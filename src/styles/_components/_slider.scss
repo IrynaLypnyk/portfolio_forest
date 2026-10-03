@@ -1,15 +1,20 @@
+@use "../_setups/fonts";
+@use "../_setups/media";
+@use "../_setups/mixins";
+@use "../_setups/variables" as app;
+
 .slider {
 	display: flex;
-	height: 755px;
+	height: 640px;
 	flex-wrap: wrap;
 	flex-direction: column;
 
 
-	@include w1100 {
-		height: 730px;
+	@include media.w1100 {
+		height: 620px;
 	}
 
-	@include w810 {
+	@include media.w810 {
 		height: auto;
 	}
 }
@@ -22,7 +27,7 @@
 		order: 1;
 		overflow: hidden;
 
-		@include w810{
+		@include media.w810{
 			width: 100%;
 			height: 270px;
 			order: 2;
@@ -43,7 +48,7 @@
   width: 100%;
 	height: 100%;
 	background-color: #ebefe2;
-  @include flex-center;
+  @include mixins.flex-center;
 	flex-direction: column;
 }
 
@@ -63,42 +68,42 @@
 		width: 380px;
 		padding: 0 15px;
 
-		@include w810{
+		@include media.w810{
 			margin-bottom: 15px;
 			width: auto;
 		}
 	}
 
 .slider__desc-skills{
-    @include roboto(medium);
-    color: $green2;
+    @include fonts.roboto(medium);
+    color: app.$green2;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 50px;
 
-		@include w810{
+		@include media.w810{
 			margin-bottom: 35px;
 		}
 
-		@include w380{
+		@include media.w380{
 			margin-bottom: 15px;
 		}
   }
 
 .slider__btn{
-    background-color: $green1;
+    background-color: app.$green1;
     width: 200px;
     height: 45px;
     border-radius: 20px;
     color: #fff;
-    @include flex-center;
+    @include mixins.flex-center;
 		transition: all 0.3s;
 
     &:hover{
-      background-color: $green2;
+      background-color: app.$green2;
     }
 
-		@include w380{
+		@include media.w380{
 			height: 40px;
 			width: 185px;
 		}
@@ -122,18 +127,18 @@
     width: 50%;
 		height: 70.2%;
     background-color: #e1e4d7;
-    @include flex-center;
+    @include mixins.flex-center;
 		//flex-direction: column;
 		order: 2;
     overflow: hidden;
 
-		@include w810{
+		@include media.w810{
 			width: 100%;
-			height: 530px;
+			height: 440px;
 			order: 1;
 		}
 
-		@include w380{
+		@include media.w380{
 			height: 255px;
 		}
   }
@@ -151,7 +156,7 @@
 	left: 0;
 	z-index: 0;
 	background-color: #e1e4d7;
-	@include flex-center;
+	@include mixins.flex-center;
 
 }
 
@@ -164,6 +169,8 @@
 
 .slides-preview__img{
 	max-height: 90%;
+  max-width: 90%;
+  object-fit: contain;
 	width: auto;
 
 }
@@ -177,13 +184,13 @@
  		max-height: 250px;
 		order: 3;
 
-		@include w810{
+		@include media.w810{
 			width: 100%;
-			height: 215px;
+			height: 180px;
 			order: 2;
 		}
 
-		@include w380{
+		@include media.w380{
 			height: 93px;
 		}
  }
@@ -214,7 +221,7 @@
 	top: 0;
 	left: 0;
 	z-index: 0;
-  @include flex-center;
+  @include mixins.flex-center;
 	flex-direction: column;
 	background-color: #bcbcbe;
 	border-left: 1px solid #cacaca;
@@ -233,6 +240,8 @@
 
 .slides-nav__img{
 	max-height: 90%;
+  max-width: 90%;
+  object-fit: contain;
 	width: auto;
 
 

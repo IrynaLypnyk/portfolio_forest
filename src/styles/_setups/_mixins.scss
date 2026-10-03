@@ -1,3 +1,4 @@
+@use "sass:math";
 @mixin clearfix {
 &:before,
 &:after {
@@ -13,7 +14,7 @@ clear: both;
 @mixin circle($width, $color) {
 width: $width;
 height: $width;
-border-radius: $width/2;
+border-radius: math.div($width, 2);
 background-color: $color;
 }
 
@@ -30,5 +31,5 @@ align-items: center;
 }
 
 @mixin skill-circle($radius, $percent) {
-  stroke-dasharray: 2*3.1415*$radius*$percent/100 2*3.1415*$radius;
+  stroke-dasharray: math.div(2*3.1415*$radius*$percent, 100) 2*3.1415*$radius;
 }

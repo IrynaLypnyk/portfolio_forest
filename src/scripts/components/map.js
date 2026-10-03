@@ -2,6 +2,7 @@
 
 let map = (function(){
   let init = function(){
+    if (!document.getElementById('map') || !window.google?.maps) return;
     let map = new google.maps.Map(document.getElementById('map'), {
       zoom: 14,
       center: {lat: 50.4561854, lng: 30.5434603},
@@ -86,7 +87,7 @@ let map = (function(){
       icon: markerpic,
       map: map,
       animation: google.maps.Animation.DROP,
-      title:'Контрактовая площадь',
+      title:'Kontraktova Square',
     });
 
     marker.addListener('click', function(){

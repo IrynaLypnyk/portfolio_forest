@@ -1,9 +1,9 @@
 doctype html
-html
+html(lang="en")
     head
         meta(charset="utf-8")
         block title
-            title Панель администрирования
+            title Admin demo
         meta(content="" name="description")
         meta(content="" name="keywords")
         meta(content="width=device-width, initial-scale=1" name="viewport")
@@ -24,7 +24,7 @@ html
         link(rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png")
         link(rel="manifest" href="favicons/manifest.json")
         meta(name="msapplication-TileColor" content="#ffffff")
-        meta(name="msapplication-TileImage" content="ms-icon-144x144.png")
+        meta(name="msapplication-TileImage" content="favicons/ms-icon-144x144.png")
         meta(name="theme-color" content="#ffffff")
         //css
         link(rel='stylesheet' href='assets/styles/app.min.css')
@@ -33,21 +33,21 @@ html
         .wrapper
             section.admin
                 header.header_admin
-                    h1.header__title Панель администрирования
-                    a(href="index.html").header__link-toMainPage Вернуться на сайт
+                    h1.header__title Admin demo
+                    a(href="index.html").header__link-toMainPage Back to the website
                 .admin__tabs
                     ul.tab
                         li.tab__item.active
-                            a(href="admin_1.html").tab__link Таб 1
+                            a(href="admin_1.html").tab__link About
                         li.tab__item
-                            a(href="admin_2.html").tab__link Таб 2
+                            a(href="admin_2.html").tab__link Blog
                         li.tab__item
-                            a(href="admin_3.html").tab__link Таб 3
+                            a(href="admin_3.html").tab__link Work
                 .admin__main
                     block admin__content
                     .pop-up
-                        .pop-up__title Сообщение отправлено
-                        button(type='submit').btn-admin.btn-admin--close Закрыть
+                        .pop-up__title Message sent
+                        button(type='submit').btn-admin.btn-admin--close Close
 
 
 

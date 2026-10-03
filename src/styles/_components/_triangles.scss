@@ -1,6 +1,9 @@
+@use "../_setups/media";
+
 // triangles
 
 .triangles{
+  pointer-events: none;
   position: absolute;
   display: block;
   bottom: 100%;
@@ -9,15 +12,15 @@
   z-index: 10;
   margin-bottom: -6px;
 
-	@include laptops{
+	@include media.laptops{
     margin-bottom: -1px;
   }
 
-  @include w995{
+  @include media.w995{
     margin-bottom: -5px;
   }
 
-  @include tablets{
+  @include media.tablets{
     margin-bottom: -5px;
   }
 
@@ -35,7 +38,7 @@
     &_about-right{
       fill: #f4f5f0;
 
-      @include tablets{
+      @include media.tablets{
         fill: #ebefe1;
       }
     }

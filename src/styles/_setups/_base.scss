@@ -1,3 +1,8 @@
+@use "../_setups/variables" as app;
+@use "fonts";
+@use "media";
+@use "mixins";
+
 // tag styles reset
 *{
   margin: 0;
@@ -29,16 +34,16 @@ html,
 body {
   height: 100%;
 
-  @include tablets{
+  @include media.tablets{
     font-size: 14px;
   }
 }
 
 body{
-  @include roboto(regular);
-  background-color: $bg1;
+  @include fonts.roboto(regular);
+  background-color: app.$bg1;
   color: #fff;
-  font-size: rem(16px);
+  font-size: media.rem(16px);
   line-height: 1.42;
 }
 
@@ -52,18 +57,18 @@ body{
 }
 
 .block-title{
-  @include sansus();
+  @include fonts.sansus();
   font-size: 63px;
   text-transform: uppercase;
-  color: $grey2;
-  @include flex-center;
+  color: app.$grey2;
+  @include mixins.flex-center;
   flex-direction: column;
 
-    @include w810{
+    @include media.w810{
       font-size: 49px;
     }
 
-    @include w380{
+    @include media.w380{
       font-size: 35px;
     }
 
@@ -73,7 +78,7 @@ body{
     width: 88px;
     height: 3px;
     display: block;
-    background-color: $grey2;
+    background-color: app.$grey2;
     margin-top: 20px;
   }
 
@@ -111,12 +116,12 @@ body{
       top: -30px;
       width: 346px;
 
-      @include w810{
+      @include media.w810{
         width: 250px;
         top: -20px;
       }
 
-      @include w360{
+      @include media.w360{
         width: 200px;
         left: 50%;
         transform: translateX(-50%);
@@ -130,16 +135,16 @@ body{
      	width: 510px;
 			top: 8px;
 
-      @include w810{
+      @include media.w810{
         width: 380px;
 			 	top: 0;
       }
 
-			@include w450{
+			@include media.w450{
         width: 340px;
       }
 
-			@include w380{
+			@include media.w380{
       	width: 250px;
     	}
     }
@@ -147,14 +152,14 @@ body{
 }
 
 .block-subtitle {
-  @include sansus();
+  @include fonts.sansus();
   font-size: 35px;
   text-transform: uppercase;
-  color: $grey1;
-  @include flex-center;
+  color: app.$grey1;
+  @include mixins.flex-center;
   flex-direction: column;
 
-  @include w360{
+  @include media.w360{
     font-size: 21px;
   }
 
@@ -163,7 +168,7 @@ body{
     width: 88px;
     height: 3px;
     display: block;
-    background-color: $grey1;
+    background-color: app.$grey1;
     margin-top: 15px;
   }
 

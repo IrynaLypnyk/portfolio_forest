@@ -1,5 +1,8 @@
+@use "../_setups/media";
+@use "../_setups/variables" as app;
+
 .soacials{
-    @include w360{
+    @include media.w360{
         text-align: center;
   }
 }
@@ -22,12 +25,12 @@
   height: 26px;
   transition: all 0.3s;
 
-  @include w360{
+  @include media.w360{
     height: 17px;
   }
 
   &:hover{
-    fill: $green1;
+    fill: app.$green1;
   }
 }
 
@@ -36,7 +39,7 @@
     transition: all 0.3s;
 
     &:hover{
-    fill: $green1;
+    fill: app.$green1;
   }
 }
 
@@ -44,11 +47,11 @@
     fill: #a9acad;
     transition: all 0.3s;
 
-    @include tablets{
+    @include media.tablets{
         margin-left: -7px;
     }
 
-    @include w360{
+    @include media.w360{
         text-align: center;
         margin-left: 0;
     }

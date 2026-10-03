@@ -1,17 +1,22 @@
+@use "../_setups/media";
+@use "../_setups/mixins";
+@use "../_setups/variables" as app;
+
 .section_map{
   position: relative;
    height: 1074px;
 
-  @include desktops{
+  @include media.desktops{
     height: 975px;
   }
 
-  @include tablets{
+  @include media.tablets{
     height: 907px;
   }
 }
 
 #map{
+  background: #e6eadf;
   width: 100%;
   height: 100%;
  }
@@ -22,24 +27,24 @@
   padding: 30px 40px;
   background-color: rgba(#fff, .85);
   border-radius: 4px;
-  @include flex-center;
+  @include mixins.flex-center;
   flex-direction: column;
   position: absolute;
   top: 330px;
   left: 50%;
   transform: translateX(-50%);
 
-   @include desktops{
+   @include media.desktops{
     top: 220px;
   }
 
-  @include tablets{
+  @include media.tablets{
    width: 348px;
    padding: 25px 40px;
    top: 170px;
   }
 
-  @include w360{
+  @include media.w360{
     top: 0;
     width: 100%;
     padding: 23px 28px;
@@ -49,13 +54,13 @@
 .map-contacts__title{
   margin-bottom: 35px;
 
-  @include tablets{
+  @include media.tablets{
     margin-bottom: 30px;
   }
 }
 
 .map-contacts__list{
-  color: $grey1;
+  color: app.$grey1;
   width: 100%;
 }
 
@@ -65,7 +70,7 @@
   align-items: center;
   margin-bottom: 25px;
 
-  @include tablets{
+  @include media.tablets{
     margin-bottom: 20px;
   }
 
@@ -75,16 +80,16 @@
 }
 
 .contacts__icon{
-  fill: $green1;
+  fill: app.$green1;
   margin-right: 10px;
 }
 
 .contacts__link{
   text-decoration: none;
-  color: $grey1;
+  color: app.$grey1;
   transition: all 0.3s;
 
   &:hover{
-    color: $green2;
+    color: app.$green2;
   }
 }

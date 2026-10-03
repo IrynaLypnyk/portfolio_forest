@@ -1,10 +1,15 @@
+@use "../_setups/fonts";
+@use "../_setups/media";
+@use "../_setups/mixins";
+@use "../_setups/variables" as app;
+
 .skills-row__title {
-  @include roboto(medium);
+  @include fonts.roboto(medium);
   font-size: 28px;
   margin-bottom: 15px;
-  color: $green2;
+  color: app.$green2;
   
-  @include w810{
+  @include media.w810{
     text-align: center;
   }
 
@@ -15,18 +20,18 @@
   margin-bottom: 30px;
   flex-wrap: wrap;
 
-  @include w810{
-    @include flex-center;
+  @include media.w810{
+    @include mixins.flex-center;
   }
 
-  @include phones{
+  @include media.phones{
     margin-bottom: 0px;
     width: 100%;
     padding: 0px 30px;
     margin-right: -28px;
   }
 
-  @include w360{
+  @include media.w360{
     padding: 0px 10px;
     margin-right: -28px;
   }
@@ -36,19 +41,19 @@
   margin-right: 40px; 
   position: relative;
 
-  @include desktops{
+  @include media.desktops{
     margin-right: 28px;
 	}
 
-  @include w920{
+  @include media.w920{
     margin-right: 10px;
 	}
 
-  @include w810{
+  @include media.w810{
     margin-right: 28px;
 	}
 
-  @include phones{
+  @include media.phones{
     margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 30px;
@@ -56,7 +61,7 @@
 }
 
 .skills-row__item:last-child{
-	@include tablets{
+	@include media.tablets{
 		margin-right: 0px;
 	}
 }
@@ -68,7 +73,7 @@
   height: 120px;
   transition: all 0.5s;
 
-  @include w1450{
+  @include media.w1450{
     width: 110px;
     height: 110px;
   }
@@ -79,7 +84,7 @@
 }
 
 .circle_fill {
-  stroke: rgba($green1, 0.93);
+  stroke: rgba(app.$green1, 0.93);
   stroke-dasharray: 0 2*3.1415*50;
   transform: rotate(-90deg);
   transform-origin: (50% 50%);
@@ -93,72 +98,72 @@
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 13px;
-  @include roboto(medium);
-  color: $green2;
+  @include fonts.roboto(medium);
+  color: app.$green2;
 }
 
 .skill-circle__svg-img_active .circle-0 {
-    @include skill-circle(50, 0);
+    @include mixins.skill-circle(50, 0);
 }
  .skill-circle__svg-img_active .circle-5 {
-    @include skill-circle(50, 5);
+    @include mixins.skill-circle(50, 5);
 }
 .skill-circle__svg-img_active .circle-10 {
-  @include skill-circle(50, 10);
+  @include mixins.skill-circle(50, 10);
 }
 .skill-circle__svg-img_active .circle-15 {
-  @include skill-circle(50, 15);
+  @include mixins.skill-circle(50, 15);
 }
 .skill-circle__svg-img_active .circle-20 {
-  @include skill-circle(50, 20);
+  @include mixins.skill-circle(50, 20);
 }
 .skill-circle__svg-img_active .circle-25 {
-  @include skill-circle(50, 25);
+  @include mixins.skill-circle(50, 25);
 }
 .skill-circle__svg-img_active .circle-30 {
-  @include skill-circle(50, 30);
+  @include mixins.skill-circle(50, 30);
 }
 .skill-circle__svg-img_active .circle-35 {
-  @include skill-circle(50, 35);
+  @include mixins.skill-circle(50, 35);
 }
 .skill-circle__svg-img_active .circle-40 {
-  @include skill-circle(50, 40);
+  @include mixins.skill-circle(50, 40);
 }
 .skill-circle__svg-img_active .circle-45 {
-  @include skill-circle(50, 45);
+  @include mixins.skill-circle(50, 45);
 }
 .skill-circle__svg-img_active .circle-50 {
-  @include skill-circle(50, 50);
+  @include mixins.skill-circle(50, 50);
 }
 .skill-circle__svg-img_active .circle-55 {
-  @include skill-circle(50, 55);
+  @include mixins.skill-circle(50, 55);
 }
 .skill-circle__svg-img_active .circle-60 {
-  @include skill-circle(50, 60);
+  @include mixins.skill-circle(50, 60);
 }
 .skill-circle__svg-img_active .circle-65 {
-  @include skill-circle(50, 65);
+  @include mixins.skill-circle(50, 65);
 }
 .skill-circle__svg-img_active .circle-70 {
-  @include skill-circle(50, 70);
+  @include mixins.skill-circle(50, 70);
 }
 .skill-circle__svg-img_active .circle-75 {
-  @include skill-circle(50, 75);
+  @include mixins.skill-circle(50, 75);
 }
 .skill-circle__svg-img_active .circle-80 {
-  @include skill-circle(50, 80);
+  @include mixins.skill-circle(50, 80);
 }
 .skill-circle__svg-img_active .circle-85 {
-  @include skill-circle(50, 85);
+  @include mixins.skill-circle(50, 85);
 }
 .skill-circle__svg-img_active .circle-90 {
-  @include skill-circle(50, 90);
+  @include mixins.skill-circle(50, 90);
 }
 .skill-circle__svg-img_active .circle-95 {
-  @include skill-circle(50, 95);
+  @include mixins.skill-circle(50, 95);
 }
 .skill-circle__svg-img_active .circle-100 {
-  @include skill-circle(50, 100);
+  @include mixins.skill-circle(50, 100);
 }
 
 

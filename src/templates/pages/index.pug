@@ -1,32 +1,32 @@
 extends ../template
 
 block variables
-  - var title = 'Добро пожаловать', className = 'welcome'
+  - var title = 'Welcome', className = 'welcome'
 
 block content
   .welcome
     .welcome__auth-btn
-      button.auth-btn Авторизоваться
+      button.auth-btn Log in
     #flipper.welcome__flipper
       .welcome__user-block
         .user-block.form-container
           include ../components/_user.pug
           .welcome__socials
-            +socials('socials', ["fb", "github", "in"])
+            +socials('socials', ["github", "in"])
         .welcome__nav-btns
-          +nav-btns([['Мои работы', 'my-works.html'], ['Обо мне', 'about.html'], ['Блог', 'blog.html']])
+          +nav-btns([['My work', 'my-works.html'], ['About me', 'about.html'], ['Blog', 'blog.html']])
       .welcome__auth-form
         .auth-form.form-container
           .form__title.auth-form__title
-            .block-subtitle.block-subtitle_auth-form Авторизуйтесь
+            .block-subtitle.block-subtitle_auth-form Log in
           form.form(action="server.php", method="post" id="auth-form")
             label.form__label.auth-form__label
-              input(type="text" placeholder="Логин" required).form__input.auth-form__input.auth-form__input_login
+              input(type="text" placeholder="Username" required).form__input.auth-form__input.auth-form__input_login
               .form__input-fake.auth-form__input-fake.auth-form__input-fake_login
                 svg(width="15" height="15").form__input-icon.auth-form__input-icon.auth-form__input-icon_login
                   use(xlink:href="assets/images/icons/sprite.svg#login")
             label.form__label.auth-form__label
-              input(type="password" placeholder="Пароль" required).form__input.auth-form__input.auth-form__input_pswd
+              input(type="password" placeholder="Password" required).form__input.auth-form__input.auth-form__input_pswd
               .form__input-fake.auth-form__input-fake.auth-form__input-fake-pswd
                 svg(width="17" height="17").form__input-icon.auth-form__input-icon.auth-form__input-icon_pswd
                   use(xlink:href="assets/images/icons/sprite.svg#password")
@@ -35,24 +35,26 @@ block content
               .form__checkbox-fake.auth-form__checkbox-fake
                 svg(width="11" height="11").form__checkbox-icon.auth-form__checkbox-icon
                   use(xlink:href="assets/images/icons/sprite.svg#check")
-              .form__label-text.auth-form__label-text Я человек
+              .form__label-text.auth-form__label-text I am human
             .form__radio-block.auth-form__radio-block
-              .form__label-text.auth-form__label-text.auth-form__label-text_radio Вы точно не робот?
+              .form__label-text.auth-form__label-text.auth-form__label-text_radio Are you sure you are not a robot?
               .form__radio-input-block.auth-form__radio-input-block
                 label.form__radio-label.auth-form__radio-label
                   input(type="radio" name="not-robot" value="yes" checked).form__radio-input.auth-form__radio-input
                   .form__radio-fake.auth-form__radio-fake
-                  .form__label-text.auth-form__label-text Да
+                  .form__label-text.auth-form__label-text Yes
                 label.form__radio-label.auth-form__radio-label
                   input(type="radio" name="not-robot" value="not-sure").form__radio-input.auth-form__radio-input
                   .form__radio-fake.auth-form__radio-fake
-                  .form__label-text.auth-form__label-text Я не уверен
+                  .form__label-text.auth-form__label-text Not sure
             .auth-form__nav-btns.nav-btns.nav-btns_auth-form
-              button.nav-btns__item.form__submit-btn.form__goto-btn_auth-form(type="button" value="На главную") На главную
-              button.nav-btns__item.form__submit-btn.form__auth-btn_auth-form(type="submit" value="Войти") Войти
+              button.nav-btns__item.form__submit-btn.form__goto-btn_auth-form(type="button" value="Home") Home
+              button.nav-btns__item.form__submit-btn.form__auth-btn_auth-form(type="submit" value="Log in") Log in
     .welcome__copyright
       ul.copyright
-        li.copyright__item &copy; Ирина Лыпник
-        li.copyright__item создано с &#10084; в LoftSchool | 2017
+        li.copyright__item
+          | &copy; 
+          a.copyright__link(href="https://irynalypnyk.com") Iryna Lypnyk
+        li.copyright__item Made with &#10084; at Loftschool | 2017
 
 

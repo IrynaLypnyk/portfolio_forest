@@ -1,3 +1,8 @@
+@use "../_setups/fonts";
+@use "../_setups/media";
+@use "../_setups/mixins";
+@use "../_setups/variables" as app;
+
 .section_my-works{
   // display: flex;
   // flex-direction: column;
@@ -16,15 +21,15 @@
 
 .my-works__title{
   padding: 50px 0;
-  @include flex-center;
+  @include mixins.flex-center;
   text-align: center;
   position: relative;
   
-    @include tablets{
+    @include media.tablets{
       padding: 40px 0;
     }
 
-    @include w600{
+    @include media.w600{
       padding: 30px 0;
     }
 }
@@ -35,7 +40,7 @@
 
 .section_reviews{
   background-image: url("../images/decor/bgreviews1800.jpg");
-  @include cover;
+  @include mixins.cover;
   min-height: 1287px;
   //display: flex;
   //flex-direction: column;
@@ -45,19 +50,19 @@
   padding-bottom: 147px;
 
 
-  @include w1015{
+  @include media.w1015{
     padding-bottom: 215px;
   }
 
-  @include w600{
+  @include media.w600{
     padding-bottom: 260px;
   }
 
-  @include phones{
+  @include media.phones{
     padding-bottom: 290px;
   }
 
-  @include w360{
+  @include media.w360{
     padding-bottom: 305px;
   }
 }
@@ -65,11 +70,11 @@
 .reviews{
   margin-bottom: 65px;
 
-  @include tablets{
+  @include media.tablets{
     margin-bottom: 45px;
   }
 
-  @include phones{
+  @include media.phones{
     margin-bottom: 0px;
   }
 
@@ -82,12 +87,12 @@
     display: flex;
     justify-content: center;
 
-    @include tablets{
+    @include media.tablets{
       padding-top: 50px;
       margin-bottom: 40px;
     }
 
-    @include phones{
+    @include media.phones{
       padding-top: 35px;
       margin-bottom: 30px;
     }
@@ -100,7 +105,7 @@
 		padding: 0 25px;
     width: 100%;
 
-    @include w600{
+    @include media.w600{
       flex-direction: column;
       align-items: center;
       padding: 0 16px 0 10px;
@@ -116,11 +121,11 @@
     justify-content: center;
 		align-items: center;
 
-    @include tablets{
+    @include media.tablets{
       width: 50%;
     }
 
-    @include w600{
+    @include media.w600{
       width: 100%;
       margin-bottom: 35px;
     }
@@ -128,7 +133,7 @@
       &:first-child{
       margin-right: 30px;
 
-				@include w600{
+				@include media.w600{
 					margin-right: 0px;
 				}
     }
@@ -142,7 +147,7 @@
     margin-right: 23px;
 		margin-bottom: 28px;
 
-		@include w600{
+		@include media.w600{
 			margin-right: 0;
 			margin-bottom: 10px;
 		}
@@ -153,14 +158,14 @@
   }
 
 	&__text{
-		@include roboto(regularitalic);
+		@include fonts.roboto(regularitalic);
     color: #5d5a55;
     margin-bottom: 20px;
 		background: url('../images/decor/quotes.png') no-repeat;
 	  //padding-top: 28px;
 		width: 100%;
 
-    @include w600{
+    @include media.w600{
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -173,20 +178,20 @@
     align-items: center;
   }
   &__author-name{
-    @include roboto(bolditalic);
-    color: $green2;
+    @include fonts.roboto(bolditalic);
+    color: app.$green2;
   }
 
   &__author-title{
     color: #373e42;
-	  @include roboto(regularitalic);
+	  @include fonts.roboto(regularitalic);
   }
 }
 
 .my-works__arrow-btn {
   transform: rotate(180deg);
   height: 160px;
-  @include flex-center;
+  @include mixins.flex-center;
   margin: 0 auto;
    //position: absolute;
    //bottom: 215px;
@@ -195,15 +200,15 @@
   border: none;
   background-color: transparent;
 
-  @include tablets {
+  @include media.tablets {
     height: 120px;
   }
 
-  @include phones {
+  @include media.phones {
     height: 110px;
   }
 
-  @include w360 {
+  @include media.w360 {
     height: 90px;
   }
 }

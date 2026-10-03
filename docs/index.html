@@ -1,16 +1,16 @@
 
 <!-- - nav-items in blog--><!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Добро пожаловать</title>
+    <title>Welcome</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <!--meta(content="width=1800" name="viewport")-->
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <!-- SEO-->
-    <meta content="" name="description">
+    <meta content="Iryna Lypnyk’s forest-themed web development portfolio." name="description">
     <meta content="" name="keywords">
-    <meta content="" name="author">
+    <meta content="Iryna Lypnyk" name="author">
     <!--favicons-->
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
@@ -27,16 +27,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
     <link rel="manifest" href="favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!--css-->
     <link rel="stylesheet" href="assets/styles/app.min.css">
+    <noscript>
+      <style>
+        #js-preloader { display: none; }
+
+      </style>
+    </noscript>
   </head>
   <body id="welcome">
-    <!--[if lte IE 8]>
-<script>alert("Вы используете устаревший браузер. Пожалуйста, обновите браузер https://browsehappy.com/")</script>
-<p class="browserupgrade">Вы используете устаревший браузер. <a href="https://browsehappy.com/">Обновите браузер</a> абсолютно бесплатно.</p>
-<![endif]-->
     <div class="preloader" id="js-preloader">
       <div class="preloader__img">
         <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="95.113px" viewbox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve">
@@ -57,47 +59,45 @@
     <div class="wrapper">
       <div class="welcome">
         <div class="welcome__auth-btn">
-          <button class="auth-btn">Авторизоваться</button>
+          <button class="auth-btn">Log in</button>
         </div>
         <div class="welcome__flipper" id="flipper">
           <div class="welcome__user-block">
             <div class="user-block form-container">
-              <div class="user__img-block"><img class="user__img" src="assets/images/content/hero.jpg" alt="Моя фото"/></div>
-              <div class="user__name">Владимир Астахов</div>
-              <div class="user__title">Личный сайт веб-разработчика</div>
+              <div class="user__img-block"><img class="user__img" src="assets/images/content/iryna-lypnyk.jpg" alt="Iryna Lypnyk"/></div>
+              <div class="user__name">Iryna Lypnyk</div>
+              <div class="user__title">My first web portfolio · 2017</div>
               <div class="welcome__socials">
                 <ul class="socials__list">
-                  <li class="socials__item"><a class="socials__link" href="#">
-                      <svg class="socials__icon socials__icon_fb" width="26px" height="26px">
-                        <use xlink:href="assets/images/icons/sprite.svg#fb"> </use>
-                      </svg></a></li>
-                  <li class="socials__item"><a class="socials__link" href="#">
+                  <li class="socials__item"><a class="socials__link" href="https://github.com/IrynaLypnyk" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                       <svg class="socials__icon socials__icon_github" width="26px" height="26px">
-                        <use xlink:href="assets/images/icons/sprite.svg#github"> </use>
-                      </svg></a></li>
-                  <li class="socials__item"><a class="socials__link" href="#">
+                        <use xlink:href="assets/images/icons/sprite.svg#github"></use>
+                      </svg></a>
+                  </li>
+                  <li class="socials__item"><a class="socials__link" href="https://www.linkedin.com/in/irynalypnyk/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                       <svg class="socials__icon socials__icon_in" width="26px" height="26px">
-                        <use xlink:href="assets/images/icons/sprite.svg#in"> </use>
-                      </svg></a></li>
+                        <use xlink:href="assets/images/icons/sprite.svg#in"></use>
+                      </svg></a>
+                  </li>
                 </ul>
               </div>
             </div>
             <div class="welcome__nav-btns">
               <ul class="nav-btns">
-                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="my-works.html">Мои работы</a></li>
-                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="about.html">Обо мне</a></li>
-                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="blog.html">Блог</a></li>
+                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="my-works.html">My work</a></li>
+                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="about.html">About me</a></li>
+                <li class="nav-btns__item"><a class="nav-btns__link nav-btns__link_undefined" href="blog.html">Blog</a></li>
               </ul>
             </div>
           </div>
           <div class="welcome__auth-form">
             <div class="auth-form form-container">
               <div class="form__title auth-form__title">
-                <div class="block-subtitle block-subtitle_auth-form">Авторизуйтесь</div>
+                <div class="block-subtitle block-subtitle_auth-form">Log in</div>
               </div>
               <form class="form" action="server.php" method="post" id="auth-form">
                 <label class="form__label auth-form__label">
-                  <input class="form__input auth-form__input auth-form__input_login" type="text" placeholder="Логин" required>
+                  <input class="form__input auth-form__input auth-form__input_login" type="text" placeholder="Username" required>
                   <div class="form__input-fake auth-form__input-fake auth-form__input-fake_login">
                     <svg class="form__input-icon auth-form__input-icon auth-form__input-icon_login" width="15" height="15">
                       <use xlink:href="assets/images/icons/sprite.svg#login"></use>
@@ -105,7 +105,7 @@
                   </div>
                 </label>
                 <label class="form__label auth-form__label">
-                  <input class="form__input auth-form__input auth-form__input_pswd" type="password" placeholder="Пароль" required>
+                  <input class="form__input auth-form__input auth-form__input_pswd" type="password" placeholder="Password" required>
                   <div class="form__input-fake auth-form__input-fake auth-form__input-fake-pswd">
                     <svg class="form__input-icon auth-form__input-icon auth-form__input-icon_pswd" width="17" height="17">
                       <use xlink:href="assets/images/icons/sprite.svg#password"></use>
@@ -119,26 +119,26 @@
                       <use xlink:href="assets/images/icons/sprite.svg#check"></use>
                     </svg>
                   </div>
-                  <div class="form__label-text auth-form__label-text">Я человек</div>
+                  <div class="form__label-text auth-form__label-text">I am human</div>
                 </label>
                 <div class="form__radio-block auth-form__radio-block">
-                  <div class="form__label-text auth-form__label-text auth-form__label-text_radio">Вы точно не робот?</div>
+                  <div class="form__label-text auth-form__label-text auth-form__label-text_radio">Are you sure you are not a robot?</div>
                   <div class="form__radio-input-block auth-form__radio-input-block">
                     <label class="form__radio-label auth-form__radio-label">
                       <input class="form__radio-input auth-form__radio-input" type="radio" name="not-robot" value="yes" checked>
                       <div class="form__radio-fake auth-form__radio-fake"></div>
-                      <div class="form__label-text auth-form__label-text">Да</div>
+                      <div class="form__label-text auth-form__label-text">Yes</div>
                     </label>
                     <label class="form__radio-label auth-form__radio-label">
                       <input class="form__radio-input auth-form__radio-input" type="radio" name="not-robot" value="not-sure">
                       <div class="form__radio-fake auth-form__radio-fake"></div>
-                      <div class="form__label-text auth-form__label-text">Я не уверен</div>
+                      <div class="form__label-text auth-form__label-text">Not sure</div>
                     </label>
                   </div>
                 </div>
                 <div class="auth-form__nav-btns nav-btns nav-btns_auth-form">
-                  <button class="nav-btns__item form__submit-btn form__goto-btn_auth-form" type="button" value="На главную">На главную</button>
-                  <button class="nav-btns__item form__submit-btn form__auth-btn_auth-form" type="submit" value="Войти">Войти</button>
+                  <button class="nav-btns__item form__submit-btn form__goto-btn_auth-form" type="button" value="Home">Home</button>
+                  <button class="nav-btns__item form__submit-btn form__auth-btn_auth-form" type="submit" value="Log in">Log in</button>
                 </div>
               </form>
             </div>
@@ -146,13 +146,13 @@
         </div>
         <div class="welcome__copyright">
           <ul class="copyright">
-            <li class="copyright__item">&copy; Ирина Лыпник</li>
-            <li class="copyright__item">создано с &#10084; в LoftSchool | 2017</li>
+            <li class="copyright__item">&copy; <a class="copyright__link" href="https://irynalypnyk.com">Iryna Lypnyk</a></li>
+            <li class="copyright__item">Made with &#10084; at Loftschool | 2017</li>
           </ul>
         </div>
       </div>
     </div>
     <!--scripts-->
-    <script src="assets/scripts/bundle.js"></script>
+    <script src="assets/scripts/bundle.js" defer></script>
   </body>
 </html>

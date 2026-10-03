@@ -1,9 +1,13 @@
+@use "../_setups/fonts";
+@use "../_setups/media";
+@use "../_setups/variables" as app;
+
 //_____main style for admin-template____
 .admin {
     width: 100%;
     min-height: 100%;
-    @include roboto(medium);
-    font-size: rem(16px);
+    @include fonts.roboto(medium);
+    font-size: media.rem(16px);
     display: flex;
     flex-direction: column;
 
@@ -14,7 +18,7 @@
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    background-color: $green1;
+    background-color: app.$green1;
     color: #fff;
     padding: 0 30px;
 }
@@ -51,15 +55,15 @@
 .tab__item {
     border-right: 3px solid #fff;
     text-transform: uppercase;
-    color: $grey2;
+    color: app.$grey2;
 }
 
 .tab__item:hover a{
-    color: $green1;
+    color: app.$green1;
 }
 
 .tab__item.active a{
-    color: $green1;
+    color: app.$green1;
     background-color: #fff;
 }
 
@@ -67,7 +71,7 @@
     display: inline-block;
     padding: 25px 68px 24px 70px;
     text-decoration: none;
-    color: $grey1;
+    color: app.$grey1;
 }
 
 .tab__link:hover {
@@ -76,14 +80,14 @@
 
 
 .content-tab{
-    color: $grey1;
-    @include roboto(regular);
+    color: app.$grey1;
+    @include fonts.roboto(regular);
     height: 100%;
 }
 .content-tab__title {
     font-size: 21px;
     margin-bottom: 45px;
-    @include roboto(medium);
+    @include fonts.roboto(medium);
 }
 
 //_____style for admin-tab-1____
@@ -119,11 +123,11 @@ tr {
 .name {
     //margin-bottom: 20px;
     display: inline-block;
-    @include roboto(medium);
+    @include fonts.roboto(medium);
 }
 
 .skill__subtitle {
-    @include roboto(regular);
+    @include fonts.roboto(regular);
     margin-right: 30px;
 }
 
@@ -136,8 +140,8 @@ tr {
     border: none;
     box-sizing: border-box;
     color: #9b9ea0;
-    @include roboto(regular);
-    font-size: rem(16px);
+    @include fonts.roboto(regular);
+    font-size: media.rem(16px);
 }
 
 .skill__input {
@@ -153,7 +157,7 @@ tr {
 
 .btn-admin {
     border-radius: 5px;
-    background-color:  $green1;
+    background-color:  app.$green1;
     padding: 15px 20px;
     border: none;
     color: #fff;
@@ -175,7 +179,7 @@ tr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @include roboto(regular);
+    @include fonts.roboto(regular);
 }
 
 

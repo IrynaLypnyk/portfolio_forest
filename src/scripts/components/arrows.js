@@ -1,3 +1,5 @@
+const $ = require('jquery');
+
 module.exports = function() {
   function ScrollTo(sectionNumber) {
     var target = $('.section').eq(sectionNumber).offset().top;

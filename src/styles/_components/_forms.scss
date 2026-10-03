@@ -1,3 +1,8 @@
+@use "../_setups/fonts";
+@use "../_setups/media";
+@use "../_setups/mixins";
+@use "../_setups/variables" as app;
+
 //common styles for all three forms
 .form-container{
   position: relative;
@@ -16,23 +21,23 @@
 
 .form__label{
   width: 100%;
-  margin-bottom: rem(20px);
-  @include flex-center;
+  margin-bottom: media.rem(20px);
+  @include mixins.flex-center;
  }
 
 .form__input,
 .form__textarea{
   border: 1px solid #fff;
   padding: 15px 10px 15px 20px;
-  @include roboto(regular);
-  color: rgba($grey1, .5);
-  font-size: rem(16px);
+  @include fonts.roboto(regular);
+  color: rgba(app.$grey1, .5);
+  font-size: media.rem(16px);
   outline: none; 
   width: 100%;
 
   &:focus{
-    border: 1px solid $green1;
-    color: $grey2;
+    border: 1px solid app.$green1;
+    color: app.$grey2;
   }
 }
 
@@ -52,7 +57,7 @@
   background-color: rgba(#122620, .6);
   height: 380px;
   border-radius: 4px 4px 0 0;
-  @include flex-center;
+  @include mixins.flex-center;
   flex-direction: column;
 
 
@@ -66,7 +71,7 @@
     background-color: #f0efe9;
     width: 52px;
     height: 45px;
-    @include flex-center;
+    @include mixins.flex-center;
     border-radius: 19px 0 0 19px;
   }
 
@@ -74,7 +79,7 @@
     border-radius: 0 19px 19px 0;
     
     &:focus + .auth-form__input-fake .auth-form__input-icon{
-       fill: $green1;
+       fill: app.$green1;
     }   
   }
   
@@ -93,7 +98,7 @@
 
 // checkbox 
   &__checkbox-label{
-    @include flex-center;
+    @include mixins.flex-center;
     margin-bottom: 10px;
   
   }
@@ -109,7 +114,7 @@
     border-radius: 3px;
     margin-right: 11px;
     position: relative;
-    @include flex-center;
+    @include mixins.flex-center;
   }
 
   &__checkbox-icon{
@@ -119,7 +124,7 @@
   }
 
   &__checkbox-input:checked + .auth-form__checkbox-fake{
-    background-color: $green1;
+    background-color: app.$green1;
   }
 
   &__checkbox-input:checked + .auth-form__checkbox-fake .auth-form__checkbox-icon{
@@ -128,19 +133,19 @@
 
   // radio
   &__radio-block{
-    @include flex-center;
+    @include mixins.flex-center;
     flex-direction: column;
 
   }
 
   &__label-text_radio{
     margin-bottom: 10px;
-    @include roboto(medium);
+    @include fonts.roboto(medium);
   }
 
   &__radio-input-block,
   &__radio-label{
-    @include flex-center;
+    @include mixins.flex-center;
     flex-direction: row;
   }
 
@@ -159,7 +164,7 @@
 
     &:after{
       content:"";
-      @include circle(8px, $green1);
+      @include mixins.circle(8px, app.$green1);
       position: absolute;
       top: 5px;
       left: 5px;
@@ -172,11 +177,11 @@
   }
 
 	 &__radio-input:checked + .form__radio-fake.auth-form__radio-fake +.form__label-text.auth-form__label-text{
-      color: $green1;
+      color: app.$green1;
   }
   
   &__radio-fake:not(:first-child){
-    margin-left: rem(40px);
+    margin-left: media.rem(40px);
   }
 }
 
@@ -195,11 +200,11 @@
     border-radius: 20px;
   }
 
-  @include tablets{
+  @include media.tablets{
     width: 348px;
   }
 
-  @include w360{
+  @include media.w360{
     width: 300px;
   }
 }
@@ -213,20 +218,20 @@
   &__item{
 
     width: auto;
-    @include flex-center;
+    @include mixins.flex-center;
     flex: 1;
-    background-color: $green1;
+    background-color: app.$green1;
     padding-left: 30px;
     padding-right: 30px;
     color: #fff;
     border: 0;
     border-right: 2px solid rgba(#ffffff, 0.5);
-    @include roboto(medium);
-    font-size: rem(16px);
+    @include fonts.roboto(medium);
+    font-size: media.rem(16px);
     outline: none;
     transition: all 0.3s;
 
-    @include w450{
+    @include media.w450{
       padding-left: 20px;
     padding-right: 20px;
     }
@@ -237,7 +242,7 @@
     }
 
     &:hover{
-      background-color: $green2;
+      background-color: app.$green2;
       cursor: pointer;
     }
  }
@@ -246,7 +251,7 @@
     text-decoration: none;
     display: inline-block;
     color: #fff;
-    @include roboto(medium);
+    @include fonts.roboto(medium);
     white-space: nowrap;
   }
 }
@@ -259,7 +264,7 @@
 }
 
 .form-success{
-  color: $green2;
+  color: app.$green2;
 }
 
 .form-errorr{

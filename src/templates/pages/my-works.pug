@@ -1,9 +1,15 @@
 extends ../template
 
 block variables
-  - var title = 'Мои работы', className = 'my-works'
+  - var title = 'My work', className = 'my-works'
 
 block content
+  -
+    const projects = [
+      { title: 'Workadium', linkLabel: 'View on GitHub', category: 'Coworking website', url: 'https://github.com/IrynaLypnyk/workadium', image: 'workadium.png' },
+      { title: 'Mister Burger', linkLabel: 'View on GitHub', category: 'Restaurant website', url: 'https://github.com/IrynaLypnyk/mister_burger', image: 'mister-burger.png' },
+      { title: 'Iryna Lypnyk Portfolio', category: 'My new portfolio', url: 'https://irynalypnyk.com/', image: 'iryna-portfolio.png' }
+    ]
   +header('my-works', 'portfolio', '1170', '285')
   section.section.section_my-works
     .triangles.triangles_my-works
@@ -12,90 +18,52 @@ block content
         polygon(points="1800,0 1800,163 899,163 899,160").triangles__svg_my-works
     .my-works
       .my-works__title
-        .block-title.block-title_my-works Мои работы
+        .block-title.block-title_my-works My work
         svg.block-title__bg-svg.block-title__bg-svg_my-works(viewBox="0 0 505 165")
           use(xlink:href="assets/images/icons/sprite.svg#works_header")
       .my-works__slider
         #slider.slider
           .slider__slide-desc
             ul.slide-desc__list
-              li.slide-desc__item.active
-                .slider__slide-title.block-subtitle.block-subtitle_my-works Школа онлайн-образования "LoftSchool"
-                .slider__desc-skills HTML, CSS, JAVASCRIPT
-                .slider__btn
-                  a.slider__btn-link(href="http://loftschool.com/" target="_blank")
-                    svg.slider__link-icon(width="19" height="19")
-                      use(xlink:href="assets/images/icons/sprite.svg#link")
-                    span.slider__link-text Посмотреть сайт
-              li.slide-desc__item
-                .slider__slide-title.block-subtitle.block-subtitle_my-works Агентство интернет решений "ITLoft"
-                .slider__desc-skills HTML, CSS, JAVASCRIPT
-                .slider__btn
-                  a.slider__btn-link(href="http://itloft.ru/" target="_blank")
-                    svg.slider__link-icon(width="19" height="19")
-                      use(xlink:href="assets/images/icons/sprite.svg#link")
-                    span.slider__link-text Посмотреть сайт
-              li.slide-desc__item
-                .slider__slide-title.block-subtitle.block-subtitle_my-works Портал обучающих уроков "LoftBlog"
-                .slider__desc-skills HTML, CSS, JAVASCRIPT
-                .slider__btn
-                  a.slider__btn-link(href="http://loftblog.ru/" target="_blank")
-                    svg.slider__link-icon(width="19" height="19")
-                      use(xlink:href="assets/images/icons/sprite.svg#link")
-                    span.slider__link-text Посмотреть сайт
-              li.slide-desc__item
-                .slider__slide-title.block-subtitle.block-subtitle_my-works Сайт "Атма йога"
-                .slider__desc-skills HTML, CSS, JAVASCRIPT
-                .slider__btn
-                  a.slider__btn-link(href="http://atmayoga.ru/" target="_blank")
-                    svg.slider__link-icon(width="19" height="19")
-                      use(xlink:href="assets/images/icons/sprite.svg#link")
-                    span.slider__link-text Посмотреть сайт
+              each project, index in projects
+                li.slide-desc__item(class=index === 0 ? 'active' : '')
+                  .slider__slide-title.block-subtitle.block-subtitle_my-works= project.title
+                  .slider__desc-skills= project.category
+                  .slider__btn
+                    a.slider__btn-link(href=project.url target="_blank" rel="noopener noreferrer")
+                      svg.slider__link-icon(width="19" height="19")
+                        use(xlink:href="assets/images/icons/sprite.svg#link")
+                      span.slider__link-text= project.linkLabel || 'View website'
           .slider__slides-preview
             ul.slides-preview__list
-              li.slides-preview__item.active
-                img.slides-preview__img(src='assets/images/content/work-1.png' alt="Школа онлайн-образования \"LoftSchool\"")
-              li.slides-preview__item
-                img.slides-preview__img(src='assets/images/content/work-2.png' alt="Агентство интернет решений \"ITLoft\"")
-              li.slides-preview__item
-                img.slides-preview__img(src='assets/images/content/work-3.png' alt="Портал обучающих уроков \"LoftBlog\"")
-              li.slides-preview__item
-                img.slides-preview__img(src='assets/images/content/work-4.png' alt="Сайт \"Атма йога\"")
+              each project, index in projects
+                li.slides-preview__item(class=index === 0 ? 'active' : '')
+                  img.slides-preview__img(src='assets/images/content/' + project.image alt=project.title + ' website preview')
           .slider__slides-nav-container
             .slides-nav.slides-nav__prev
               ul.slides-nav__list.slides-nav__list_prev
-                li.slides-nav__item.slides-nav__item_prev
-                  img.slides-nav__img(src='assets/images/content/work-1.png' alt="Школа онлайн-образования \"LoftSchool\"")
-                li.slides-nav__item.slides-nav__item_prev
-                  img.slides-nav__img(src='assets/images/content/work-2.png' alt="Агентство интернет решений \"ITLoft\"")
-                li.slides-nav__item.slides-nav__item_prev
-                  img.slides-nav__img(src='assets/images/content/work-3.png' alt="Портал обучающих уроков \"LoftBlog\"")
-                li.slides-nav__item.slides-nav__item_prev.active
-                  img.slides-nav__img(src='assets/images/content/work-4.png' alt="Сайт \"Атма йога\"")
+                each project, index in projects
+                  li.slides-nav__item.slides-nav__item_prev(class=index === projects.length - 1 ? 'active' : '')
+                    img.slides-nav__img(src='assets/images/content/' + project.image alt=project.title + ' website preview')
               .slides-nav__controls.slides-nav__controls_prev
                 svg.slides-nav__arrow-svg.slides-nav__arrow-svg_prev(width="43" height="27")
                   use(xlink:href="assets/images/icons/sprite.svg#portf_arrow_down")
               .slides-nav__controls-bg.slides-nav__controls-bg_next
             .slides-nav.slides-nav__next
               ul.slides-nav__list.slides-nav__list_next
-                li.slides-nav__item.slides-nav__item_next
-                  img.slides-nav__img(src='assets/images/content/work-1.png' alt="Школа онлайн-образования \"LoftSchool\"")
-                li.slides-nav__item.slides-nav__item_next.active
-                  img.slides-nav__img(src='assets/images/content/work-2.png' alt="Агентство интернет решений \"ITLoft\"")
-                li.slides-nav__item.slides-nav__item_next
-                  img.slides-nav__img(src='assets/images/content/work-3.png' alt="Портал обучающих уроков \"LoftBlog\"")
-                li.slides-nav__item.slides-nav__item_next
-                  img.slides-nav__img(src='assets/images/content/work-4.png' alt="Сайт \"Атма йога\"")
+                each project, index in projects
+                  li.slides-nav__item.slides-nav__item_next(class=index === 1 ? 'active' : '')
+                    img.slides-nav__img(src='assets/images/content/' + project.image alt=project.title + ' website preview')
               .slides-nav__controls.slides-nav__controls_next
                 svg.slides-nav__arrow-svg.slides-nav__arrow-svg_next(width="43" height="27")
                   use(xlink:href="assets/images/icons/sprite.svg#portf_arrow_up")
               .slides-nav__controls-bg.slides-nav__controls-bg_next
   section.section.section_reviews
     .reviews__title
-      .block-title.block-title_reviews 
-        | Что обо мне 
+      .block-title.block-title_reviews
+        | Course demo
         br
-        | говорят
+        | testimonials
       svg.block-title__bg-svg.block-title__bg-svg_reviews(viewBox="0 0 502 174")
         use(xlink:href="assets/images/icons/sprite.svg#about_header")
     .reviews
@@ -104,38 +72,38 @@ block content
           //- i.reviews__quotes
           .reviews__avatar
             img(src="assets/images/content/review1.jpg").reviews__img
-          .reviews__text 
-            p Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          .reviews__text
+            p She studied web development at Loftschool: two months of challenging assignments and sleepless nights!
           .reviews__author
             .reviews__author-info
-              .reviews__author-name 
-                p Ковальчук Дмитрий
-              .reviews__author-title 
-                p - основатель Loftschool
+              .reviews__author-name
+                p Dmitry Kovalchuk
+              .reviews__author-title
+                p - Loftschool founder
         li.reviews__item
           .reviews__avatar
             img(src="assets/images/content/review2.jpg").reviews__img
-          .reviews__text 
-            p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+          .reviews__text
+            p This code can handle any challenge. Just please do not open the site in a very old browser!
           .reviews__author
             .reviews__author-info
-              .reviews__author-name 
-                p Сабанцев Владимир
+              .reviews__author-name
+                p Vladimir Sabantsev
               .reviews__author-title
-                p - преподаватель
+                p - Course instructor
     .contact-form.form-container
       .form__title.form__title_contact-form
-        .block-subtitle.block-subtitle_contact-form Связаться со мной
+        .block-subtitle.block-subtitle_contact-form Get in touch
       form(action="assets/php/contact-form.php", method="post" id="contact-form").form
         .form__fields
           label.form__label.contact-form__label
-            input(type="text", name="name" placeholder="Имя" required).form__input.contact-form__input
+            input(type="text", name="name" placeholder="Name" required).form__input.contact-form__input
           label.form__label.contact-form__label
             input(type="email", name="email" placeholder="E-mail" required).form__input.contact-form__input
-          textarea(placeholder ="Ваше сообщение" name="message" required).form__textarea.contact-form__textarea
+          textarea(placeholder ="Your message" name="message" required).form__textarea.contact-form__textarea
         .nav-btns.nav-btns_contact-form
-          button.nav-btns__item.form__submit-btn.form__submit-btn_contact-form#show-modal(type="submit" value="Отправить") Отправить
-          button.nav-btns__item.form__reset-btn.form__reset-btn_contact-form(type="reset" value="Очистить") Очистить
+          button.nav-btns__item.form__submit-btn.form__submit-btn_contact-form#show-modal(type="submit" value="Send") Send
+          button.nav-btns__item.form__reset-btn.form__reset-btn_contact-form(type="reset" value="Reset") Reset
     button.my-works__arrow-btn
       a.arrow__link(href="#")
         svg.arrow__icon(width="27" height="19")

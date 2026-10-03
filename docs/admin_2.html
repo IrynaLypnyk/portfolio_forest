@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Панель администрирования - Таб_2</title>
+    <title>Admin demo - Blog</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -23,7 +23,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
     <link rel="manifest" href="favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!--css-->
     <link rel="stylesheet" href="assets/styles/app.min.css">
@@ -32,31 +32,31 @@
     <div class="wrapper">
       <section class="admin">
         <header class="header_admin">
-          <h1 class="header__title">Панель администрирования</h1><a class="header__link-toMainPage" href="index.html">Вернуться на сайт</a>
+          <h1 class="header__title">Admin demo</h1><a class="header__link-toMainPage" href="index.html">Back to the website</a>
         </header>
         <div class="admin__tabs">
           <ul class="tab">
-            <li class="tab__item active"><a class="tab__link" href="admin_1.html">Таб 1</a></li>
-            <li class="tab__item"><a class="tab__link" href="admin_2.html">Таб 2</a></li>
-            <li class="tab__item"><a class="tab__link" href="admin_3.html">Таб 3</a></li>
+            <li class="tab__item active"><a class="tab__link" href="admin_1.html">About</a></li>
+            <li class="tab__item"><a class="tab__link" href="admin_2.html">Blog</a></li>
+            <li class="tab__item"><a class="tab__link" href="admin_3.html">Work</a></li>
           </ul>
         </div>
         <div class="admin__main">
           <div class="content-tab">
-            <h2 class="content-tab__title">Страница "Блог"</h2>
+            <h2 class="content-tab__title">Page "Blog"</h2>
             <form class="content-tab2__addArticle" action="">
-              <div class="name content-tab2__name">Добавить запись</div>
-              <input class="content-tab2__name admin-input" type="text" placeholder="Название" name="">
-              <input class="content-tab2__data admin-input" type="text" placeholder="Дата" name="">
-              <textarea class="content-tab2__text admin-input" placeholder="Содержание" name=""></textarea>
+              <div class="name content-tab2__name">Add a post</div>
+              <input class="content-tab2__name admin-input" type="text" placeholder="Title" name="">
+              <input class="content-tab2__data admin-input" type="text" placeholder="Date" name="">
+              <textarea class="content-tab2__text admin-input" placeholder="Content" name=""></textarea>
               <div class="content-tab2__button">
-                <button class="btn-admin btn-admin--add" type="submit">Добавить</button>
+                <button class="btn-admin btn-admin--add" type="submit">Add</button>
               </div>
             </form>
           </div>
           <div class="pop-up">
-            <div class="pop-up__title">Сообщение отправлено</div>
-            <button class="btn-admin btn-admin--close" type="submit">Закрыть</button>
+            <div class="pop-up__title">Message sent</div>
+            <button class="btn-admin btn-admin--close" type="submit">Close</button>
           </div>
         </div>
       </section>

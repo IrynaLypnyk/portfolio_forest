@@ -1,5 +1,9 @@
+@use "../_setups/fonts";
+@use "../_setups/media";
+@use "../_setups/mixins";
+
 .user{
-  @include flex-center;
+  @include mixins.flex-center;
   flex-direction: column;
   overflow: hidden;
   position: relative;
@@ -16,23 +20,26 @@
 
   &__img{
 		display: block;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 	}
 
   &__name{
-    @include roboto(medium);
-    font-size: rem(28px);
+    @include fonts.roboto(medium);
+    font-size: media.rem(28px);
     color: #fff;
-    margin-bottom: rem(5px);
+    margin-bottom: media.rem(5px);
 
-		@include smallest{
+		@include media.smallest{
 		font-size: 21px;
 		}
   }
 
   &__title{
-    font-size: rem(16px);
-	  @include roboto(regular);
+    font-size: media.rem(16px);
+	  @include fonts.roboto(regular);
     color: rgba(#fff, 0.8);
 		text-align: center;
 	}

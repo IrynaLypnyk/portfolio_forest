@@ -1,16 +1,21 @@
+@use "../_setups/fonts";
+@use "../_setups/media";
+@use "../_setups/mixins";
+@use "../_setups/variables" as app;
+
 .welcome{
   height: 100vh;
   width: 100%;
   background-image: url("../images/decor/bg1800.jpg");
-  @include cover;
-  @include flex-center;
+  @include mixins.cover;
+  @include mixins.flex-center;
   position: relative;
 
-  @include laptops{
+  @include media.laptops{
     background-image: url("../images/decor/bg1000.jpg");
     }
 
-  @include phones{
+  @include media.phones{
     background-image: url("../images/decor/bg500.jpg");
     }
   }
@@ -20,19 +25,19 @@
   top: 25px;
   right: 100px;
 
-   @include phones{
+   @include media.phones{
     right: 50%;
     transform: translateX(50%);
   }
 
-  @include w360{
+  @include media.w360{
     top: 10px;
   }
 }
 .auth-btn{
-  @include roboto(medium);
+  @include fonts.roboto(medium);
   color: #fff;
-  font-size: rem(16px);
+  font-size: media.rem(16px);
   border: 1px solid #fff;
   background-color: transparent;
   border-radius: 18px;
@@ -42,7 +47,7 @@
 
   &:hover{
     color: #fff;
-    background-color: $green1;
+    background-color: app.$green1;
     cursor: pointer;
     letter-spacing: 0;
     border-color: #729e19;
@@ -70,7 +75,7 @@
   height: 350px;
   background-color: rgba(#122620, .6);
   border-radius: 4px 4px 0 0;
-  @include flex-center;
+  @include mixins.flex-center;
   flex-direction: column;
 }
 
@@ -80,7 +85,7 @@
   padding-top: 30px;
   //padding-bottom: 85px;
 
-  @include w360{
+  @include media.w360{
     //padding-bottom: 30px;
   }
 }
@@ -90,20 +95,20 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding-bottom: rem(38px);
+  padding-bottom: media.rem(38px);
   display: flex;
   justify-content: center;
 
-  @include w450{
+  @include media.w450{
     padding-bottom: 5px;
-    @include roboto(light);
+    @include fonts.roboto(light);
   }
 }
 .copyright {
   display: flex;
   flex-direction: row;
 
-  @include w450 {
+  @include media.w450 {
     flex-direction: column;
     align-items: center;
   }
@@ -114,8 +119,18 @@
     color: #fff;
     margin: 0 6px;
 
-    @include w450 {
+    @include media.w450 {
       display: none;
     }
+  }
+}
+.copyright__link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration-thickness: 2px;
   }
 }
