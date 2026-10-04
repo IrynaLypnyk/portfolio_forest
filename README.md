@@ -4,7 +4,7 @@ My first web development portfolio, originally built in 2017 as a final project 
 
 The original project has been preserved and refreshed with an animated WebGL water effect, modern build tooling, English copy, updated project links, and automated browser tests.
 
-[Live demo](https://irynalypnyk.github.io/portfolio_forest/)
+🔗[Live demo](https://portfolio-forest-ilypnyk.netlify.app//)
 
 ## WebGL water animation
 
