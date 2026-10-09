@@ -82,7 +82,7 @@ test('contact form handles static hosting and re-enables submit', async ({ page 
 });
 
 test('preloader recovers from missing image', async ({ page }) => {
-  await page.route('**/iryna-lypnyk.jpg', route => route.abort());
+  await page.route('**/iryna-illustrated.png', route => route.abort());
   await page.goto('/');
   await expect(page.locator('#js-preloader')).toHaveClass(/done/);
   await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
