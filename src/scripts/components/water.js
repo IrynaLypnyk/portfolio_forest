@@ -8,7 +8,7 @@ function createWater(host) {
   canvas.className = 'water-canvas';
   canvas.setAttribute('aria-hidden', 'true');
   const gl = canvas.getContext('webgl', { alpha: false, antialias: false, depth: false, powerPreference: 'low-power' });
-  if (!gl) return () => {};
+  if (!gl) return { dispose() {}, ready: Promise.resolve() };
 
   let disposed = false;
   let ready = false;
@@ -175,8 +175,7 @@ function createWater(host) {
     syncAnimation();
   }
 
-  start().catch(dispose);
-  return dispose;
+  return { dispose, ready: start().catch(dispose) };
 }
 
 module.exports = function () {
@@ -185,9 +184,10 @@ module.exports = function () {
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let cleanup;
   const update = () => {
-    cleanup?.();
+    cleanup?.dispose();
     cleanup = motion.matches ? undefined : createWater(host);
+    return cleanup?.ready;
   };
   motion.addEventListener('change', update);
-  update();
+  return update();
 };

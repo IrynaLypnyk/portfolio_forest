@@ -17,8 +17,8 @@ const aboutpage = document.getElementById('about');
 const workspage = document.getElementById('my-works');
 const blog = document.getElementById('blog');
 
-preloader(); //прелоадер
-require('./components/water')();
+const waterReady = require('./components/water')();
+preloader(waterReady ? [waterReady] : []);
 
 if(welcomepage){
   flipper(); //флиппер
