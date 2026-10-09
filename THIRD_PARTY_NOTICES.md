@@ -1,9 +1,26 @@
-# Water distortion effect
+# Third-Party Notices
 
-The shaders in `src/scripts/shaders/` are adapted from the **Animated Water Distortion Effects with WebGL** example by **Lucas Bebber for Codrops**, preserved in the local `waterWebGL` / `WaterWebGL-loftschool` project. The water image and RGB map match the assets in that example.
+## Original WebGL Distortion Effect
 
-The original demo's README grants the following permission:
+**Author:** Lucas Bebber
+**Published by:** Codrops (2016)
+
+**Source:** https://github.com/lbebber/HeatDistortionEffect
+
+This project incorporates a GLSL shader originating from the work above.
+
+### Original Usage Terms
+
+The original project's README states:
 
 > Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is".
 
-This portfolio integrates the water shader with a new native WebGL runtime. The original Webpack, GSAP and Lodash runtime is not included.
+These terms are reproduced for attribution and reference. All rights to the original materials remain with their respective owners.
+
+## Background Photograph
+
+**Photographer:** Ti Holowaychuk  
+**Source:** Unsplash  
+**License:** [Unsplash License](https://unsplash.com/license)
+
+The photograph is used as the background scene for the WebGL water distortion experiment.

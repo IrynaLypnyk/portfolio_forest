@@ -2,9 +2,25 @@
 
 My first web development portfolio, originally built in 2017 as a final project for Loftschool's Advanced Web Development course.
 
-The original project has been preserved and refreshed with an animated WebGL water effect, modern build tooling, English copy, updated project links, and automated browser tests.
 
-🔗[Live demo](https://portfolio-forest-ilypnyk.netlify.app//)
+🔗[Live demo](https://portfolio-forest-ilypnyk.netlify.app)
+
+## Highlights
+
+- **Responsive multi-page portfolio** with layouts tailored to desktop, tablet, and mobile screens.
+- **WebGL water animation and mouse-driven parallax** using GLSL shaders, without an animation library.
+- **Motion-aware rendering** with reduced-motion support for the water effect, visibility-based pausing, and a static-image fallback.
+- **3D card flip** that reveals the demo login form on the welcome page.
+- **Animated SVG graphics** including a loading indicator, scroll-triggered skill charts, and reusable sprite icons.
+- **Custom project slider** with looping navigation, synchronized descriptions and links, adjacent-project previews, and fade transitions.
+- **Interactive blog navigation** with scrollspy, a fixed desktop sidebar, and a slide-out mobile menu.
+- **Animated full-screen navigation** and smooth scrolling between sections.
+- **Asynchronous contact form** with browser and PHP validation, submission feedback, and timeout handling; email delivery requires a configured PHP server.
+- **Styled Google Maps integration** with a custom animated marker; requires an API key.
+- **Reusable Pug components and modular Sass** with a minified esbuild bundle and a local development workflow.
+- **Desktop and mobile Playwright tests**, run alongside the production build in GitHub Actions.
+
+See [all features](FEATURES.md) for the full inventory and demo limitations.
 
 ## WebGL water animation
 
@@ -23,7 +39,14 @@ Explore the [WebGL runtime](src/scripts/components/water.js) and [water shader](
 
 ## Stack
 
-Pug · Sass · jQuery · JavaScript · esbuild · Playwright · WebGL / GLSL
+- **Frontend:** HTML5, CSS3, JavaScript, jQuery, Pug, Sass (SCSS), normalize.css, and BEM naming.
+- **Graphics:** SVG, Canvas, WebGL, and GLSL shaders.
+- **Integrations:** Google Maps JavaScript API, CodePen embeds, and the Fetch API for form submissions.
+- **Server-side form handling:** PHP with `mail()` (requires a configured PHP host).
+- **Build and development:** Node.js, npm, and esbuild.
+- **Testing and CI:** Playwright (Chromium) and GitHub Actions.
+
+The current build uses esbuild; Gulp and Webpack mentioned in the course content and skill charts belong to the original learning project. The login and admin demos do not use a database or authentication backend.
 
 ## Getting started
 
